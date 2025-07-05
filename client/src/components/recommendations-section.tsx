@@ -1,27 +1,38 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 
 export default function RecommendationsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const recommendations = [
     {
       name: "Sarah Chen",
       title: "Senior Product Manager, TechCorp",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Alex consistently delivered exceptional results on our most challenging projects. His technical expertise and collaborative approach made him an invaluable team member.",
+      quote: "Dhanush consistently delivered exceptional results on our most challenging projects. His technical expertise and collaborative approach made him an invaluable team member.",
     },
     {
       name: "Marcus Thompson",
       title: "CTO, InnovateLabs",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Working with Alex was a game-changer. His ability to architect complex systems while maintaining clean, maintainable code is truly impressive.",
+      quote: "Working with Dhanush was a game-changer. His ability to architect complex systems while maintaining clean, maintainable code is truly impressive.",
     },
     {
       name: "Dr. Amanda Rodriguez",
       title: "Research Director, AI Institute",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Alex's dedication to excellence and innovative problem-solving approach made our research platform a tremendous success. Highly recommended.",
+      quote: "Dhanush's dedication to excellence and innovative problem-solving approach made our research platform a tremendous success. Highly recommended.",
     },
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % recommendations.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [recommendations.length]);
 
   return (
     <section id="recommendations" className="py-20 bg-slate-50">
@@ -29,32 +40,52 @@ export default function RecommendationsSection() {
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Recommendations
         </h2>
-        <div className="overflow-x-auto">
-          <div className="flex space-x-6 pb-4 carousel-container" style={{ width: "max-content" }}>
-            {recommendations.map((rec, index) => (
-              <Card key={index} className="carousel-item w-96 flex-shrink-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={rec.image}
-                      alt={`${rec.name} headshot`}
-                      className="w-16 h-16 rounded-full mr-4 object-cover"
-                    />
-                    <div>
-                      <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
-                        {rec.name}
-                      </h4>
-                      <p className="text-slate-600 text-sm">{rec.title}</p>
+        <div className="max-w-4xl mx-auto">
+          <div className="relative overflow-hidden">
+            <div 
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {recommendations.map((rec, index) => (
+                <Card key={index} className="w-full flex-shrink-0 shadow-lg">
+                  <CardContent className="p-8">
+                    <div className="flex items-center mb-6">
+                      <img
+                        src={rec.image}
+                        alt={`${rec.name} headshot`}
+                        className="w-16 h-16 rounded-full mr-4 object-cover"
+                      />
+                      <div>
+                        <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
+                          {rec.name}
+                        </h4>
+                        <p className="text-slate-600 text-sm">{rec.title}</p>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-slate-600 italic mb-4">"{rec.quote}"</p>
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                    <p className="text-slate-600 italic mb-4 text-center">"{rec.quote}"</p>
+                    <div className="flex justify-center text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+          
+          {/* Carousel indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {recommendations.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-[hsl(var(--portfolio-primary))]' 
+                    : 'bg-slate-300 hover:bg-slate-400'
+                }`}
+              />
             ))}
           </div>
         </div>
