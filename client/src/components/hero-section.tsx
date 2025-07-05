@@ -7,9 +7,9 @@ export default function HeroSection() {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
       <div className="container mx-auto px-4">
         {/* Video and Pitch Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
           {/* Video Embed */}
-          <div className="relative">
+          <div className="relative lg:col-span-2">
             <div className="aspect-video bg-slate-200 rounded-xl shadow-lg overflow-hidden">
               <div className="w-full h-full bg-slate-300 flex items-center justify-center">
                 <div className="text-center">
@@ -22,7 +22,7 @@ export default function HeroSection() {
           </div>
           
           {/* Watch Pitch CTA */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-1">
             <Card className="shadow-lg">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
