@@ -61,7 +61,7 @@ export default function RecommendationsSection() {
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Recommendations
         </h2>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="relative">
             {/* Left Arrow */}
             <Button
@@ -87,14 +87,16 @@ export default function RecommendationsSection() {
             <div className="overflow-hidden px-16">
               <div 
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 80}%)` }}
+                style={{ 
+                  transform: `translateX(calc(50% - 160px - ${currentIndex * 336}px))`,
+                }}
               >
                 {recommendations.map((rec, index) => (
-                  <div key={index} className="w-4/5 flex-shrink-0 px-4">
+                  <div key={index} className="w-80 flex-shrink-0 mx-4">
                     <Card className={`shadow-lg transition-all duration-300 ${
                       index === currentIndex 
                         ? 'scale-105 shadow-xl' 
-                        : 'scale-95 opacity-75'
+                        : 'scale-95 opacity-60'
                     }`}>
                       <CardContent className="p-8">
                         <div className="flex items-center mb-6">
