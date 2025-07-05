@@ -43,7 +43,7 @@ export default function HeroSection() {
         {/* Introduction */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
-            Hello, I'm Alex Johnson
+            Hello, I'm Dhanush Gowda S
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Full-Stack Developer & Digital Innovation Specialist

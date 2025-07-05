@@ -28,20 +28,20 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
+          <div className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
+            Dhanush Gowda S
+          </div>
+          
           <div className="hidden lg:flex space-x-8">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-slate-700 hover:text-[hsl(var(--portfolio-primary))] transition-colors duration-200 font-medium"
+                className="text-slate-700 hover:text-[hsl(var(--portfolio-primary))] transition-colors duration-200 font-medium text-sm"
               >
                 {link.label}
               </button>
             ))}
-          </div>
-          
-          <div className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
-            Alex Johnson
           </div>
           
           <Button
@@ -65,7 +65,7 @@ export default function Header() {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-slate-700 hover:text-[hsl(var(--portfolio-primary))] transition-colors duration-200 font-medium text-left"
+                  className="text-slate-700 hover:text-[hsl(var(--portfolio-primary))] transition-colors duration-200 font-medium text-left text-sm"
                 >
                   {link.label}
                 </button>
