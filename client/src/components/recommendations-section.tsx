@@ -1,5 +1,6 @@
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 export default function RecommendationsSection() {
@@ -24,7 +25,27 @@ export default function RecommendationsSection() {
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
       quote: "Dhanush's dedication to excellence and innovative problem-solving approach made our research platform a tremendous success. Highly recommended.",
     },
+    {
+      name: "Raj Patel",
+      title: "Engineering Director, DataFlow Systems",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
+      quote: "Dhanush's ability to solve complex technical challenges while maintaining excellent code quality is remarkable. He consistently delivers beyond expectations.",
+    },
+    {
+      name: "Jennifer Liu",
+      title: "VP of Engineering, CloudScale",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
+      quote: "I've rarely seen someone with Dhanush's combination of technical depth and leadership skills. He's an asset to any team and drives innovation wherever he goes.",
+    },
   ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % recommendations.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + recommendations.length) % recommendations.length);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,37 +61,66 @@ export default function RecommendationsSection() {
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Recommendations
         </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="relative overflow-hidden">
-            <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        <div className="max-w-6xl mx-auto">
+          <div className="relative">
+            {/* Left Arrow */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg"
             >
-              {recommendations.map((rec, index) => (
-                <Card key={index} className="w-full flex-shrink-0 shadow-lg">
-                  <CardContent className="p-8">
-                    <div className="flex items-center mb-6">
-                      <img
-                        src={rec.image}
-                        alt={`${rec.name} headshot`}
-                        className="w-16 h-16 rounded-full mr-4 object-cover"
-                      />
-                      <div>
-                        <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
-                          {rec.name}
-                        </h4>
-                        <p className="text-slate-600 text-sm">{rec.title}</p>
-                      </div>
-                    </div>
-                    <p className="text-slate-600 italic mb-4 text-center">"{rec.quote}"</p>
-                    <div className="flex justify-center text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+            
+            {/* Right Arrow */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+            
+            {/* Carousel Container */}
+            <div className="overflow-hidden px-16">
+              <div 
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${currentIndex * 80}%)` }}
+              >
+                {recommendations.map((rec, index) => (
+                  <div key={index} className="w-4/5 flex-shrink-0 px-4">
+                    <Card className={`shadow-lg transition-all duration-300 ${
+                      index === currentIndex 
+                        ? 'scale-105 shadow-xl' 
+                        : 'scale-95 opacity-75'
+                    }`}>
+                      <CardContent className="p-8">
+                        <div className="flex items-center mb-6">
+                          <img
+                            src={rec.image}
+                            alt={`${rec.name} headshot`}
+                            className="w-16 h-16 rounded-full mr-4 object-cover"
+                          />
+                          <div>
+                            <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
+                              {rec.name}
+                            </h4>
+                            <p className="text-slate-600 text-sm">{rec.title}</p>
+                          </div>
+                        </div>
+                        <p className="text-slate-600 italic mb-4 text-center">"{rec.quote}"</p>
+                        <div className="flex justify-center text-yellow-400">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-current" />
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           
