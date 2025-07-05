@@ -2,6 +2,7 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import AndyImage from "@/resources/andy.jpg";
 
 export default function RecommendationsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,9 +27,9 @@ export default function RecommendationsSection() {
       quote: "Dhanush's dedication to excellence and innovative problem-solving approach made our research platform a tremendous success. Highly recommended.",
     },
     {
-      name: "Raj Patel",
+      name: "Andy Helgeson",
       title: "Engineering Director, DataFlow Systems",
-      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
+      image: AndyImage,
       quote: "Dhanush's ability to solve complex technical challenges while maintaining excellent code quality is remarkable. He consistently delivers beyond expectations.",
     },
     {
