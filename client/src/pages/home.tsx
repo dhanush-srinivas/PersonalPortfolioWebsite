@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
-import AboutSection from "@/components/about-section";
 import RecommendationsSection from "@/components/recommendations-section";
 import LeadershipSection from "@/components/leadership-section";
 import AwardsSection from "@/components/awards-section";
@@ -15,7 +14,6 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50">
       <Header />
       <HeroSection />
-      <AboutSection />
       <RecommendationsSection />
       <LeadershipSection />
       <AwardsSection />
