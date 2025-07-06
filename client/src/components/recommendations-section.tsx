@@ -113,12 +113,17 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
               >
                 {recommendations.map((rec, index) => (
                   <div key={index} className="w-[50vw] flex-shrink-0 mx-4">
-                    <Card className={`shadow-lg transition-all duration-300 ${
-                      index === currentIndex 
-                        ? 'scale-105 shadow-xl' 
-                        : 'scale-95 opacity-60'
-                    }`}>
-                      <CardContent className="p-8">
+                    <Card
+                      className={`shadow-lg transition-all duration-300 ${
+                        index === currentIndex
+                          ? 'scale-105 shadow-xl'
+                          : 'scale-95 opacity-60'
+                      } ${rec.name === 'Stephen Dietemann' ? 'w-[40vw] mx-auto' : ''}`}
+                    >
+                      <CardContent className={`${
+                        rec.name === 'Stephen Dietemann' ? 'p-4' : 'p-8'
+                      }`}
+                      >
                         <div className="flex items-center mb-6">
                           <img
                             src={rec.image}
@@ -129,18 +134,20 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                             <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
                               {rec.name}
                             </h4>
-                            <p
-                              className={`text-slate-600 ${
-                                rec.name === "Stephen Dietemann"
-                                  ? "text-[0.5rem]"
-                                  : "text-sm"
-                              }`}
-                            >
+                            <p className="text-slate-600 text-sm">
                               {rec.title}
                             </p>
                           </div>
                         </div>
-                        <p className="text-slate-600 italic mb-4 text-center text-xs md:text-sm">"{rec.quote}"</p>
+                        <p
+                          className={`text-slate-600 italic mb-4 text-center ${
+                            rec.name === 'Stephen Dietemann'
+                              ? 'text-[0.6rem]'
+                              : 'text-xs md:text-sm'
+                          }`}
+                        >
+                          "{rec.quote}"
+                        </p>
                         <div className="flex justify-center text-yellow-400">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className="w-4 h-4 fill-current" />
