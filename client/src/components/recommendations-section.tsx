@@ -129,7 +129,15 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                             <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
                               {rec.name}
                             </h4>
-                            <p className="text-slate-600 text-xs">{rec.title}</p>
+                            <p
+                              className={`text-slate-600 ${
+                                rec.name === "Stephen Dietemann"
+                                  ? "text-[0.5rem]"
+                                  : "text-sm"
+                              }`}
+                            >
+                              {rec.title}
+                            </p>
                           </div>
                         </div>
                         <p className="text-slate-600 italic mb-4 text-center text-xs md:text-sm">"{rec.quote}"</p>
