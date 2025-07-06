@@ -26,7 +26,7 @@ export default function HeroSection() {
           
           {/* Watch Pitch CTA */}
           <div className="space-y-6 lg:col-span-1">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg font-montserrat">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                   Who am I?
@@ -46,7 +46,7 @@ export default function HeroSection() {
         {/* About Me and Education */}
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Education */}
-          <Card className="shadow-lg lg:col-span-1 justify-self-center self-center">
+          <Card className="shadow-lg lg:col-span-1 justify-self-center self-center font-montserrat">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-6">
                 Education
@@ -78,12 +78,12 @@ export default function HeroSection() {
           </Card>
 
           {/* About Me */}
-          <Card className="shadow-lg lg:col-span-2 order-2">
+          <Card className="shadow-lg lg:col-span-2 order-2 font-montserrat">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                 About Me
               </h3>
-              <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-lg font-semibold">
+              <div className="text-slate-600 leading-relaxed mb-6 space-y-4 text-base font-semibold text-center">
                 <p>Hey! I'm Dhanush 😊. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.</p>
                 <p>I've been involved in everything from analyzing data 📊 and building dashboards to managing projects and working with teams across different functions. I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together 🤝.</p>
                 <p>I'm creative, practical, and always up for a good challenge 💡. I like to bring energy into the room, share ideas, and keep the work fun without losing focus. Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated ☕.</p>

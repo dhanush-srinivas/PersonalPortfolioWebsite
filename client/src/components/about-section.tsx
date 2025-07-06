@@ -24,7 +24,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white font-montserrat">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">

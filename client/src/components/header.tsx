@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm font-montserrat">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <div className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
