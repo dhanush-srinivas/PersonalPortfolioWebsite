@@ -107,12 +107,12 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
             <div className="overflow-hidden px-16">
               <div 
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ 
-                  transform: `translateX(calc(50% - 160px - ${currentIndex * 336}px))`,
+                style={{
+                  transform: `translateX(calc(50% - 192px - ${currentIndex * 416}px))`,
                 }}
               >
                 {recommendations.map((rec, index) => (
-                  <div key={index} className="w-80 flex-shrink-0 mx-4">
+                  <div key={index} className="w-96 flex-shrink-0 mx-4">
                     <Card className={`shadow-lg transition-all duration-300 ${
                       index === currentIndex 
                         ? 'scale-105 shadow-xl' 
@@ -132,7 +132,7 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                             <p className="text-slate-600 text-sm">{rec.title}</p>
                           </div>
                         </div>
-                        <p className="text-slate-600 italic mb-4 text-center">"{rec.quote}"</p>
+                        <p className="text-slate-600 italic mb-4 text-center text-sm md:text-base">"{rec.quote}"</p>
                         <div className="flex justify-center text-yellow-400">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className="w-4 h-4 fill-current" />

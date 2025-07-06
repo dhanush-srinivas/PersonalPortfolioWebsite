@@ -45,9 +45,9 @@ export default function HeroSection() {
         </div>
         
         {/* About Me and Education */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Education */}
-          <Card className="shadow-lg lg:col-span-1 justify-self-center self-center font-montserrat">
+          <Card className="shadow-lg lg:col-span-1 justify-self-center self-center font-montserrat lg:max-w-md">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-6">
                 Education
@@ -173,7 +173,7 @@ export default function HeroSection() {
           </Card>
 
           {/* About Me */}
-          <Card className="shadow-lg lg:col-span-1 order-2 font-montserrat max-w-xl mx-auto">
+          <Card className="shadow-lg lg:col-span-2 order-2 font-montserrat w-full lg:max-w-none mx-auto">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                 About Me
