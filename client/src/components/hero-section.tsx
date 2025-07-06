@@ -30,7 +30,7 @@ export default function HeroSection() {
                   Who am I?
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Watch this 80-second video. I share my passion for technology, creative thinking, and what drives me to build impactful digital experiences.
+                  Watch this 80-second video🎥to learn about my passion for technology 💻, creative thinking 🎨, and what inspires me to create meaningful digital experiences 🌐
                 </p>
                 <Button className="bg-[hsl(var(--portfolio-primary))] hover:bg-[hsl(var(--portfolio-primary))]/90 text-white">
                   <Play className="w-4 h-4 mr-2" />
@@ -49,13 +49,11 @@ export default function HeroSection() {
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                 About Me
               </h3>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Hey! I'm Dhanush. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.
-                I've been involved in everything from analyzing data and building dashboards to managing projects and working with teams across different functions.
-                I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together.
-                I'm creative, practical, and always up for a good challenge. I like to bring energy into the room, share ideas, and keep the work fun without losing focus.
-                Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.
-              </p>
+              <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif">
+                <p>Hey! I'm Dhanush 😊. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.</p>
+                <p>I've been involved in everything from analyzing data 📊 and building dashboards to managing projects and working with teams across different functions. I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together 🤝.</p>
+                <p>I'm creative, practical, and always up for a good challenge 💡. I like to bring energy into the room, share ideas, and keep the work fun without losing focus. Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated ☕.</p>
+              </div>
             </CardContent>
           </Card>
           
