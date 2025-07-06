@@ -1,23 +1,24 @@
-import { Play, Linkedin, Github, Mail } from "lucide-react";
+import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function HeroSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+    <section className="pt-10 pb-20 bg-gradient-to-br from-slate-50 to-white">
       <div className="container mx-auto px-4">
         {/* Video and Pitch Section */}
         <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
           {/* Video Embed */}
           <div className="relative lg:col-span-2">
             <div className="aspect-video bg-slate-200 rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-full bg-slate-300 flex items-center justify-center">
-                <div className="text-center">
-                  <Play className="w-16 h-16 text-slate-500 mb-4 mx-auto" />
-                  <p className="text-slate-600 font-medium">Video Pitch Placeholder</p>
-                  <p className="text-sm text-slate-500 mt-2">YouTube or MP4 embed goes here</p>
-                </div>
-              </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/MNKRUlD76x0"
+                title="Who am I"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
           
@@ -26,10 +27,10 @@ export default function HeroSection() {
             <Card className="shadow-lg">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
-                  Watch my Pitch Video
+                  Who am I?
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Get to know me in 90 seconds. I share my passion for technology, my journey, and what drives me to create exceptional digital experiences.
+                  Watch this 80-second video. I share my passion for technology, creative thinking, and what drives me to build impactful digital experiences.
                 </p>
                 <Button className="bg-[hsl(var(--portfolio-primary))] hover:bg-[hsl(var(--portfolio-primary))]/90 text-white">
                   <Play className="w-4 h-4 mr-2" />
@@ -38,16 +39,6 @@ export default function HeroSection() {
               </CardContent>
             </Card>
           </div>
-        </div>
-        
-        {/* Introduction */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
-            Hello, I'm Dhanush Gowda S
-          </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Full-Stack Developer & Digital Innovation Specialist
-          </p>
         </div>
         
         {/* About Me and Education */}
@@ -59,22 +50,12 @@ export default function HeroSection() {
                 About Me
               </h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                I'm a passionate full-stack developer with over 5 years of experience creating digital solutions that make a difference. 
-                My journey began with a curiosity about how things work and evolved into a career dedicated to building innovative, 
-                user-centered applications. I thrive on solving complex problems and turning ideas into reality through clean, 
-                efficient code and thoughtful design.
+                Hey! I'm Dhanush. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.
+                I've been involved in everything from analyzing data and building dashboards to managing projects and working with teams across different functions.
+                I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together.
+                I'm creative, practical, and always up for a good challenge. I like to bring energy into the room, share ideas, and keep the work fun without losing focus.
+                Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.
               </p>
-              <div className="flex space-x-4">
-                <Button variant="ghost" size="icon" className="text-[hsl(var(--portfolio-primary))] hover:text-[hsl(var(--portfolio-primary))]/80">
-                  <Linkedin className="w-6 h-6" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-[hsl(var(--portfolio-primary))] hover:text-[hsl(var(--portfolio-primary))]/80">
-                  <Github className="w-6 h-6" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-[hsl(var(--portfolio-primary))] hover:text-[hsl(var(--portfolio-primary))]/80">
-                  <Mail className="w-6 h-6" />
-                </Button>
-              </div>
             </CardContent>
           </Card>
           
