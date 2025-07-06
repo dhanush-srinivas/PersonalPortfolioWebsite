@@ -2,41 +2,60 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import CarolImage from "@/resources/carol.jpg";
+import MichelleImage from "@/resources/michelle.jpeg";
 import AndyImage from "@/resources/andy.jpg";
+import AshleyImage from "@/resources/ashley.jpg";
+import DebopreetaImage from "@/resources/debopreeta.jpeg";
+import SteveImage from "@/resources/steve.jpg";
 
 export default function RecommendationsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const recommendations = [
     {
-      name: "Sarah Chen",
-      title: "Senior Product Manager, TechCorp",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Dhanush consistently delivered exceptional results on our most challenging projects. His technical expertise and collaborative approach made him an invaluable team member.",
+      name: "Carol Marcus-Rehtmeyer",
+      title: "Executive Director at UT Dallas | MBA",
+      image: CarolImage,
+      quote: `I’ve had the pleasure of working with Dhanush Gowda during his time at the university, and I continue to be impressed by his leadership and initiative. Dhanush is someone who not only seeks out opportunities to lead but does so with a rare blend of focus, dedication, and humility. His willingness to step into multiple leadership roles reflects both his ambition and his deep commitment to making a meaningful impact in his community.
+
+Beyond his accomplishments, it’s Dhanush’s kind and collaborative nature that sets him apart. He leads with empathy, inspires trust in his peers, and approaches challenges with resolve and grace. Any team would be fortunate to have him.`,
     },
     {
-      name: "Marcus Thompson",
-      title: "CTO, InnovateLabs",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Working with Dhanush was a game-changer. His ability to architect complex systems while maintaining clean, maintainable code is truly impressive.",
-    },
-    {
-      name: "Dr. Amanda Rodriguez",
-      title: "Research Director, AI Institute",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Dhanush's dedication to excellence and innovative problem-solving approach made our research platform a tremendous success. Highly recommended.",
+      name: "Michelle Rook Jones",
+      title: "Program Director- Innovation and Entrepreneurship, UT Dallas",
+      image: MichelleImage,
+      quote: `There are just some people that you immediately know will make your business and life better, and that's Dhanush. He's a naturally positive person who is highly motivated by action, is the first to volunteer for the smallest to the largest projects, adapts well to uncertainty, desires to contribute, and genuinely stays curious. Dhanush prefers to coordinate multiple, cross-functional resources to align project teams solving problems and designing innovative solutions. His fresh perspective and his clear communication style are a welcome addition to any company. Dhanush is a difference maker. Hire him!`,
     },
     {
       name: "Andy Helgeson",
-      title: "Engineering Director, DataFlow Systems",
+      title: "Assistant Director of the Student Union at UT Dallas",
       image: AndyImage,
-      quote: "Dhanush's ability to solve complex technical challenges while maintaining excellent code quality is remarkable. He consistently delivers beyond expectations.",
+      quote: `Dhanush is a terrific team player who displays all the qualities that one would want from a true leader. He gets the work done promptly and precisely while also creating a fun atmosphere for himself and his peers. He is a great decision-maker, with tremendous work ethic, as well as the fact that he mentors his coworkers in the process of completing tasks. Dhanush is kind, funny, easy to work with, and an extremely hard worker who prioritizes his duties when at work. He is eager to learn and to find new ways to contribute to his team. I would whole-heartedly recommend Dhanush to any employer looking for a high-quality employee who is going to give it their all.`,
     },
     {
-      name: "Jennifer Liu",
-      title: "VP of Engineering, CloudScale",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "I've rarely seen someone with Dhanush's combination of technical depth and leadership skills. He's an asset to any team and drives innovation wherever he goes.",
+      name: "Ashley Shoemake",
+      title: "Assistant Director of the Student Union at UT Dallas",
+      image: AshleyImage,
+      quote: `Dhanush has been a great addition to our team at the Student Union at the University of Texas at Dallas. As a student employee, he worked hard to make sure our facilities operated smoothly, customers were taken care of, and his coworkers had someone they could depend on. Dhanush worked to make sure issues were handled without complaint and worked to the best of his ability to address any concerns. Additionally, Dhanush served as a member of the Student Union Student Leadership Council where he stood out as a leader amongst his peers, going above and beyond to make meaningful contributions to our department. I fully recommend Dhanush for any company and know that he will be a great addition to any workplace he joins.`,
+    },
+    {
+      name: "Debopreeta Bhattacharya",
+      title: "Vice-President, Student Government at UT Dallas",
+      image: DebopreetaImage,
+      quote: `Dhanush was an exceptional senator in UTD Student Government during the 2024-2025 term. As the former vice president, I have had the pleasure of seeing all that he has accomplished through the Graduate and International Affairs Committee. Dhanush, along with the rest of the senators, worked very hard this past term to improve outreach to graduate and international students and helped bolster many great events and initiatives. Through exploring new opportunities, Dhanush has contributed to Student Government's success and is always open to learning and growing. Dhanush has been very diligent in his work and has always been there to lend a helping hand to ensure that projects are seen through to completion. I am confident that he will thrive in the workplace and will be excellent in any role!`,
+    },
+    {
+      name: "Stephen Dietemann",
+      title: "Student Union Coordinator at UT Dallas",
+      image: SteveImage,
+      quote: `I had the pleasure of supervising Dhanush during his time as a Student Manager at the University of Texas at Dallas Student Union. I can confidently say he was one of the most dependable and well-rounded student employees on our team.
+
+Dhanush consistently demonstrated a strong work ethic and a high level of accountability, always taking pride in his responsibilities and following through with excellence. What truly stood out was his leadership and interpersonal skills. He naturally stepped into a managerial role, acting as a mentor to the team and serving as a go-to leader for training and onboarding new student employees. His calm, friendly, and earnest demeanor made him approachable to all, and he continually motivated his peers, helping to create a positive and collaborative team environment.
+
+In addition to his responsibilities as a Student Manager, Dhanush was also a leading member of the Student Union Leadership Council, where he contributed to strategic initiatives for leadership, professional development, policy making, awards and recognition to improve the student employee experience.
+
+Dhanush would be a fantastic addition to any organization, and I highly recommend him for any role that values integrity, leadership, and teamwork.`,
     },
   ];
 
@@ -57,9 +76,9 @@ export default function RecommendationsSection() {
   }, [recommendations.length]);
 
   return (
-    <section id="recommendations" className="py-20 bg-slate-50">
+    <section id="recommendations" className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
+        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-12">
           Recommendations
         </h2>
         <div className="max-w-7xl mx-auto">

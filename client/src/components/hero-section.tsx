@@ -66,7 +66,7 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-96" side="right">
+                  <HoverCardContent className="w-[32rem]" side="right">
                     <div className="flex items-start mb-2">
                       <img src={UTDLogo} alt="UT Dallas" className="w-10 h-10 mr-3 object-contain" />
                       <div>
@@ -78,7 +78,7 @@ export default function HeroSection() {
                       </div>
                     </div>
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
-                    <ul className="space-y-1 text-sm text-slate-600">
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Systems Engineering</span>
@@ -128,7 +128,7 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-96" side="right">
+                  <HoverCardContent className="w-[32rem]" side="right">
                     <div className="flex items-start mb-2">
                       <img src={VTULogo} alt="VTU" className="w-10 h-10 mr-3 object-contain" />
                       <div>
@@ -140,7 +140,7 @@ export default function HeroSection() {
                       </div>
                     </div>
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
-                    <ul className="space-y-1 text-sm text-slate-600">
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Supply Chain Management</span>
@@ -173,8 +173,8 @@ export default function HeroSection() {
           </Card>
 
           {/* About Me */}
-          <Card className="shadow-lg lg:col-span-1 order-2 font-montserrat">
-            <CardContent className="p-8">
+          <Card className="shadow-lg lg:col-span-1 order-2 font-montserrat max-w-xl mx-auto">
+            <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                 About Me
               </h3>
