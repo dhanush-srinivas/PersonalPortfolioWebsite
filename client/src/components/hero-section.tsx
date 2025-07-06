@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+import { Play, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
@@ -45,9 +45,9 @@ export default function HeroSection() {
         </div>
         
         {/* About Me and Education */}
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Education */}
-          <Card className="shadow-lg lg:col-span-2 justify-self-center self-center font-montserrat">
+          <Card className="shadow-lg lg:col-span-1 justify-self-center self-center font-montserrat">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-6">
                 Education
@@ -66,27 +66,51 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-80">
+                  <HoverCardContent className="w-96" side="right">
                     <div className="flex items-start mb-2">
                       <img src={UTDLogo} alt="UT Dallas" className="w-10 h-10 mr-3 object-contain" />
                       <div>
-                        <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
+                        <h4 className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
                           MS in Systems Engineering &amp; Management
                         </h4>
-                        <p className="text-slate-600 font-medium">University of Texas at Dallas</p>
-                        <p className="text-slate-500 text-sm">2023 - 2025</p>
+                        <p className="text-slate-600 font-medium text-lg">University of Texas at Dallas</p>
+                        <p className="text-slate-500 text-base">2023 - 2025</p>
                       </div>
                     </div>
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
-                    <ul className="list-disc list-inside text-sm text-slate-600 space-y-1">
-                      <li>Systems Engineering</li>
-                      <li>Data Analytics</li>
-                      <li>Operations Research</li>
-                      <li>Lean Manufacturing</li>
-                      <li>Project Management (planning, budgeting, scheduling)</li>
-                      <li>Cross-functional team leadership</li>
-                      <li>Stakeholder Communication</li>
-                      <li>SAP</li>
+                    <ul className="space-y-1 text-sm text-slate-600">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Systems Engineering</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Data Analytics</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Operations Research</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Lean Manufacturing</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Project Management (planning, budgeting, scheduling)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Cross-functional team leadership</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Stakeholder Communication</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>SAP</span>
+                      </li>
                     </ul>
                   </HoverCardContent>
                 </HoverCard>
@@ -104,25 +128,43 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-80">
+                  <HoverCardContent className="w-96" side="right">
                     <div className="flex items-start mb-2">
                       <img src={VTULogo} alt="VTU" className="w-10 h-10 mr-3 object-contain" />
                       <div>
-                        <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
+                        <h4 className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
                           BE in Industrial Engineering &amp; Management
                         </h4>
-                        <p className="text-slate-600 font-medium">Visvesvaraya Technological University (VTU)</p>
-                        <p className="text-slate-500 text-sm">2017 - 2021</p>
+                        <p className="text-slate-600 font-medium text-lg">Visvesvaraya Technological University (VTU)</p>
+                        <p className="text-slate-500 text-base">2017 - 2021</p>
                       </div>
                     </div>
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
-                    <ul className="list-disc list-inside text-sm text-slate-600 space-y-1">
-                      <li>Supply Chain Management</li>
-                      <li>Facility Layout and Design</li>
-                      <li>Work Study and Ergonomics</li>
-                      <li>Total Quality Management</li>
-                      <li>CAD/CAM</li>
-                      <li>Production Planning and Control</li>
+                    <ul className="space-y-1 text-sm text-slate-600">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Supply Chain Management</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Facility Layout and Design</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Work Study and Ergonomics</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Total Quality Management</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>CAD/CAM</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <span>Production Planning and Control</span>
+                      </li>
                     </ul>
                   </HoverCardContent>
                 </HoverCard>
@@ -131,12 +173,12 @@ export default function HeroSection() {
           </Card>
 
           {/* About Me */}
-          <Card className="shadow-lg lg:col-span-2 order-2 font-montserrat">
+          <Card className="shadow-lg lg:col-span-1 order-2 font-montserrat">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                 About Me
               </h3>
-              <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-lg font-semibold">
+              <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-base italic font-medium">
                 <p>Hey! I'm Dhanush. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.</p>
                 <p>I've been involved in everything from analyzing data and building dashboards to managing projects and working with teams across different functions. I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together.</p>
                 <p>I'm creative, practical, and always up for a good challenge. I like to bring energy into the room, share ideas, and keep the work fun without losing focus. Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.</p>
