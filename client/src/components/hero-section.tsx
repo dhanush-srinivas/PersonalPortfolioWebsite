@@ -179,9 +179,9 @@ export default function HeroSection() {
                 About Me
               </h3>
               <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-base italic font-medium">
-                <p>Hey! I'm Dhanush. I recently completed my Master's in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity for how things work and how they can work better.</p>
-                <p>I've been involved in everything from analyzing data and building dashboards to managing projects and working with teams across different functions. I enjoy simplifying complex problems and turning scattered data into something useful. I’ve worked with tools like Power BI, SQL, and SAP, but what I really enjoy is the process of collaborating with people and figuring things out together.</p>
-                <p>I'm creative, practical, and always up for a good challenge. I like to bring energy into the room, share ideas, and keep the work fun without losing focus. Whether I’m designing a solution, solving a problem, or just helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.</p>
+                <p>Hey! I'm Dhanush. I recently completed my Master’s in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity about how things work and how they can work better.</p>
+                <p>My journey so far has included building dashboards, identifying market opportunities, planning product roadmaps, managing cross-functional projects, and collaborating with teams to bring ideas to life. I love turning messy data into meaningful insights and simplifying complex problems into practical solutions.</p>
+                <p>I’ve worked with tools like Power BI, SQL, and SAP—but what excites me most is the problem-solving process. Whether I’m designing a solution, tackling a challenge, or helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.</p>
               </div>
             </CardContent>
           </Card>
