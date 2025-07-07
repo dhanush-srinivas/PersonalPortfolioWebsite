@@ -14,18 +14,18 @@ export default function RecommendationsSection() {
 
   const recommendations = [
     {
+      name: "Michelle Rook Jones",
+      title: "Program Director- Innovation and Entrepreneurship, UT Dallas",
+      image: MichelleImage,
+      quote: `There are just some people that you immediately know will make your business and life better, and that's Dhanush. He's a naturally positive person who is highly motivated by action, is the first to volunteer for the smallest to the largest projects, adapts well to uncertainty, desires to contribute, and genuinely stays curious. Dhanush prefers to coordinate multiple, cross-functional resources to align project teams solving problems and designing innovative solutions. His fresh perspective and his clear communication style are a welcome addition to any company. Dhanush is a difference maker. Hire him!`,
+    },
+    {
       name: "Carol Marcus-Rehtmeyer",
       title: "Executive Director at UT Dallas | MBA",
       image: CarolImage,
       quote: `I’ve had the pleasure of working with Dhanush Gowda during his time at the university, and I continue to be impressed by his leadership and initiative. Dhanush is someone who not only seeks out opportunities to lead but does so with a rare blend of focus, dedication, and humility. His willingness to step into multiple leadership roles reflects both his ambition and his deep commitment to making a meaningful impact in his community.
 
 Beyond his accomplishments, it’s Dhanush’s kind and collaborative nature that sets him apart. He leads with empathy, inspires trust in his peers, and approaches challenges with resolve and grace. Any team would be fortunate to have him.`,
-    },
-    {
-      name: "Michelle Rook Jones",
-      title: "Program Director- Innovation and Entrepreneurship, UT Dallas",
-      image: MichelleImage,
-      quote: `There are just some people that you immediately know will make your business and life better, and that's Dhanush. He's a naturally positive person who is highly motivated by action, is the first to volunteer for the smallest to the largest projects, adapts well to uncertainty, desires to contribute, and genuinely stays curious. Dhanush prefers to coordinate multiple, cross-functional resources to align project teams solving problems and designing innovative solutions. His fresh perspective and his clear communication style are a welcome addition to any company. Dhanush is a difference maker. Hire him!`,
     },
     {
       name: "Andy Helgeson",

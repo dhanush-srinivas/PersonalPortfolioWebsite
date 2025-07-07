@@ -15,10 +15,10 @@ export default function Home() {
       <Header />
       <HeroSection />
       <RecommendationsSection />
+      <ProjectsSection />
       <LeadershipSection />
       <AwardsSection />
       <CertificationsSection />
-      <ProjectsSection />
       <SkillsSection />
       <ExperienceSection />
       <Footer />
