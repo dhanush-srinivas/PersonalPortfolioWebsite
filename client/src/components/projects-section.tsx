@@ -2,18 +2,142 @@ import { ExternalLink, Github, Smartphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Analytics Platform",
-      description: "A comprehensive analytics dashboard for e-commerce businesses, featuring real-time data visualization, predictive analytics, and automated reporting capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React", "Node.js", "MongoDB", "D3.js"],
-      links: {
-        demo: "#",
-        github: "#",
-      },
+      title: "System Architecture & Product Strategy for a 3D Printer Leasing Platform",
+      description:
+        "Built a B2B leasing-as-a-service platform for industrial 3D printers, enabling small manufacturers to adopt advanced tech without upfront costs.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: [
+        "Role : Product Manager",
+        "Tools: Figma, Lucidchart, Excel, Python, SQL , Miro, Notion, Google Slides",
+      ],
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>📍Situation:</strong> Industrial 3D printing is
+            revolutionizing manufacturing, yet most small and mid-sized
+            businesses lack the capital and infrastructure to adopt this
+            technology. Recognizing this gap, our team proposed a B2B
+            leasing-as-a-service model for 3D printers that could reduce upfront
+            costs and offer a scalable, maintenance-friendly deployment.
+          </p>
+          <p>
+            <strong>🎯Task:</strong> As the Product Manager, I was responsible
+            for driving the end-to-end product strategy. From identifying market
+            needs and defining product vision to designing the system
+            architecture and pitching the solution to potential investors. The
+            key objectives were to:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Develop a modular, scalable system that supports leasing, printer
+              monitoring, and automated billing.
+            </li>
+            <li>
+              Create a risk-adjusted pricing strategy that could adapt to usage
+              tiers, machine types, and maintenance schedules.
+            </li>
+            <li>
+              Validate business feasibility and adoption likelihood through MVP
+              testing and stakeholder interviews.
+            </li>
+          </ul>
+          <p>
+            <strong>⚙️ Action:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>User & Market Research:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Conducted 10+ interviews with stakeholders including small
+                  manufacturers, logistics managers, and tech leads to
+                  understand pain points in adopting 3D printing.
+                </li>
+                <li>
+                  Identified key drivers: upfront hardware cost, machine
+                  downtime risk, and supply chain inflexibility.
+                </li>
+                <li>
+                  Used findings to develop 3 core user personas (SME owner,
+                  Plant Manager, Procurement Officer).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>System Architecture Design:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Collaborated with technical leads to design a
+                  microservices-based architecture, where leasing, telemetry,
+                  maintenance, and billing were separate yet interlinked
+                  modules.
+                </li>
+                <li>
+                  Designed architecture in Lucidchart, mapping out APIs between
+                  services like Lease Management, Telemetry, Predictive
+                  Maintenance, and Billing engines.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Product Roadmap & MVP Planning:</strong> Used the MoSCoW
+              method to prioritize features for the MVP and created a 6-month
+              roadmap detailing sprints for backend infrastructure, UI
+              prototyping, and testing.
+            </li>
+            <li>
+              <strong>Pricing & Risk Simulation:</strong> Modeled various
+              pricing strategies using Excel and Monte Carlo simulations and
+              developed three-tier pricing with risk buffers for servicing and
+              parts cost.
+            </li>
+            <li>
+              <strong>UI/UX and Frontend Prototyping:</strong> Used Figma to
+              wireframe dashboards for usage tracking, maintenance scheduling,
+              and billing.
+            </li>
+            <li>
+              <strong>Investor Pitch & Feedback Loop:</strong> Created a pitch
+              deck with market sizing, architecture overview, and revenue
+              projections. Presented to UTD alumni startup founders and received
+              strong validation.
+            </li>
+          </ol>
+          <p>
+            <strong>📈 Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Delivered a fully documented architecture and MVP plan that
+              improved integration efficiency by 20%.
+            </li>
+            <li>
+              Increased platform adoption feasibility by 20%, backed by
+              simulated pricing and stakeholder feedback.
+            </li>
+            <li>
+              Received verbal investment interest and validation from business
+              leaders during pitch day.
+            </li>
+            <li>
+              Ranked among the top 3 concepts in our incubator cohort based on
+              scalability and innovation.
+            </li>
+          </ul>
+          <p>
+            <strong>🧠 Skills & Tools Used:</strong> Product Strategy · System
+            Architecture · B2B SaaS · MVP Design · Pricing Models · Simulation
+            Modeling · Stakeholder Interviews · Agile Planning · Figma ·
+            Lucidchart · Notion · SQL · Excel · Python (mock API testing)
+          </p>
+        </div>
+      ),
     },
     {
       title: "EcoTrack Mobile App",
@@ -73,20 +197,40 @@ export default function ProjectsSection() {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex space-x-4">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.links.demo} className="flex items-center">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.links.github} className="flex items-center">
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </a>
-                  </Button>
-                </div>
+                {project.details ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm">Read more</Button>
+                    </DialogTrigger>
+                    <DialogContent className="w-[80vw] h-[80vh] p-0">
+                      <div className="flex flex-col md:flex-row h-full">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="object-cover md:w-1/2 h-40 md:h-full"
+                        />
+                        <div className="p-6 overflow-y-auto md:w-1/2">
+                          {project.details}
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
+                  <div className="flex space-x-4">
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.links.demo} className="flex items-center">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.links.github} className="flex items-center">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
