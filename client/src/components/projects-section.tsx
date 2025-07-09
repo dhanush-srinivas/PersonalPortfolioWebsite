@@ -4,9 +4,24 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import PrinterImage from "@/resources/3DPrinter.jpg";
+import type { ReactNode } from "react";
+
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  role?: string;
+  tools?: string;
+  technologies?: string[];
+  links?: {
+    demo: string;
+    github: string;
+  };
+  details?: ReactNode;
+};
 
 export default function ProjectsSection() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "System Architecture & Product Strategy for a 3D Printer Leasing Platform",
       description:
@@ -195,15 +210,15 @@ export default function ProjectsSection() {
                       {project.role || project.tools ? (
                         <div className="flex flex-col gap-2 mb-6">
                           {project.role && (
-                            <Badge variant="secondary">Role: {project.role}</Badge>
+                            <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
                           )}
                           {project.tools && (
-                            <Badge variant="secondary">Tools: {project.tools}</Badge>
+                            <Badge variant="secondary" className="w-fit">Tools: {project.tools}</Badge>
                           )}
                         </div>
                       ) : (
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {project.technologies.map((tech, techIndex) => (
+                          {project.technologies?.map((tech, techIndex) => (
                             <Badge key={techIndex} variant="secondary">
                               {tech}
                             </Badge>
@@ -214,12 +229,12 @@ export default function ProjectsSection() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="w-[95vw] max-w-2xl h-[95vh] overflow-y-auto p-0">
+                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0">
                   <div className="flex flex-col md:flex-row h-full">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="object-cover md:w-1/3 h-32 md:h-auto"
+                      className="object-cover md:w-1/4 h-32 md:h-auto"
                     />
                     <div className="p-6 overflow-y-auto md:w-2/3">
                       {project.details}
@@ -245,15 +260,15 @@ export default function ProjectsSection() {
                   {project.role || project.tools ? (
                     <div className="flex flex-col gap-2 mb-6">
                       {project.role && (
-                        <Badge variant="secondary">Role: {project.role}</Badge>
+                        <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
                       )}
                       {project.tools && (
-                        <Badge variant="secondary">Tools: {project.tools}</Badge>
+                        <Badge variant="secondary" className="w-fit">Tools: {project.tools}</Badge>
                       )}
                     </div>
                   ) : (
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {project.technologies.map((tech, techIndex) => (
+                      {project.technologies?.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary">
                           {tech}
                         </Badge>
@@ -262,13 +277,13 @@ export default function ProjectsSection() {
                   )}
                   <div className="flex space-x-4">
                     <Button variant="outline" size="sm" asChild>
-                      <a href={project.links.demo} className="flex items-center">
+                      <a href={project.links?.demo} className="flex items-center">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo
                       </a>
                     </Button>
                     <Button variant="outline" size="sm" asChild>
-                      <a href={project.links.github} className="flex items-center">
+                      <a href={project.links?.github} className="flex items-center">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </a>
