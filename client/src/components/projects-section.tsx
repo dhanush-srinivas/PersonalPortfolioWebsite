@@ -30,7 +30,7 @@ export default function ProjectsSection() {
     {
       title: "System Architecture & Product Strategy for a 3D Printer Leasing Platform",
       description:
-        "Built a B2B leasing-as-a-service platform for industrial 3D printers, enabling small manufacturers to adopt advanced tech without upfront costs.",
+        "Built a B2B leasing-as-a-service platform for industrial 3D printers, enabling small manufacturers to adopt advanced tech without upfront costs. Designed the full product strategy, system architecture, and pricing model, earning investor interest and top incubator recognition.",
       image: PrinterImage,
       role: "Product Manager",
       tools:
@@ -232,7 +232,7 @@ export default function ProjectsSection() {
     {
       title: "Inventory Optimization & Forecasting for an Urban Apparel Retailer",
       description:
-        "Implemented a data-driven inventory planning system to reduce stockouts and carrying costs for a Bangalore-based retailer.",
+        "Implemented a data-driven inventory optimization system for a Bangalore-based apparel retailer to reduce stockouts and carrying costs. Used forecasting models and supplier collaboration to boost availability of high-demand SKUs and improve procurement efficiency.",
       image: ClothingImage,
       role: "Supply Chain Product Analyst",
       tools:
@@ -440,9 +440,9 @@ export default function ProjectsSection() {
       title:
         "Market Research & Strategic Engagement Framework – National Research Group",
       description:
-        "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends.",
+        "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends. Delivered insights that improved cross-department strategic alignment by 25% and shaped future policy engagement strategies.",
       image: NRGImage,
-      role: "Product & Market Research Lead (Externship)",
+      role: "Market Research Lead (Externship)",
       tools:
         "Excel, Qualtrics, PowerPoint, Google Trends, Miro, Figma (infographics), LinkedIn Sales Navigator",
       details: (
@@ -618,20 +618,20 @@ export default function ProjectsSection() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-32 object-cover"
+                      className="w-full h-40 object-cover"
                     />
                     <CardContent className="p-4">
-                      <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                      <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-slate-600 mb-3">{project.description}</p>
+                      <p className="text-sm text-slate-600 mb-3">{project.description}</p>
                       {project.role || project.tools ? (
                         <div className="flex flex-col gap-2 mb-3">
                           {project.role && (
-                            <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
+                            <Badge variant="secondary" className="w-fit text-xs">Role: {project.role}</Badge>
                           )}
                           {project.tools && (
-                            <Badge variant="secondary" className="w-fit">Tools: {project.tools}</Badge>
+                            <Badge variant="secondary" className="w-fit text-xs">Tools: {project.tools}</Badge>
                           )}
                         </div>
                       ) : (
@@ -649,10 +649,10 @@ export default function ProjectsSection() {
                 </DialogTrigger>
                 <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0 flex flex-col">
                   <div
-                    className="w-full h-32 bg-cover bg-center flex items-end"
+                    className="w-full h-40 bg-cover bg-center flex items-end"
                     style={{ backgroundImage: `url(${project.image})` }}
                   >
-                    <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] bg-white/80 w-full text-center py-2">
+                    <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] bg-white/80 w-full text-center py-2">
                       {project.title}
                     </h3>
                   </div>
@@ -669,20 +669,20 @@ export default function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-32 object-cover"
+                  className="w-full h-40 object-cover"
                 />
                 <CardContent className="p-4">
-                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                      <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-slate-600 mb-3">{project.description}</p>
+                      <p className="text-sm text-slate-600 mb-3">{project.description}</p>
                   {project.role || project.tools ? (
                     <div className="flex flex-col gap-2 mb-3">
                       {project.role && (
-                        <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
+                            <Badge variant="secondary" className="w-fit text-xs">Role: {project.role}</Badge>
                       )}
                       {project.tools && (
-                        <Badge variant="secondary" className="w-fit">Tools: {project.tools}</Badge>
+                            <Badge variant="secondary" className="w-fit text-xs">Tools: {project.tools}</Badge>
                       )}
                     </div>
                   ) : (
