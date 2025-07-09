@@ -64,23 +64,19 @@ export default function LeadershipSection() {
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Leadership Experience
         </h2>
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leadership.map((item, index) => (
-            <div
-              key={index}
-              className={`md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}
-            >
-              <Card className="bg-slate-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-6">
-                    <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
-                      <item.icon className="text-white w-8 h-8" />
-                    </div>
+            <Card key={index} className="bg-slate-50 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <item.icon className="text-white w-7 h-7" />
+                  </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                    <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 mb-4">{item.description}</p>
+                    <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {item.badges.map((badge, badgeIndex) => (
                         <Badge key={badgeIndex} variant="secondary" className="text-xs">
@@ -90,9 +86,8 @@ export default function LeadershipSection() {
                     </div>
                   </div>
                 </div>
-                </CardContent>
-              </Card>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
