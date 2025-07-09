@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import PrinterImage from "@/resources/new3DPrinter.jpg";
+import NRGImage from "@/resources/NRG.jpg";
+import ClothingImage from "@/resources/Clothing.jpg";
 import type { ReactNode } from "react";
 
 type Project = {
@@ -158,8 +160,7 @@ export default function ProjectsSection() {
         "Market Research & Strategic Engagement Framework – National Research Group",
       description:
         "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends.",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: NRGImage,
       role: "Product & Market Research Lead (Externship)",
       tools:
         "Excel, Qualtrics, PowerPoint, Google Trends, Miro, Figma (infographics), LinkedIn Sales Navigator",
@@ -311,14 +312,141 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title: "AI Customer Service Bot",
-      description: "An intelligent chatbot system that uses natural language processing to provide automated customer support with 95% accuracy rate.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Python", "TensorFlow", "Flask", "NLP"],
-      links: {
-        demo: "#",
-        github: "#",
-      },
+      title: "Inventory Optimization & Forecasting for an Urban Apparel Retailer",
+      description:
+        "Implemented a data-driven inventory planning system to reduce stockouts and carrying costs for a Bangalore-based retailer.",
+      image: ClothingImage,
+      role: "Supply Chain Product Analyst",
+      tools:
+        "Excel, Python, Power BI, Google Sheets, Retail Analytics Frameworks",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>📍 Situation:</strong> A local apparel retailer in Bangalore
+            was struggling with frequent stockouts of fast-moving items and
+            overstocking of low-demand inventory, leading to increased carrying
+            costs, missed sales opportunities, and a strained relationship with
+            suppliers.
+          </p>
+          <p>
+            <strong>🎯 Task:</strong> My role was to analyze existing inventory
+            trends, implement a data-driven inventory planning system, and
+            collaborate with suppliers to improve lead time predictability —
+            with the primary objectives to:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Reduce stockouts of high-demand SKUs</li>
+            <li>Lower inventory holding costs</li>
+            <li>
+              Enable the retailer to transition from reactive restocking to
+              proactive demand planning
+            </li>
+          </ul>
+          <p>
+            <strong>⚙️ Action:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>Inventory Segmentation & Data Audit:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Conducted a 12-month analysis of historical sales, returns,
+                  and delivery logs using Excel and Google Sheets.
+                </li>
+                <li>
+                  Applied ABC classification to categorize SKUs based on
+                  revenue contribution and velocity.
+                </li>
+                <li>
+                  Identified that 70% of revenue came from just 20% of SKUs,
+                  which were inconsistently replenished due to supplier
+                  lead-time variability.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Demand Forecasting & Stock Replenishment Modeling:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Implemented time-series forecasting models (moving average and
+                  exponential smoothing) in Excel to predict demand for key
+                  SKUs.
+                </li>
+                <li>
+                  Designed a reorder point model factoring in lead time, safety
+                  stock, and average daily sales, using Python scripts for
+                  simulation runs.
+                </li>
+                <li>
+                  Used inventory turnover ratios and historical service levels
+                  to adjust stock levels dynamically by product type.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Supplier Collaboration & Lead Time Optimization:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Met with local suppliers to share reorder schedules and
+                  negotiated minimum order quantities (MOQs) and improved
+                  delivery cycle consistency.
+                </li>
+                <li>
+                  Integrated a lead time buffer strategy for high-risk SKUs and
+                  flagged inconsistent vendors in the reporting dashboard.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Visualization & Implementation:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Created an inventory control dashboard using Power BI, helping
+                  store managers visualize SKU status (stockouts, overstock,
+                  reorder) and trends across product lines (e.g., formalwear,
+                  casualwear, seasonal).
+                </li>
+                <li>
+                  Designed a simple weekly reporting system that alerted the
+                  procurement team on low-stock items and flagged forecast
+                  deviations over 10%.
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            <strong>📈 Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Reduced stockouts by 20%, especially for high-frequency fashion
+              SKUs, improving customer satisfaction and walk-in conversion
+              rates.
+            </li>
+            <li>
+              Achieved a 15% reduction in inventory carrying costs by trimming
+              overstock and improving procurement precision.
+            </li>
+            <li>
+              Improved supplier delivery reliability by aligning purchase
+              frequency with predicted demand, reducing last-minute order rushes
+              by 40%.
+            </li>
+            <li>
+              Retailer adopted the solution as part of their monthly store
+              planning cadence, with staff trained to maintain and update the
+              models post-engagement.
+            </li>
+          </ul>
+          <p>
+            <strong>🧠 Skills & Tools Used:</strong> Inventory Optimization ·
+            Demand Forecasting · ABC Classification · Stock Replenishment Models
+            · Supplier Relationship Management · Python · Excel (Solver, Forecast
+            Sheet) · Power BI · Retail Analytics · KPI Tracking · Visual
+            Dashboards · Stakeholder Communication
+          </p>
+        </div>
+      ),
     },
     {
       title: "Blockchain Supply Chain",
