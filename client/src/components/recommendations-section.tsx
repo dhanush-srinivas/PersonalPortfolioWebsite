@@ -1,6 +1,11 @@
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 import { useState, useEffect, useRef } from "react";
 import CarolImage from "@/resources/carol.jpg";
 import MichelleImage from "@/resources/michelle.jpeg";
@@ -133,48 +138,59 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
               >
                 {recommendations.map((rec, index) => (
                   <div key={index} className="w-[50vw] flex-shrink-0 mx-4">
-                    <Card
-                      className={`shadow-lg transition-all duration-300 ${
-                        index === currentIndex
-                          ? 'scale-105 shadow-xl'
-                          : 'scale-95 opacity-60'
-                      } ${rec.name === 'Stephen Dietemann' ? 'w-[40vw] mx-auto' : ''}`}
-                    >
-                      <CardContent className={`${
-                        rec.name === 'Stephen Dietemann' ? 'p-4' : 'p-8'
-                      }`}
-                      >
-                        <div className="flex items-center mb-6">
-                          <img
-                            src={rec.image}
-                            alt={`${rec.name} headshot`}
-                            className="w-16 h-16 rounded-full mr-4 object-cover"
-                          />
-                          <div>
-                            <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
-                              {rec.name}
-                            </h4>
-                            <p className="text-slate-600 text-sm">
-                              {rec.title}
-                            </p>
-                          </div>
-                        </div>
-                        <p
-                          className={`text-slate-600 italic mb-4 text-center ${
-                            rec.name === 'Stephen Dietemann'
-                              ? 'text-[0.6rem]'
-                              : 'text-xs md:text-sm'
-                          }`}
+                    <Tooltip delayDuration={0}>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="https://www.linkedin.com/in/dhanushsrinivas/details/recommendations/?detailScreenTabIndex=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          "{rec.quote}"
-                        </p>
-                        <div className="flex justify-center text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-current" />
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
+                          <Card
+                            className={`shadow-lg transition-all duration-300 ${
+                              index === currentIndex
+                                ? 'scale-105 shadow-xl'
+                                : 'scale-95 opacity-60'
+                            } ${rec.name === 'Stephen Dietemann' ? 'w-[40vw] mx-auto' : ''}`}
+                          >
+                            <CardContent className={`${
+                              rec.name === 'Stephen Dietemann' ? 'p-4' : 'p-8'
+                            }`}
+                            >
+                              <div className="flex items-center mb-6">
+                                <img
+                                  src={rec.image}
+                                  alt={`${rec.name} headshot`}
+                                  className="w-16 h-16 rounded-full mr-4 object-cover"
+                                />
+                                <div>
+                                  <h4 className="font-semibold text-[hsl(var(--portfolio-secondary))]">
+                                    {rec.name}
+                                  </h4>
+                                  <p className="text-slate-600 text-sm">
+                                    {rec.title}
+                                  </p>
+                                </div>
+                              </div>
+                              <p
+                                className={`text-slate-600 italic mb-4 text-center ${
+                                  rec.name === 'Stephen Dietemann'
+                                    ? 'text-[0.6rem]'
+                                    : 'text-xs md:text-sm'
+                                }`}
+                              >
+                                "{rec.quote}"
+                              </p>
+                              <div className="flex justify-center text-yellow-400">
+                                {[...Array(5)].map((_, i) => (
+                                  <Star key={i} className="w-4 h-4 fill-current" />
+                                ))}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent side="top">Click to see this on linkedin</TooltipContent>
+                    </Tooltip>
                   </div>
                 ))}
               </div>
@@ -198,5 +214,4 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
         </div>
       </div>
     </section>
-  );
-}
+  );}
