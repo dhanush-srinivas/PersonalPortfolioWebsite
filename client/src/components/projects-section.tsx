@@ -159,130 +159,59 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title:
-        "Market Research & Strategic Engagement Framework – National Research Group",
+      title: "AquaFlex (Product Innovation and GTM Strategy for Smart Water Bottles)",
       description:
-        "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends.",
-      image: NRGImage,
-      role: "Product & Market Research Lead (Externship)",
+        "Led product and GTM strategy for AquaFlex, a smart water bottle with hydration alerts and UV self-cleaning. Built feature roadmap, market sizing, and launch plan targeting health-conscious, tech-savvy users.",
+      image: BottleImage,
+      role: "Product Manager",
       tools:
-        "Excel, Qualtrics, PowerPoint, Google Trends, Miro, Figma (infographics), LinkedIn Sales Navigator",
+        "Qualtrics, Excel, Canva, Google Trends, SWOT & Persona Frameworks, TAM-SAM-SOM Modeling, Figma, Google Slides",
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> The National Research Group (NRG)
-            sought to understand how community-focused policies are shaped and
-            influenced in real-world decision-making. With shifting public
-            narratives and increased focus on social impact, there was a
-            critical need to map the policy influence landscape and identify key
-            voices shaping perception and adoption.
+            <strong>📍 Situation:</strong> In an age of health awareness and sustainable living, hydration remains a poorly addressed problem despite being critical to wellness. Our team identified a growing consumer need for a tech-enabled, eco-friendly hydration solution that could integrate seamlessly into modern lifestyles.
           </p>
           <p>
-            <strong>🎯 Task:</strong> As an extern and team lead, I was
-            responsible for leading a strategic market research initiative that
-            analyzed the influence ecosystem around policy-driven community
-            initiatives. My objectives were to:
+            <strong>🎯 Task:</strong> As the Product Manager of a seven-member cross-functional team, my goal was to lead the conceptualization, feature design, and market strategy for AquaFlex, a smart water bottle that blends technology, health monitoring, and sustainability.
           </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>
-              Identify and profile key policy influencers using both qualitative
-              and quantitative research.
-            </li>
-            <li>
-              Analyze content trends, community sentiment, and engagement
-              patterns to recommend targeted outreach strategies.
-            </li>
-            <li>
-              Translate research findings into actionable insights for senior
-              stakeholders to inform product-aligned policy engagement.
-            </li>
-          </ul>
           <p>
-            <strong>⚙️ Action</strong>
+            <strong>⚙️ Action:</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
-              <strong>Research Strategy Design & Team Management:</strong>
+              <strong>User Research &amp; Market Sizing:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Led a team of 4 analysts, delegating research streams (quant,
-                  qual, and competitive) and synchronizing weekly check-ins via
-                  agile boards.
-                </li>
-                <li>
-                  Defined key research pillars: policy influence mapping, trend
-                  forecasting, community sentiment, and strategic alignment.
-                </li>
+                <li>Launched consumer surveys targeting 18–35-year-old health-conscious, tech-savvy adults to identify pain points around hydration and portability.</li>
+                <li>Estimated a TAM of 76M U.S. users with an addressable market of 38M based on tech-health overlap.</li>
+                <li>Defined six primary user personas including gym-goers, corporate wellness users, and eco-conscious families.</li>
               </ul>
             </li>
             <li>
-              <strong>Qualitative & Quantitative Research Execution:</strong>
+              <strong>Product Strategy &amp; Feature Roadmap:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Used LinkedIn Sales Navigator, government databases, and
-                  academic sources to shortlist and profile 15 key policy
-                  influencers, evaluating their reach, affiliations, and public
-                  stances.
-                </li>
-                <li>
-                  Conducted semi-structured interviews and scraped public
-                  statements, social media activity, and publications for
-                  sentiment analysis.
-                </li>
-                <li>
-                  Used NVivo to code qualitative data and surface common themes
-                  around community equity, economic impact, and regional focus.
-                </li>
+                <li>Developed core differentiators like smart hydration reminders, UV self-cleaning, infuser compatibility, temperature control, and ruggedized design.</li>
+                <li>Built a comparative feature matrix against leading competitors to identify clear competitive gaps.</li>
               </ul>
             </li>
             <li>
-              <strong>Trend & Market Analysis:</strong>
+              <strong>Competitive Analysis &amp; Positioning:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Leveraged Google Trends and policy reports to forecast shifts
-                  in narrative interest and influence timing.
-                </li>
-                <li>
-                  Created an engagement matrix ranking influencers by advocacy
-                  strength, alignment potential, and responsiveness.
-                </li>
-                <li>
-                  Identified underserved regional segments with high policy need
-                  but low current engagement, suggesting product strategy
-                  expansion points.
-                </li>
+                <li>Mapped relative product advantage by scoring each feature on innovation, eco-friendliness, usability, and tech depth.</li>
+                <li>Positioned AquaFlex as the “Apple Watch of water bottles” — a personalized, interactive hydration device.</li>
               </ul>
             </li>
             <li>
-              <strong>Product/Strategy Alignment:</strong>
+              <strong>Marketing, Pricing, and GTM Strategy:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Created personas and journey maps representing key policy
-                  influencers and their typical interaction with research data.
-                </li>
-                <li>
-                  Recommended a phased engagement strategy aligned with product
-                  planning cycles (awareness → influence → feedback loop).
-                </li>
-                <li>
-                  Developed a dashboard prototype in Excel to track engagement
-                  metrics over time (reach, resonance, and policy impact score).
-                </li>
+                <li>Developed a three-tiered distribution plan spanning D2C, Amazon, and retail health stores.</li>
+                <li>Set premium pricing using value-based logic and crafted a launch campaign leveraging TikTok influencers and Instagram ads.</li>
               </ul>
             </li>
             <li>
-              <strong>Stakeholder Presentation & Buy-In:</strong>
+              <strong>Financial Modeling &amp; Risk Assessment:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Presented findings and strategy recommendations to senior
-                  leadership using data-backed visualizations and influencer
-                  heatmaps.
-                </li>
-                <li>
-                  Linked research directly to product strategy by illustrating
-                  how improved policy alignment could accelerate adoption and
-                  improve community trust in pilot programs.
-                </li>
+                <li>Modeled cost structure by component and forecasted first-year revenue of $750K across two SKUs.</li>
+                <li>Outlined risk mitigation strategies for market competition, IP infringement, and consumer adoption dips.</li>
               </ul>
             </li>
           </ol>
@@ -290,26 +219,12 @@ export default function ProjectsSection() {
             <strong>📈 Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>
-              Enabled 25% increase in strategic alignment across departments by
-              identifying the most impactful voices for future collaboration.
-            </li>
-            <li>
-              Enhanced decision-making accuracy by improving understanding of
-              external policy levers and community pulse.
-            </li>
-            <li>
-              Research outputs were adopted into the organization's planning
-              framework and later used as a baseline for policy engagement
-              roadmaps.
-            </li>
+            <li>Developed a complete end-to-end product and go-to-market strategy integrating consumer insight, sustainability, health tech, and digital innovation.</li>
+            <li>Created a market-ready investment pitch deck validated by course faculty and alumni entrepreneurs.</li>
+            <li>Received top project recognition for strategic clarity, product innovation, and execution depth.</li>
           </ul>
           <p>
-            <strong>🧠 Skills & Tools Used:</strong> Market Research · Strategic
-            Analysis · Qualitative Coding (NVivo) · Persona Development · Policy
-            Mapping · Influencer Profiling · Google Trends · Competitive
-            Intelligence · Stakeholder Presentation · Community Engagement
-            Strategy · Excel Dashboards · Team Leadership
+            <strong>🧠 Skills &amp; Tools Used:</strong> Product Strategy · Market Research · TAM/SAM/SOM Estimation · Competitive Benchmarking · Pricing Models · Consumer Persona Design · Feature Prioritization · GTM Planning · Financial Forecasting · Risk Assessment · Canva · Figma · Excel · Qualtrics · Presentation Design
           </p>
         </div>
       ),
@@ -522,59 +437,130 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title: "AquaFlex (Product Innovation and GTM Strategy for Smart Water Bottles)",
+      title:
+        "Market Research & Strategic Engagement Framework – National Research Group",
       description:
-        "Led product and GTM strategy for AquaFlex, a smart water bottle with hydration alerts and UV self-cleaning. Built feature roadmap, market sizing, and launch plan targeting health-conscious, tech-savvy users.",
-      image: BottleImage,
-      role: "Product Manager",
+        "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends.",
+      image: NRGImage,
+      role: "Product & Market Research Lead (Externship)",
       tools:
-        "Qualtrics, Excel, Canva, Google Trends, SWOT & Persona Frameworks, TAM-SAM-SOM Modeling, Figma, Google Slides",
+        "Excel, Qualtrics, PowerPoint, Google Trends, Miro, Figma (infographics), LinkedIn Sales Navigator",
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> In an age of health awareness and sustainable living, hydration remains a poorly addressed problem despite being critical to wellness. Our team identified a growing consumer need for a tech-enabled, eco-friendly hydration solution that could integrate seamlessly into modern lifestyles.
+            <strong>📍 Situation:</strong> The National Research Group (NRG)
+            sought to understand how community-focused policies are shaped and
+            influenced in real-world decision-making. With shifting public
+            narratives and increased focus on social impact, there was a
+            critical need to map the policy influence landscape and identify key
+            voices shaping perception and adoption.
           </p>
           <p>
-            <strong>🎯 Task:</strong> As the Product Manager of a seven-member cross-functional team, my goal was to lead the conceptualization, feature design, and market strategy for AquaFlex, a smart water bottle that blends technology, health monitoring, and sustainability.
+            <strong>🎯 Task:</strong> As an extern and team lead, I was
+            responsible for leading a strategic market research initiative that
+            analyzed the influence ecosystem around policy-driven community
+            initiatives. My objectives were to:
           </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Identify and profile key policy influencers using both qualitative
+              and quantitative research.
+            </li>
+            <li>
+              Analyze content trends, community sentiment, and engagement
+              patterns to recommend targeted outreach strategies.
+            </li>
+            <li>
+              Translate research findings into actionable insights for senior
+              stakeholders to inform product-aligned policy engagement.
+            </li>
+          </ul>
           <p>
-            <strong>⚙️ Action:</strong>
+            <strong>⚙️ Action</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
-              <strong>User Research &amp; Market Sizing:</strong>
+              <strong>Research Strategy Design & Team Management:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Launched consumer surveys targeting 18–35-year-old health-conscious, tech-savvy adults to identify pain points around hydration and portability.</li>
-                <li>Estimated a TAM of 76M U.S. users with an addressable market of 38M based on tech-health overlap.</li>
-                <li>Defined six primary user personas including gym-goers, corporate wellness users, and eco-conscious families.</li>
+                <li>
+                  Led a team of 4 analysts, delegating research streams (quant,
+                  qual, and competitive) and synchronizing weekly check-ins via
+                  agile boards.
+                </li>
+                <li>
+                  Defined key research pillars: policy influence mapping, trend
+                  forecasting, community sentiment, and strategic alignment.
+                </li>
               </ul>
             </li>
             <li>
-              <strong>Product Strategy &amp; Feature Roadmap:</strong>
+              <strong>Qualitative & Quantitative Research Execution:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Developed core differentiators like smart hydration reminders, UV self-cleaning, infuser compatibility, temperature control, and ruggedized design.</li>
-                <li>Built a comparative feature matrix against leading competitors to identify clear competitive gaps.</li>
+                <li>
+                  Used LinkedIn Sales Navigator, government databases, and
+                  academic sources to shortlist and profile 15 key policy
+                  influencers, evaluating their reach, affiliations, and public
+                  stances.
+                </li>
+                <li>
+                  Conducted semi-structured interviews and scraped public
+                  statements, social media activity, and publications for
+                  sentiment analysis.
+                </li>
+                <li>
+                  Used NVivo to code qualitative data and surface common themes
+                  around community equity, economic impact, and regional focus.
+                </li>
               </ul>
             </li>
             <li>
-              <strong>Competitive Analysis &amp; Positioning:</strong>
+              <strong>Trend & Market Analysis:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Mapped relative product advantage by scoring each feature on innovation, eco-friendliness, usability, and tech depth.</li>
-                <li>Positioned AquaFlex as the “Apple Watch of water bottles” — a personalized, interactive hydration device.</li>
+                <li>
+                  Leveraged Google Trends and policy reports to forecast shifts
+                  in narrative interest and influence timing.
+                </li>
+                <li>
+                  Created an engagement matrix ranking influencers by advocacy
+                  strength, alignment potential, and responsiveness.
+                </li>
+                <li>
+                  Identified underserved regional segments with high policy need
+                  but low current engagement, suggesting product strategy
+                  expansion points.
+                </li>
               </ul>
             </li>
             <li>
-              <strong>Marketing, Pricing, and GTM Strategy:</strong>
+              <strong>Product/Strategy Alignment:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Developed a three-tiered distribution plan spanning D2C, Amazon, and retail health stores.</li>
-                <li>Set premium pricing using value-based logic and crafted a launch campaign leveraging TikTok influencers and Instagram ads.</li>
+                <li>
+                  Created personas and journey maps representing key policy
+                  influencers and their typical interaction with research data.
+                </li>
+                <li>
+                  Recommended a phased engagement strategy aligned with product
+                  planning cycles (awareness → influence → feedback loop).
+                </li>
+                <li>
+                  Developed a dashboard prototype in Excel to track engagement
+                  metrics over time (reach, resonance, and policy impact score).
+                </li>
               </ul>
             </li>
             <li>
-              <strong>Financial Modeling &amp; Risk Assessment:</strong>
+              <strong>Stakeholder Presentation & Buy-In:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Modeled cost structure by component and forecasted first-year revenue of $750K across two SKUs.</li>
-                <li>Outlined risk mitigation strategies for market competition, IP infringement, and consumer adoption dips.</li>
+                <li>
+                  Presented findings and strategy recommendations to senior
+                  leadership using data-backed visualizations and influencer
+                  heatmaps.
+                </li>
+                <li>
+                  Linked research directly to product strategy by illustrating
+                  how improved policy alignment could accelerate adoption and
+                  improve community trust in pilot programs.
+                </li>
               </ul>
             </li>
           </ol>
@@ -582,12 +568,26 @@ export default function ProjectsSection() {
             <strong>📈 Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Developed a complete end-to-end product and go-to-market strategy integrating consumer insight, sustainability, health tech, and digital innovation.</li>
-            <li>Created a market-ready investment pitch deck validated by course faculty and alumni entrepreneurs.</li>
-            <li>Received top project recognition for strategic clarity, product innovation, and execution depth.</li>
+            <li>
+              Enabled 25% increase in strategic alignment across departments by
+              identifying the most impactful voices for future collaboration.
+            </li>
+            <li>
+              Enhanced decision-making accuracy by improving understanding of
+              external policy levers and community pulse.
+            </li>
+            <li>
+              Research outputs were adopted into the organization's planning
+              framework and later used as a baseline for policy engagement
+              roadmaps.
+            </li>
           </ul>
           <p>
-            <strong>🧠 Skills &amp; Tools Used:</strong> Product Strategy · Market Research · TAM/SAM/SOM Estimation · Competitive Benchmarking · Pricing Models · Consumer Persona Design · Feature Prioritization · GTM Planning · Financial Forecasting · Risk Assessment · Canva · Figma · Excel · Qualtrics · Presentation Design
+            <strong>🧠 Skills & Tools Used:</strong> Market Research · Strategic
+            Analysis · Qualitative Coding (NVivo) · Persona Development · Policy
+            Mapping · Influencer Profiling · Google Trends · Competitive
+            Intelligence · Stakeholder Presentation · Community Engagement
+            Strategy · Excel Dashboards · Team Leadership
           </p>
         </div>
       ),
@@ -618,15 +618,15 @@ export default function ProjectsSection() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-32 object-cover"
                     />
-                    <CardContent className="p-8">
-                      <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4">
+                    <CardContent className="p-4">
+                      <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-slate-600 mb-6">{project.description}</p>
+                      <p className="text-slate-600 mb-3">{project.description}</p>
                       {project.role || project.tools ? (
-                        <div className="flex flex-col gap-2 mb-6">
+                        <div className="flex flex-col gap-2 mb-3">
                           {project.role && (
                             <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
                           )}
@@ -635,7 +635,7 @@ export default function ProjectsSection() {
                           )}
                         </div>
                       ) : (
-                        <div className="flex flex-wrap gap-2 mb-6">
+                        <div className="flex flex-wrap gap-2 mb-3">
                           {project.technologies?.map((tech, techIndex) => (
                             <Badge key={techIndex} variant="secondary">
                               {tech}
@@ -649,7 +649,7 @@ export default function ProjectsSection() {
                 </DialogTrigger>
                 <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0 flex flex-col">
                   <div
-                    className="w-full h-48 bg-cover bg-center flex items-end"
+                    className="w-full h-32 bg-cover bg-center flex items-end"
                     style={{ backgroundImage: `url(${project.image})` }}
                   >
                     <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] bg-white/80 w-full text-center py-2">
@@ -669,15 +669,15 @@ export default function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-32 object-cover"
                 />
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4">
+                <CardContent className="p-4">
+                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-slate-600 mb-6">{project.description}</p>
+                  <p className="text-slate-600 mb-3">{project.description}</p>
                   {project.role || project.tools ? (
-                    <div className="flex flex-col gap-2 mb-6">
+                    <div className="flex flex-col gap-2 mb-3">
                       {project.role && (
                         <Badge variant="secondary" className="w-fit">Role: {project.role}</Badge>
                       )}
@@ -686,7 +686,7 @@ export default function ProjectsSection() {
                       )}
                     </div>
                   ) : (
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
                       {project.technologies?.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary">
                           {tech}
