@@ -20,15 +20,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import UTDLogo from "@/resources/UTD.png";
 import VTULogo from "@/resources/VTU.png";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="pt-10 pb-20 bg-gradient-to-br from-slate-50 to-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="pt-10 pb-20 bg-gradient-to-br from-slate-50 to-white"
+    >
       <div className="container mx-auto px-4">
         {/* Video and Pitch Section */}
         <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
           {/* Video Embed */}
-          <div className="relative lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative lg:col-span-2"
+          >
             <div className="aspect-video bg-slate-200 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-[hsl(var(--portfolio-primary))]/50">
               <iframe
                 className="w-full h-full"
@@ -39,12 +50,17 @@ export default function HeroSection() {
                 allowFullScreen
               ></iframe>
             </div>
-          </div>
-          
+          </motion.div>
+
           {/* Watch Pitch CTA */}
-          <div className="space-y-6 lg:col-span-1">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6 lg:col-span-1"
+          >
             <Card className="shadow-lg font-montserrat">
-              <CardContent className="p-8" style={{ fontFamily: "Georgia, serif" }}>
+              <CardContent className="p-8 font-montserrat">
                 <h2 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                   Who am I?
                 </h2>
@@ -57,7 +73,7 @@ export default function HeroSection() {
                 </Button>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
         
         {/* About Me and Education */}
@@ -207,6 +223,6 @@ export default function HeroSection() {
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -614,7 +614,7 @@ export default function ProjectsSection() {
             project.details ? (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1 hover:scale-105 cursor-pointer">
+                  <Card className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -664,7 +664,7 @@ export default function ProjectsSection() {
             ) : (
               <Card
                 key={index}
-                className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1 hover:scale-105"
+                className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <img
                   src={project.image}
