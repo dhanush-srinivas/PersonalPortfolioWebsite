@@ -1,8 +1,9 @@
-import { ExternalLink, Github, Smartphone } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import PrinterImage from "@/resources/3DPrinter.jpg";
 
 export default function ProjectsSection() {
   const projects = [
@@ -10,8 +11,7 @@ export default function ProjectsSection() {
       title: "System Architecture & Product Strategy for a 3D Printer Leasing Platform",
       description:
         "Built a B2B leasing-as-a-service platform for industrial 3D printers, enabling small manufacturers to adopt advanced tech without upfront costs.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: PrinterImage,
       technologies: [
         "Role : Product Manager",
         "Tools: Figma, Lucidchart, Excel, Python, SQL , Miro, Notion, Google Slides",
@@ -178,44 +178,67 @@ export default function ProjectsSection() {
           Projects
         </h2>
         <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 mb-6">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                {project.details ? (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" size="sm">Read more</Button>
-                    </DialogTrigger>
-                    <DialogContent className="w-[80vw] h-[80vh] p-0">
-                      <div className="flex flex-col md:flex-row h-full">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="object-cover md:w-1/2 h-40 md:h-full"
-                        />
-                        <div className="p-6 overflow-y-auto md:w-1/2">
-                          {project.details}
-                        </div>
+          {projects.map((project, index) =>
+            project.details ? (
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1 hover:scale-105 cursor-pointer">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <CardContent className="p-8">
+                      <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4">
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-600 mb-6">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge key={techIndex} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ))}
                       </div>
-                    </DialogContent>
-                  </Dialog>
-                ) : (
+                      <Button variant="outline" size="sm">Read more</Button>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] h-[95vh] p-0">
+                  <div className="flex flex-col md:flex-row h-full">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover md:w-1/2 h-40 md:h-full"
+                    />
+                    <div className="p-6 overflow-y-auto md:w-1/2">
+                      {project.details}
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            ) : (
+              <Card
+                key={index}
+                className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1 hover:scale-105"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 mb-6">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="secondary">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
                   <div className="flex space-x-4">
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.links.demo} className="flex items-center">
@@ -230,10 +253,10 @@ export default function ProjectsSection() {
                       </a>
                     </Button>
                   </div>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            )
+          )}
         </div>
       </div>
     </section>
