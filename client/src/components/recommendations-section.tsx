@@ -146,7 +146,7 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                           rel="noopener noreferrer"
                         >
                           <Card
-                            className={`shadow-lg transition-all duration-300 ${
+                            className={`shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${
                               index === currentIndex
                                 ? 'scale-105 shadow-xl'
                                 : 'scale-95 opacity-60'

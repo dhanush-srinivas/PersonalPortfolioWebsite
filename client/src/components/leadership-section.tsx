@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function LeadershipSection() {
   const leadership = [
@@ -17,6 +18,7 @@ export default function LeadershipSection() {
       description: "Led a cross-functional team of 8 developers and designers to deliver a mission-critical e-commerce platform, resulting in a 40% increase in user engagement and 25% boost in conversion rates.",
       badges: ["Team Management", "Agile Methodology", "Strategic Planning"],
       color: "bg-[hsl(var(--portfolio-primary))]",
+      details: "Led an agile team of 8 through weekly sprints and coordinated design reviews to ship a full-stack e-commerce platform ahead of schedule.",
     },
     {
       icon: GraduationCap,
@@ -24,6 +26,7 @@ export default function LeadershipSection() {
       description: "Established and coordinated a company-wide mentorship program that paired senior developers with junior team members, improving retention rates by 35% and accelerating skill development.",
       badges: ["Mentoring", "Program Development", "Talent Development"],
       color: "bg-[hsl(var(--portfolio-accent))]",
+      details: "Created onboarding resources and ran monthly check-ins, pairing 20+ juniors with mentors across departments.",
     },
     {
       icon: Rocket,
@@ -31,6 +34,7 @@ export default function LeadershipSection() {
       description: "Chaired the innovation committee responsible for evaluating and implementing emerging technologies, leading to the adoption of three key technologies that improved development efficiency by 50%.",
       badges: ["Innovation", "Technology Assessment", "Change Management"],
       color: "bg-orange-500",
+      details: "Facilitated quarterly hackathons and curated a tech radar that guided adoption of cloud tooling and CI/CD pipelines.",
     },
     {
       icon: Briefcase,
@@ -39,6 +43,7 @@ export default function LeadershipSection() {
         "Oversaw simultaneous delivery of multiple client projects valued over $5M, ensuring on-time completion and 15% cost savings.",
       badges: ["Risk Mitigation", "Stakeholder Alignment", "Budget Control"],
       color: "bg-purple-500",
+      details: "Implemented risk dashboards and weekly stakeholder syncs to keep five concurrent projects on track and under budget.",
     },
     {
       icon: Lightbulb,
@@ -47,6 +52,7 @@ export default function LeadershipSection() {
         "Guided cross-departmental teams to identify growth opportunities and launch initiatives that increased market reach by 20%.",
       badges: ["Strategy", "Cross-Functional", "Data-Driven"],
       color: "bg-teal-500",
+      details: "Analyzed market trends and presented quarterly reports that shaped product expansion into two new verticals.",
     },
     {
       icon: Handshake,
@@ -55,6 +61,7 @@ export default function LeadershipSection() {
         "Built partnerships with local organizations to host quarterly tech workshops, attracting over 300 participants annually.",
       badges: ["Partnerships", "Event Planning", "Public Relations"],
       color: "bg-indigo-500",
+      details: "Negotiated sponsorships and coordinated volunteers to deliver hands-on sessions for students and professionals.",
     },
   ];
 
@@ -66,28 +73,53 @@ export default function LeadershipSection() {
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leadership.map((item, index) => (
-            <Card key={index} className="bg-slate-50 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <Card className="bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                        <item.icon className="text-white w-7 h-7" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {item.badges.map((badge, badgeIndex) => (
+                            <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                              {badge}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </DialogTrigger>
+              <DialogContent className="w-[95vw] max-w-md p-6">
+                <div className="flex items-start space-x-4 mb-4">
                   <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
                     <item.icon className="text-white w-7 h-7" />
                   </div>
-                  <div className="flex-1">
+                  <div>
                     <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {item.badges.map((badge, badgeIndex) => (
-                        <Badge key={badgeIndex} variant="secondary" className="text-xs">
-                          {badge}
-                        </Badge>
-                      ))}
-                    </div>
+                    <p className="text-slate-600 text-sm">{item.description}</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                <p className="text-slate-600 text-sm mb-4">{item.details}</p>
+                <div className="flex flex-wrap gap-2">
+                  {item.badges.map((badge, badgeIndex) => (
+                    <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                      {badge}
+                    </Badge>
+                  ))}
+                </div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>

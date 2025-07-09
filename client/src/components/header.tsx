@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +25,12 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm font-montserrat">
+    <motion.header
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm font-montserrat"
+    >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <div className="font-semibold text-xl text-[hsl(var(--portfolio-secondary))]">
@@ -73,6 +79,6 @@ export default function Header() {
           </div>
         )}
       </div>
-    </header>
+    </motion.header>
   );
 }
