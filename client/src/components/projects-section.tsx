@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import PrinterImage from "@/resources/3DPrinter.jpg";
+import PrinterImage from "@/resources/new3DPrinter.jpg";
 import type { ReactNode } from "react";
 
 type Project = {
@@ -229,16 +229,16 @@ export default function ProjectsSection() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6 flex flex-col items-center">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-32 h-32 mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4 text-center">
-                    {project.title}
-                  </h3>
-                  <div className="overflow-y-auto w-full">
+                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0 flex flex-col">
+                  <div
+                    className="w-full h-48 bg-cover bg-center flex items-end"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  >
+                    <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] bg-white/80 w-full text-center py-2">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <div className="overflow-y-auto w-full p-6">
                     {project.details}
                   </div>
                 </DialogContent>
