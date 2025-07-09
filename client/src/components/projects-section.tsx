@@ -229,16 +229,17 @@ export default function ProjectsSection() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0">
-                  <div className="flex flex-col md:flex-row h-full">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="object-cover md:w-1/4 h-32 md:h-auto"
-                    />
-                    <div className="p-6 overflow-y-auto md:w-2/3">
-                      {project.details}
-                    </div>
+                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6 flex flex-col items-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-cover w-32 h-32 mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-4 text-center">
+                    {project.title}
+                  </h3>
+                  <div className="overflow-y-auto w-full">
+                    {project.details}
                   </div>
                 </DialogContent>
               </Dialog>
