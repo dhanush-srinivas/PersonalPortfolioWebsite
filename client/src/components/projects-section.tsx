@@ -154,14 +154,161 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title: "EcoTrack Mobile App",
-      description: "A sustainability tracking app that helps users monitor their carbon footprint, set environmental goals, and connect with eco-friendly communities.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React Native", "Firebase", "Redux", "Maps API"],
-      links: {
-        demo: "#",
-        github: "#",
-      },
+      title:
+        "Market Research & Strategic Engagement Framework – National Research Group",
+      description:
+        "Led a market research initiative for the National Research Group to map the policy influencer landscape and uncover community impact trends.",
+      image:
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      role: "Product & Market Research Lead (Externship)",
+      tools:
+        "Excel, Qualtrics, PowerPoint, Google Trends, Miro, Figma (infographics), LinkedIn Sales Navigator",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>📍 Situation:</strong> The National Research Group (NRG)
+            sought to understand how community-focused policies are shaped and
+            influenced in real-world decision-making. With shifting public
+            narratives and increased focus on social impact, there was a
+            critical need to map the policy influence landscape and identify key
+            voices shaping perception and adoption.
+          </p>
+          <p>
+            <strong>🎯 Task:</strong> As an extern and team lead, I was
+            responsible for leading a strategic market research initiative that
+            analyzed the influence ecosystem around policy-driven community
+            initiatives. My objectives were to:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Identify and profile key policy influencers using both qualitative
+              and quantitative research.
+            </li>
+            <li>
+              Analyze content trends, community sentiment, and engagement
+              patterns to recommend targeted outreach strategies.
+            </li>
+            <li>
+              Translate research findings into actionable insights for senior
+              stakeholders to inform product-aligned policy engagement.
+            </li>
+          </ul>
+          <p>
+            <strong>⚙️ Action</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>Research Strategy Design & Team Management:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Led a team of 4 analysts, delegating research streams (quant,
+                  qual, and competitive) and synchronizing weekly check-ins via
+                  agile boards.
+                </li>
+                <li>
+                  Defined key research pillars: policy influence mapping, trend
+                  forecasting, community sentiment, and strategic alignment.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Qualitative & Quantitative Research Execution:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Used LinkedIn Sales Navigator, government databases, and
+                  academic sources to shortlist and profile 15 key policy
+                  influencers, evaluating their reach, affiliations, and public
+                  stances.
+                </li>
+                <li>
+                  Conducted semi-structured interviews and scraped public
+                  statements, social media activity, and publications for
+                  sentiment analysis.
+                </li>
+                <li>
+                  Used NVivo to code qualitative data and surface common themes
+                  around community equity, economic impact, and regional focus.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Trend & Market Analysis:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Leveraged Google Trends and policy reports to forecast shifts
+                  in narrative interest and influence timing.
+                </li>
+                <li>
+                  Created an engagement matrix ranking influencers by advocacy
+                  strength, alignment potential, and responsiveness.
+                </li>
+                <li>
+                  Identified underserved regional segments with high policy need
+                  but low current engagement, suggesting product strategy
+                  expansion points.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Product/Strategy Alignment:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Created personas and journey maps representing key policy
+                  influencers and their typical interaction with research data.
+                </li>
+                <li>
+                  Recommended a phased engagement strategy aligned with product
+                  planning cycles (awareness → influence → feedback loop).
+                </li>
+                <li>
+                  Developed a dashboard prototype in Excel to track engagement
+                  metrics over time (reach, resonance, and policy impact score).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Stakeholder Presentation & Buy-In:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Presented findings and strategy recommendations to senior
+                  leadership using data-backed visualizations and influencer
+                  heatmaps.
+                </li>
+                <li>
+                  Linked research directly to product strategy by illustrating
+                  how improved policy alignment could accelerate adoption and
+                  improve community trust in pilot programs.
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            <strong>📈 Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Enabled 25% increase in strategic alignment across departments by
+              identifying the most impactful voices for future collaboration.
+            </li>
+            <li>
+              Enhanced decision-making accuracy by improving understanding of
+              external policy levers and community pulse.
+            </li>
+            <li>
+              Research outputs were adopted into the organization's planning
+              framework and later used as a baseline for policy engagement
+              roadmaps.
+            </li>
+          </ul>
+          <p>
+            <strong>🧠 Skills & Tools Used:</strong> Market Research · Strategic
+            Analysis · Qualitative Coding (NVivo) · Persona Development · Policy
+            Mapping · Influencer Profiling · Google Trends · Competitive
+            Intelligence · Stakeholder Presentation · Community Engagement
+            Strategy · Excel Dashboards · Team Leadership
+          </p>
+        </div>
+      ),
     },
     {
       title: "AI Customer Service Bot",
