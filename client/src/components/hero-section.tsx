@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
           {/* Video Embed */}
           <div className="relative lg:col-span-2">
-            <div className="aspect-video bg-slate-200 rounded-xl shadow-lg overflow-hidden">
+            <div className="aspect-video bg-slate-200 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-[hsl(var(--portfolio-primary))]/50">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/MNKRUlD76x0"
@@ -71,16 +71,18 @@ export default function HeroSection() {
               <div className="space-y-6">
                 <HoverCard>
                   <HoverCardTrigger asChild>
-                    <div className="border-l-4 border-[hsl(var(--portfolio-primary))] pl-6 flex items-start cursor-pointer">
-                      <img src={UTDLogo} alt="UT Dallas" className="w-10 h-10 mr-3 object-contain" />
-                      <div>
-                        <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
-                          MS in Systems Engineering &amp; Management
-                        </h4>
-                        <p className="text-slate-600 font-medium">University of Texas at Dallas</p>
-                        <p className="text-slate-500 text-sm">2023 - 2025</p>
-                      </div>
-                    </div>
+                    <Card className="border-l-4 border-[hsl(var(--portfolio-primary))] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer">
+                      <CardContent className="pl-6 py-4 flex items-start">
+                        <img src={UTDLogo} alt="UT Dallas" className="w-10 h-10 mr-3 object-contain" />
+                        <div>
+                          <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
+                            MS in Systems Engineering &amp; Management
+                          </h4>
+                          <p className="text-slate-600 font-medium">University of Texas at Dallas</p>
+                          <p className="text-slate-500 text-sm">2023 - 2025</p>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-[32rem]" side="right">
                     <div className="flex items-start mb-2">
@@ -133,16 +135,18 @@ export default function HeroSection() {
 
                 <HoverCard>
                   <HoverCardTrigger asChild>
-                    <div className="border-l-4 border-[hsl(var(--portfolio-accent))] pl-6 flex items-start cursor-pointer">
-                      <img src={VTULogo} alt="VTU" className="w-10 h-10 mr-3 object-contain" />
-                      <div>
-                        <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
-                          BE in Industrial Engineering &amp; Management
-                        </h4>
-                        <p className="text-slate-600 font-medium">Visvesvaraya Technological University (VTU)</p>
-                        <p className="text-slate-500 text-sm">2017 - 2021</p>
-                      </div>
-                    </div>
+                    <Card className="border-l-4 border-[hsl(var(--portfolio-accent))] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer">
+                      <CardContent className="pl-6 py-4 flex items-start">
+                        <img src={VTULogo} alt="VTU" className="w-10 h-10 mr-3 object-contain" />
+                        <div>
+                          <h4 className="font-semibold text-lg text-[hsl(var(--portfolio-secondary))]">
+                            BE in Industrial Engineering &amp; Management
+                          </h4>
+                          <p className="text-slate-600 font-medium">Visvesvaraya Technological University (VTU)</p>
+                          <p className="text-slate-500 text-sm">2017 - 2021</p>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-[32rem]" side="right">
                     <div className="flex items-start mb-2">
