@@ -12,10 +12,9 @@ export default function ProjectsSection() {
       description:
         "Built a B2B leasing-as-a-service platform for industrial 3D printers, enabling small manufacturers to adopt advanced tech without upfront costs.",
       image: PrinterImage,
-      technologies: [
-        "Role : Product Manager",
-        "Tools: Figma, Lucidchart, Excel, Python, SQL , Miro, Notion, Google Slides",
-      ],
+      role: "Product Manager",
+      tools:
+        "Figma, Lucidchart, Excel, Python, SQL, Miro, Notion, Google Slides",
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
@@ -193,25 +192,36 @@ export default function ProjectsSection() {
                         {project.title}
                       </h3>
                       <p className="text-slate-600 mb-6">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
+                      {project.role || project.tools ? (
+                        <div className="flex flex-col gap-2 mb-6">
+                          {project.role && (
+                            <Badge variant="secondary">Role: {project.role}</Badge>
+                          )}
+                          {project.tools && (
+                            <Badge variant="secondary">Tools: {project.tools}</Badge>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.technologies.map((tech, techIndex) => (
+                            <Badge key={techIndex} variant="secondary">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
                       <Button variant="outline" size="sm">Read more</Button>
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="w-[95vw] h-[95vh] p-0">
+                <DialogContent className="w-[95vw] max-w-2xl h-[95vh] overflow-y-auto p-0">
                   <div className="flex flex-col md:flex-row h-full">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="object-cover md:w-1/2 h-40 md:h-full"
+                      className="object-cover md:w-1/3 h-32 md:h-auto"
                     />
-                    <div className="p-6 overflow-y-auto md:w-1/2">
+                    <div className="p-6 overflow-y-auto md:w-2/3">
                       {project.details}
                     </div>
                   </div>
@@ -232,13 +242,24 @@ export default function ProjectsSection() {
                     {project.title}
                   </h3>
                   <p className="text-slate-600 mb-6">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+                  {project.role || project.tools ? (
+                    <div className="flex flex-col gap-2 mb-6">
+                      {project.role && (
+                        <Badge variant="secondary">Role: {project.role}</Badge>
+                      )}
+                      {project.tools && (
+                        <Badge variant="secondary">Tools: {project.tools}</Badge>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                   <div className="flex space-x-4">
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.links.demo} className="flex items-center">
