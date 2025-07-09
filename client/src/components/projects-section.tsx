@@ -6,6 +6,9 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import PrinterImage from "@/resources/new3DPrinter.jpg";
 import NRGImage from "@/resources/NRG.jpg";
 import ClothingImage from "@/resources/Clothing.jpg";
+import SAPImage from "@/resources/SAP.jpg";
+import BottleImage from "@/resources/bottle.jpg";
+import WireframeImage from "@/resources/wireframing.jpg";
 import type { ReactNode } from "react";
 
 type Project = {
@@ -449,10 +452,150 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title: "Blockchain Supply Chain",
-      description: "A decentralized supply chain management system using blockchain technology to ensure transparency and traceability of products from origin to consumer.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Solidity", "Web3.js", "Ethereum", "IPFS"],
+      title: "Supply Chain Simulation & Forecasting Optimization Using SAP IBP/APO",
+      description:
+        "Simulated and optimized end-to-end supply chain planning for a global manufacturer using SAP IBP and APO, improving forecast accuracy and procurement efficiency. Developed a reusable planning framework covering demand forecasting, MRP, and S&OP integration across multiple plants and distribution centers.",
+      image: SAPImage,
+      role: "Supply Chain Data Analyst",
+      tools:
+        "SAP IBP, SAP APO, ECC (MD01/MD02/MD04), MMBE, Excel, Demand Planning Algorithms (Statistical Forecasting), S&OP Frameworks",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>📍 Situation:</strong> Global manufacturing organizations rely on integrated planning tools to align supply with demand, especially across distributed networks. In this simulated environment, we were tasked with optimizing the planning pipeline for Global Bike Inc. by leveraging SAP Integrated Business Planning (IBP) and Advanced Planning &amp; Optimization (APO) modules.
+          </p>
+          <p>
+            <strong>🎯 Task:</strong> The goal was to simulate and improve an end-to-end supply chain process covering demand forecasting, supply network planning, and material requirements planning (MRP) across multiple plants and distribution centers. KPIs included forecast accuracy, procurement lead time, and inventory availability.
+          </p>
+          <p>
+            <strong>⚙️ Action:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>End-to-End Supply Chain Simulation:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Designed and configured a virtual multi-plant supply chain scenario in the GBI sandbox, including three distribution centers and manufacturing hubs.
+                </li>
+                <li>
+                  Mapped the planning flow across demand planning → supply planning → capacity alignment, ensuring master data accuracy (BOMs, routings, work centers, transportation lanes).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Demand Forecasting (12-month window):</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Used SAP IBP to simulate statistical demand forecasting using historical sales and seasonal factors.</li>
+                <li>Applied moving average and exponential smoothing models to test forecast variability across product lines.</li>
+                <li>Adjusted forecast models to align with customer service levels and realignment cycles.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Supply Network &amp; MRP Execution:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Executed MRP runs via MD01 and MD02 to generate procurement and production proposals.</li>
+                <li>Monitored live inventory using MD04 and storage location analysis via MMBE, adjusting reorder points and safety stock settings.</li>
+                <li>Validated sourcing logic, lot-sizing procedures, and procurement type settings.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>S&amp;OP Integration &amp; KPI Tracking:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Applied S&amp;OP frameworks to balance supply and demand, align capacity constraints, and ensure feasibility of the supply plan.</li>
+                <li>Tracked key metrics such as Forecast Accuracy, Procurement Lead Time, and Inventory Turnover.</li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            <strong>📈 Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Achieved a 5% improvement in forecast accuracy, measured via pre/post-MAPE comparisons on seasonal product lines.</li>
+            <li>Reduced simulated procurement lead times by refining sourcing logic and aligning vendor lead times with plant capacity.</li>
+            <li>Strengthened understanding of real-world MRP execution and IBP-driven decision-making, bridging the gap between planning theory and SAP implementation.</li>
+            <li>Produced a reusable planning simulation framework now used as a reference model for new learners in the program.</li>
+          </ul>
+          <p>
+            <strong>🧠 Skills &amp; Tools Used:</strong> SAP IBP · SAP APO · SAP ECC (MD01, MD02, MD04, MMBE) · Statistical Forecasting · Demand Planning · Supply Network Design · Capacity Alignment · Material Requirements Planning (MRP) · Inventory Optimization · S&amp;OP Principles · Excel · Planning Analytics
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "AquaFlex (Product Innovation and GTM Strategy for Smart Water Bottles)",
+      description:
+        "Led product and GTM strategy for AquaFlex, a smart water bottle with hydration alerts and UV self-cleaning. Built feature roadmap, market sizing, and launch plan targeting health-conscious, tech-savvy users.",
+      image: BottleImage,
+      role: "Product Manager",
+      tools:
+        "Qualtrics, Excel, Canva, Google Trends, SWOT & Persona Frameworks, TAM-SAM-SOM Modeling, Figma, Google Slides",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>📍 Situation:</strong> In an age of health awareness and sustainable living, hydration remains a poorly addressed problem despite being critical to wellness. Our team identified a growing consumer need for a tech-enabled, eco-friendly hydration solution that could integrate seamlessly into modern lifestyles.
+          </p>
+          <p>
+            <strong>🎯 Task:</strong> As the Product Manager of a seven-member cross-functional team, my goal was to lead the conceptualization, feature design, and market strategy for AquaFlex, a smart water bottle that blends technology, health monitoring, and sustainability.
+          </p>
+          <p>
+            <strong>⚙️ Action:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>User Research &amp; Market Sizing:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Launched consumer surveys targeting 18–35-year-old health-conscious, tech-savvy adults to identify pain points around hydration and portability.</li>
+                <li>Estimated a TAM of 76M U.S. users with an addressable market of 38M based on tech-health overlap.</li>
+                <li>Defined six primary user personas including gym-goers, corporate wellness users, and eco-conscious families.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Product Strategy &amp; Feature Roadmap:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Developed core differentiators like smart hydration reminders, UV self-cleaning, infuser compatibility, temperature control, and ruggedized design.</li>
+                <li>Built a comparative feature matrix against leading competitors to identify clear competitive gaps.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Competitive Analysis &amp; Positioning:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Mapped relative product advantage by scoring each feature on innovation, eco-friendliness, usability, and tech depth.</li>
+                <li>Positioned AquaFlex as the “Apple Watch of water bottles” — a personalized, interactive hydration device.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Marketing, Pricing, and GTM Strategy:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Developed a three-tiered distribution plan spanning D2C, Amazon, and retail health stores.</li>
+                <li>Set premium pricing using value-based logic and crafted a launch campaign leveraging TikTok influencers and Instagram ads.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Financial Modeling &amp; Risk Assessment:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Modeled cost structure by component and forecasted first-year revenue of $750K across two SKUs.</li>
+                <li>Outlined risk mitigation strategies for market competition, IP infringement, and consumer adoption dips.</li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            <strong>📈 Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Developed a complete end-to-end product and go-to-market strategy integrating consumer insight, sustainability, health tech, and digital innovation.</li>
+            <li>Created a market-ready investment pitch deck validated by course faculty and alumni entrepreneurs.</li>
+            <li>Received top project recognition for strategic clarity, product innovation, and execution depth.</li>
+          </ul>
+          <p>
+            <strong>🧠 Skills &amp; Tools Used:</strong> Product Strategy · Market Research · TAM/SAM/SOM Estimation · Competitive Benchmarking · Pricing Models · Consumer Persona Design · Feature Prioritization · GTM Planning · Financial Forecasting · Risk Assessment · Canva · Figma · Excel · Qualtrics · Presentation Design
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Upcoming Project",
+      description: "Details coming soon.",
+      image: WireframeImage,
       links: {
         demo: "#",
         github: "#",
