@@ -1,7 +1,7 @@
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import CarolImage from "@/resources/carol.jpg";
 import MichelleImage from "@/resources/michelle.jpeg";
 import AndyImage from "@/resources/andy.jpg";
@@ -11,6 +11,8 @@ import SteveImage from "@/resources/steve.jpg";
 
 export default function RecommendationsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [startCarousel, setStartCarousel] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   const recommendations = [
     {
@@ -68,15 +70,33 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
   };
 
   useEffect(() => {
+    const sectionEl = sectionRef.current;
+    if (!sectionEl) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          observer.disconnect();
+          setTimeout(() => setStartCarousel(true), 5000);
+        }
+      },
+      { threshold: 1 }
+    );
+    observer.observe(sectionEl);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!startCarousel) return;
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % recommendations.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [recommendations.length]);
+  }, [recommendations.length, startCarousel]);
 
   return (
-    <section id="recommendations" className="py-16 bg-slate-50">
+    <section id="recommendations" ref={sectionRef} className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-12">
           Recommendations
