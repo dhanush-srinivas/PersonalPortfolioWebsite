@@ -51,7 +51,7 @@ export default function AwardsSection() {
     <section id="awards" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
-          Awards
+          Awards & Recognition
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {awards.map((award, index) => (

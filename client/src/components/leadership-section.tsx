@@ -1,4 +1,11 @@
-import { Users, GraduationCap, Rocket } from "lucide-react";
+import {
+  Users,
+  GraduationCap,
+  Rocket,
+  Briefcase,
+  Lightbulb,
+  Handshake,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -25,22 +32,50 @@ export default function LeadershipSection() {
       badges: ["Innovation", "Technology Assessment", "Change Management"],
       color: "bg-orange-500",
     },
+    {
+      icon: Briefcase,
+      title: "Project Management Lead",
+      description:
+        "Oversaw simultaneous delivery of multiple client projects valued over $5M, ensuring on-time completion and 15% cost savings.",
+      badges: ["Risk Mitigation", "Stakeholder Alignment", "Budget Control"],
+      color: "bg-purple-500",
+    },
+    {
+      icon: Lightbulb,
+      title: "Strategic Initiatives Advisor",
+      description:
+        "Guided cross-departmental teams to identify growth opportunities and launch initiatives that increased market reach by 20%.",
+      badges: ["Strategy", "Cross-Functional", "Data-Driven"],
+      color: "bg-teal-500",
+    },
+    {
+      icon: Handshake,
+      title: "Community Outreach Liaison",
+      description:
+        "Built partnerships with local organizations to host quarterly tech workshops, attracting over 300 participants annually.",
+      badges: ["Partnerships", "Event Planning", "Public Relations"],
+      color: "bg-indigo-500",
+    },
   ];
 
   return (
     <section id="leadership" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
-          Leadership
+          Leadership Experience
         </h2>
         <div className="max-w-4xl mx-auto space-y-8">
           {leadership.map((item, index) => (
-            <Card key={index} className="bg-slate-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-6">
-                  <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
-                    <item.icon className="text-white w-8 h-8" />
-                  </div>
+            <div
+              key={index}
+              className={`md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}
+            >
+              <Card className="bg-slate-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <item.icon className="text-white w-8 h-8" />
+                    </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
                       {item.title}
@@ -55,8 +90,9 @@ export default function LeadershipSection() {
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
