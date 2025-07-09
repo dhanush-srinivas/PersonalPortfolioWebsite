@@ -1,4 +1,20 @@
-import { Play, CheckCircle } from "lucide-react";
+import { Play } from "lucide-react";
+import {
+  FaCogs,
+  FaChartLine,
+  FaProjectDiagram,
+  FaIndustry,
+  FaTasks,
+  FaUsers,
+  FaComments,
+  FaDatabase,
+  FaTruck,
+  FaDraftingCompass,
+  FaUserCog,
+  FaCheckCircle,
+  FaLaptopCode,
+  FaClipboardList,
+} from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
@@ -80,35 +96,35 @@ export default function HeroSection() {
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaCogs className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Systems Engineering</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaChartLine className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Data Analytics</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaProjectDiagram className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Operations Research</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaIndustry className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Lean Manufacturing</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaTasks className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Project Management (planning, budgeting, scheduling)</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaUsers className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Cross-functional team leadership</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaComments className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Stakeholder Communication</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaDatabase className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>SAP</span>
                       </li>
                     </ul>
@@ -142,27 +158,27 @@ export default function HeroSection() {
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaTruck className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Supply Chain Management</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaDraftingCompass className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Facility Layout and Design</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaUserCog className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Work Study and Ergonomics</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaCheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Total Quality Management</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaLaptopCode className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>CAD/CAM</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaClipboardList className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
                         <span>Production Planning and Control</span>
                       </li>
                     </ul>
