@@ -23,7 +23,7 @@ export default function LeadershipSection() {
       icon: Users,
       title: "At-Large Senator, UTD Student Government",
       description:
-        "Represented graduate and international students in university-wide policy discussions and programming initiatives.",
+        "Elected by the student body, I served as an At-Large Senator within UTD’s Student Government, representing the broader graduate and international student community in university-wide decision-making...",
       badges: ["Advocacy", "Event Management", "Public Speaking"],
       color: "bg-[hsl(var(--portfolio-primary))]",
       logo: SGLogo,
@@ -64,7 +64,7 @@ export default function LeadershipSection() {
             governance, policy-making, and effective public speaking in formal
             environments.
           </p>
-          <img src={SGImage} alt="Student Government" className="w-24 mx-auto rounded-md" />
+          <img src={SGImage} alt="Student Government" className="w-40 mx-auto rounded-md" />
         </div>
       ),
     },
@@ -139,7 +139,7 @@ export default function LeadershipSection() {
                       />
                     )}
                     <CardContent className="relative p-6">
-                      <div className="flex items-start space-x-4">
+                      <div className="flex items-start space-x-4 bg-white/80 rounded p-2">
                         <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
                           <item.icon className="text-white w-7 h-7" />
                         </div>
@@ -148,14 +148,14 @@ export default function LeadershipSection() {
                             {item.title}
                           </h3>
                           <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {item.badges.map((badge, badgeIndex) => (
-                              <Badge key={badgeIndex} variant="secondary" className="text-xs">
-                                {badge}
-                              </Badge>
-                            ))}
-                          </div>
                         </div>
+                      </div>
+                      <div className="absolute right-4 bottom-4 flex flex-wrap gap-2">
+                        {item.badges.map((badge, badgeIndex) => (
+                          <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                            {badge}
+                          </Badge>
+                        ))}
                       </div>
                     </CardContent>
                   </Card>
