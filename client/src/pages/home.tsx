@@ -2,7 +2,6 @@ import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import RecommendationsSection from "@/components/recommendations-section";
 import LeadershipSection from "@/components/leadership-section";
-import AwardsSection from "@/components/awards-section";
 import CertificationsSection from "@/components/certifications-section";
 import ProjectsSection from "@/components/projects-section";
 import SkillsSection from "@/components/skills-section";
@@ -17,7 +16,6 @@ export default function Home() {
       <RecommendationsSection />
       <ProjectsSection />
       <LeadershipSection />
-      <AwardsSection />
       <CertificationsSection />
       <SkillsSection />
       <ExperienceSection />

@@ -10,7 +10,6 @@ export default function Header() {
     { href: "#recommendations", label: "Recommendations" },
     { href: "#projects", label: "Projects" },
     { href: "#leadership", label: "Leadership" },
-    { href: "#awards", label: "Awards" },
     { href: "#certifications", label: "Certifications" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
