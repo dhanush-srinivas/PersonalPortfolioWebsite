@@ -9,16 +9,64 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import SGLogo from "@/resources/SG_logo.png";
+import SGImage from "@/resources/Sg.jpg";
 
 export default function LeadershipSection() {
   const leadership = [
     {
       icon: Users,
-      title: "Technical Team Lead",
-      description: "Led a cross-functional team of 8 developers and designers to deliver a mission-critical e-commerce platform, resulting in a 40% increase in user engagement and 25% boost in conversion rates.",
-      badges: ["Team Management", "Agile Methodology", "Strategic Planning"],
+      title: "At-Large Senator, UTD Student Government",
+      description:
+        "Represented graduate and international students in university-wide policy discussions and programming initiatives.",
+      badges: ["Advocacy", "Event Management", "Public Speaking"],
       color: "bg-[hsl(var(--portfolio-primary))]",
-      details: "Led an agile team of 8 through weekly sprints and coordinated design reviews to ship a full-stack e-commerce platform ahead of schedule.",
+      logo: SGLogo,
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            Elected by the student body, I served as an At-Large Senator within
+            UTD’s Student Government, representing the broader graduate and
+            international student community in university-wide decision-making.
+            In this role, I actively contributed to discussions on campus-wide
+            policies, budget allocations, and strategic initiatives aimed at
+            improving the student experience.
+          </p>
+          <p>
+            One of my most meaningful contributions was organizing the
+            “Understanding Health Insurance for International Students” event,
+            in collaboration with the Graduate and International Affairs
+            Committee. Recognizing the confusion many international students
+            face when navigating the U.S. healthcare system, I led the planning
+            and execution of this educational event, partnering with
+            Intercultural Programs, the Student Health Center, Campus Emergency
+            Medical Response, and the Academic Health Plan. The session
+            successfully demystified complex insurance concepts and empowered
+            students to make informed health decisions during their time in the
+            U.S.
+          </p>
+          <p>
+            As a senator, I also learned how to confidently pitch ideas,
+            present suggestions, and advocate for student concerns in front of
+            the full senate. Through frequent speaking opportunities and
+            committee meetings, I developed the ability to communicate clearly,
+            think strategically under pressure, and influence positive outcomes
+            through collaboration.
+          </p>
+          <p>
+            This experience not only strengthened my leadership and event
+            management skills but also deepened my understanding of student
+            governance, policy-making, and effective public speaking in formal
+            environments.
+          </p>
+          <img src={SGImage} alt="Student Government" className="w-full rounded-md" />
+        </div>
+      ),
     },
     {
       icon: GraduationCap,
@@ -72,55 +120,118 @@ export default function LeadershipSection() {
           Leadership Experience
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {leadership.map((item, index) => (
-            <Dialog key={index}>
-              <DialogTrigger asChild>
-                <Card className="bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
-                        <item.icon className="text-white w-7 h-7" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {item.badges.map((badge, badgeIndex) => (
-                            <Badge key={badgeIndex} variant="secondary" className="text-xs">
-                              {badge}
-                            </Badge>
-                          ))}
+          {leadership.map((item, index) =>
+            index === 0 ? (
+              <HoverCard key={index} openDelay={0} closeDelay={100}>
+                <HoverCardTrigger asChild>
+                  <Card className="relative bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                    {"logo" in item && (
+                      <img
+                        src={(item as any).logo}
+                        alt="SG logo"
+                        className="absolute left-0 top-0 h-full w-1/2 object-contain pointer-events-none opacity-90"
+                        style={{
+                          WebkitMaskImage:
+                            "linear-gradient(to right, black 0%, transparent 50%)",
+                          maskImage:
+                            "linear-gradient(to right, black 0%, transparent 50%)",
+                        }}
+                      />
+                    )}
+                    <CardContent className="relative p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                          <item.icon className="text-white w-7 h-7" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {item.badges.map((badge, badgeIndex) => (
+                              <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                                {badge}
+                              </Badge>
+                            ))}
+                          </div>
                         </div>
                       </div>
+                    </CardContent>
+                  </Card>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <item.icon className="text-white w-7 h-7" />
                     </div>
-                  </CardContent>
-                </Card>
-              </DialogTrigger>
-              <DialogContent className="w-[95vw] max-w-md p-6">
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
-                    <item.icon className="text-white w-7 h-7" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm">{item.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
+                  {item.details}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {item.badges.map((badge, badgeIndex) => (
+                      <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                        {badge}
+                      </Badge>
+                    ))}
                   </div>
-                </div>
-                <p className="text-slate-600 text-sm mb-4">{item.details}</p>
-                <div className="flex flex-wrap gap-2">
-                  {item.badges.map((badge, badgeIndex) => (
-                    <Badge key={badgeIndex} variant="secondary" className="text-xs">
-                      {badge}
-                    </Badge>
-                  ))}
-                </div>
-              </DialogContent>
-            </Dialog>
-          ))}
+                </HoverCardContent>
+              </HoverCard>
+            ) : (
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <Card className="bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                          <item.icon className="text-white w-7 h-7" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-slate-600 mb-4 text-sm">{item.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {item.badges.map((badge, badgeIndex) => (
+                              <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                                {badge}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] max-w-md p-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <item.icon className="text-white w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[hsl(var(--portfolio-secondary))] mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-600 text-sm mb-4">{item.details}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.badges.map((badge, badgeIndex) => (
+                      <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                        {badge}
+                      </Badge>
+                    ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
+            )
+          )}
         </div>
       </div>
     </section>
