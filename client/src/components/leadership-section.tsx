@@ -64,7 +64,7 @@ export default function LeadershipSection() {
             governance, policy-making, and effective public speaking in formal
             environments.
           </p>
-          <img src={SGImage} alt="Student Government" className="w-full rounded-md" />
+          <img src={SGImage} alt="Student Government" className="w-24 mx-auto rounded-md" />
         </div>
       ),
     },
@@ -122,8 +122,8 @@ export default function LeadershipSection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leadership.map((item, index) =>
             index === 0 ? (
-              <HoverCard key={index} openDelay={0} closeDelay={100}>
-                <HoverCardTrigger asChild>
+              <Dialog key={index}>
+                <DialogTrigger asChild>
                   <Card className="relative bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
                     {"logo" in item && (
                       <img
@@ -132,9 +132,9 @@ export default function LeadershipSection() {
                         className="absolute left-0 top-0 h-full w-1/2 object-contain pointer-events-none opacity-90"
                         style={{
                           WebkitMaskImage:
-                            "linear-gradient(to right, black 0%, transparent 50%)",
+                            "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
                           maskImage:
-                            "linear-gradient(to right, black 0%, transparent 50%)",
+                            "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
                         }}
                       />
                     )}
@@ -159,8 +159,8 @@ export default function LeadershipSection() {
                       </div>
                     </CardContent>
                   </Card>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6">
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
                       <item.icon className="text-white w-7 h-7" />
@@ -180,8 +180,8 @@ export default function LeadershipSection() {
                       </Badge>
                     ))}
                   </div>
-                </HoverCardContent>
-              </HoverCard>
+                </DialogContent>
+              </Dialog>
             ) : (
               <Dialog key={index}>
                 <DialogTrigger asChild>
