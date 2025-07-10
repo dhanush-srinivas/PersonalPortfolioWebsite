@@ -17,6 +17,9 @@ import {
 import SGLogo from "@/resources/SG_logo.png";
 import SGImage from "@/resources/Sg.jpg";
 import KSImage from "@/resources/KS.jpg";
+import SU1Image from "@/resources/SU1.jpeg";
+import SU2Image from "@/resources/SU2.jpeg";
+import UandIImage from "@/resources/U&i.jpg";
 
 export default function LeadershipSection() {
   const leadership = [
@@ -134,39 +137,143 @@ export default function LeadershipSection() {
       ),
     },
     {
-      icon: Rocket,
-      title: "Innovation Committee Chair",
-      description: "Chaired the innovation committee responsible for evaluating and implementing emerging technologies, leading to the adoption of three key technologies that improved development efficiency by 50%.",
-      badges: ["Innovation", "Technology Assessment", "Change Management"],
-      color: "bg-orange-500",
-      details: "Facilitated quarterly hackathons and curated a tech radar that guided adoption of cloud tooling and CI/CD pipelines.",
-    },
-    {
       icon: Briefcase,
-      title: "Project Management Lead",
+      title: "Team Manager, Student Union at UT Dallas",
       description:
-        "Oversaw simultaneous delivery of multiple client projects valued over $5M, ensuring on-time completion and 15% cost savings.",
-      badges: ["Risk Mitigation", "Stakeholder Alignment", "Budget Control"],
-      color: "bg-purple-500",
-      details: "Implemented risk dashboards and weekly stakeholder syncs to keep five concurrent projects on track and under budget.",
+        "Managed daily operations and event logistics for the Student Union while leading a team of student employees.",
+      badges: ["Operations", "Team Leadership", "Event Coordination"],
+      color: "bg-orange-500",
+      logo: SU2Image,
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            Led the operational team at the UT Dallas Student Union for two years, ensuring smooth day-to-day functioning and high-quality service delivery across a range of student-focused activities.
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Managed all logistical operations within the Student Union, including coordinating complex event hall setups, overseeing large-scale campus events, and supervising front-desk operations for hundreds of daily visitors.
+            </li>
+            <li>
+              Led and coached a team of student employees across multiple shifts, ensuring real-time problem-solving, clear task delegation during peak hours, and consistent adherence to service and safety standards.
+            </li>
+            <li>
+              Served as the escalation point for urgent issues, resolving conflicts and operational bottlenecks quickly and efficiently.
+            </li>
+            <li>
+              Trained and onboarded new team members, reinforcing best practices for customer service, emergency preparedness, and building management procedures.
+            </li>
+            <li>
+              Collaborated with professional staff to enhance internal workflows, streamline communication, and identify areas for continuous improvement in day-to-day operations.
+            </li>
+            <li>
+              Maintained a high-performance team culture, emphasizing accountability, collaboration, and service excellence across all operational touchpoints.
+            </li>
+            <li>
+              Contributed to the Student Union’s reputation as a reliable, inclusive, and well-managed campus hub for students, faculty, and visiting guests.
+            </li>
+          </ul>
+          <img src={SU2Image} alt="Student Union operations" className="w-40 mx-auto rounded-md" />
+          <img src={SU1Image} alt="Student Union facility" className="w-40 mx-auto rounded-md" />
+        </div>
+      ),
     },
     {
       icon: Lightbulb,
-      title: "Strategic Initiatives Advisor",
+      title: "Officer, Innovation & Entrepreneurship Council",
       description:
-        "Guided cross-departmental teams to identify growth opportunities and launch initiatives that increased market reach by 20%.",
-      badges: ["Strategy", "Cross-Functional", "Data-Driven"],
+        "Organized startup-focused programs and connected students with founders and industry mentors.",
+      badges: ["Event Planning", "Startup Outreach", "Networking"],
+      color: "bg-purple-500",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            As an Officer in the Innovation & Entrepreneurship Leadership Council, I played an active role in fostering a startup-centric culture on campus by organizing events, creating opportunities for student-founders, and bridging the gap between industry and academia.
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              I was part of the organizing team behind our first-ever Startup Internship Fair, which brought together 15 startups from various industries and over 100 students in a high-impact networking event. From reaching out to founders and coordinating logistics to managing day-of operations, I helped ensure a seamless, high-energy environment where students could connect directly with CEOs and startup teams.
+            </li>
+            <li>
+              I also contributed to The Big Idea Competition (BIC), one of North Texas's most celebrated entrepreneurship events hosted by the Institute for Innovation and Entrepreneurship. I supported backstage operations, co-managed our IIE booth, and represented the council to prospective founders and attendees. I even had the opportunity to interact with several student and alumni founders and demo one of the finalist products on the spot.
+            </li>
+            <li>
+              Beyond flagship events, I helped organize industry visits to startup offices across the Dallas area, giving students a firsthand look into the inner workings of fast-growing companies and exposing them to real-world entrepreneurial journeys.
+            </li>
+          </ul>
+          <p>
+            These experiences allowed me to collaborate with mentors, industry professionals, and fellow council members, while strengthening my ability to plan large-scale events, engage with founders, and represent the council's mission to support innovation on campus. Being at the heart of these initiatives reinforced my passion for building ecosystems that support student entrepreneurship and I hope to return one day as a founder myself.
+          </p>
+        </div>
+      ),
+    },
+    {
+      icon: Users,
+      title: "Board Member, Student Leadership Council",
+      description:
+        "Advanced professional development and community engagement initiatives within the Student Union.",
+      badges: ["Community Building", "Strategic Planning", "Mentorship"],
       color: "bg-teal-500",
-      details: "Analyzed market trends and presented quarterly reports that shaped product expansion into two new verticals.",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            As a Board Member of the Student Leadership Council, I contributed to fostering a values-driven, inclusive, and service-oriented culture within the UT Dallas Student Union. The Council’s mission centered on building a strong internal community while providing student staff with opportunities for leadership, communication, and personal growth.
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Collaborated with fellow board members to design and implement initiatives that promoted professional development and community engagement among Student Union staff.
+            </li>
+            <li>
+              Supported strategic planning efforts aligned with the Student Union’s mission of inclusivity, service excellence, and purposeful student employment.
+            </li>
+            <li>
+              Helped shape programming that encouraged team-building, continuous learning, and cross-functional collaboration across various student-led departments within the Union.
+            </li>
+            <li>
+              Served as a mentor and peer leader, encouraging a positive work environment grounded in respect, innovation, and accountability.
+            </li>
+          </ul>
+          <p>
+            This experience deepened my leadership skills and taught me how to foster community and drive impact within a diverse, mission-driven organization.
+          </p>
+        </div>
+      ),
     },
     {
       icon: Handshake,
-      title: "Community Outreach Liaison",
+      title: "City Leader, U&I (non-profit) Bangalore",
       description:
-        "Built partnerships with local organizations to host quarterly tech workshops, attracting over 300 participants annually.",
-      badges: ["Partnerships", "Event Planning", "Public Relations"],
+        "Coordinated city-wide volunteer efforts and educational programs for underprivileged children.",
+      badges: ["Non-Profit Leadership", "Volunteer Coordination", "Fundraising"],
       color: "bg-indigo-500",
-      details: "Negotiated sponsorships and coordinated volunteers to deliver hands-on sessions for students and professionals.",
+      logo: UandIImage,
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            As a City Leader for U&I, a non-profit dedicated to providing education to underprivileged children, I led critical initiatives at both the center and city levels combining leadership, operational planning, and community outreach.
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Supervised a team at a learning center, ensuring quality education for children through structured lessons in English and life skills, fostering both academic growth and personal confidence.
+            </li>
+            <li>
+              Led a successful offline crowdfunding campaign, guiding my center through planning, outreach, and execution while managing attendance records and volunteer engagement to ensure transparency and smooth operations.
+            </li>
+            <li>
+              Oversaw data operations for the entire city, coordinating volunteer schedules, tracking student progress, and improving center efficiency through streamlined planning and reporting systems.
+            </li>
+            <li>
+              Spearheaded a city-wide volunteer recruitment campaign, leading outreach and marketing efforts that attracted passionate, qualified individuals committed to the cause. Personally supported the screening and onboarding process to ensure effective volunteer-student matches.
+            </li>
+            <li>
+              Acted as a central liaison between the organization’s leadership, volunteers, and the communities we serve ensuring both strategic alignment and on-the-ground impact.
+            </li>
+          </ul>
+          <p>
+            This role helped me grow as a mission-driven leader, capable of balancing grassroots execution with city-level coordination, while making a tangible difference in the lives of young learners.
+          </p>
+          <img src={UandIImage} alt="U&I" className="w-40 mx-auto rounded-md" />
+        </div>
+      ),
     },
   ];
 
