@@ -68,14 +68,14 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-3xl mx-auto border rounded-lg p-6 h-full">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-4xl mx-auto border rounded-lg p-6 h-full">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
                     <Card className="w-full bg-slate-50 shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
-                      <CardContent className="p-2 flex items-center space-x-4">
-                        <img src={cert.image} alt={cert.title} className="w-16 h-16 object-contain" />
+                      <CardContent className="px-2 py-1 flex items-center space-x-4">
+                        <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
                         <div>
                           <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                             {cert.title}
@@ -91,7 +91,7 @@ export default function SkillsSection() {
                 </Dialog>
               ) : (
                 <Card key={cert.title} className="w-full bg-slate-50 shadow flex items-center">
-                  <CardContent className="p-2">
+                  <CardContent className="px-2 py-1">
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
                     </h3>
