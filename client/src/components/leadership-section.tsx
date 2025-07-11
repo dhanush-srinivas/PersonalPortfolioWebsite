@@ -17,7 +17,6 @@ import {
 import SGLogo from "@/resources/SG_logo.png";
 import SGImage from "@/resources/Sg.jpg";
 import KSImage from "@/resources/KS.jpg";
-import SU1Image from "@/resources/SU1.jpeg";
 import SU2Image from "@/resources/SU2.jpeg";
 import UandIImage from "@/resources/U&i.jpg";
 
@@ -173,7 +172,6 @@ export default function LeadershipSection() {
             </li>
           </ul>
           <img src={SU2Image} alt="Student Union operations" className="w-40 mx-auto rounded-md" />
-          <img src={SU1Image} alt="Student Union facility" className="w-40 mx-auto rounded-md" />
         </div>
       ),
     },
@@ -290,17 +288,17 @@ export default function LeadershipSection() {
                 <DialogTrigger asChild>
                   <Card className="relative bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
                     {"logo" in item && (
-                      <img
-                        src={(item as any).logo}
-                        alt={`${item.title} image`}
-                        className="absolute left-0 top-0 h-full w-1/2 object-contain pointer-events-none opacity-90"
-                        style={{
-                          WebkitMaskImage:
-                            "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
-                          maskImage:
-                            "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
-                        }}
-                      />
+                    <img
+                      src={(item as any).logo}
+                      alt={`${item.title} image`}
+                      className="absolute left-0 top-0 h-full w-1/2 object-cover pointer-events-none opacity-90"
+                      style={{
+                        WebkitMaskImage:
+                          "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
+                        maskImage:
+                          "linear-gradient(to right, black 0%, black 70%, transparent 100%)",
+                      }}
+                    />
                     )}
                     <CardContent className="relative p-6">
                       <div className="inline-flex items-start space-x-4 bg-white/80 rounded p-2 w-fit">
