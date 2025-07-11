@@ -16,8 +16,10 @@ import {
 } from "@/components/ui/hover-card";
 import SGLogo from "@/resources/SG_logo.png";
 import SGImage from "@/resources/Sg.jpg";
+import SG1Image from "@/resources/Sg1.jpg";
 import KSImage from "@/resources/KS.jpg";
 import SU2Image from "@/resources/SU2.jpeg";
+import IIELCImage from "@/resources/iielc.jpg";
 import UandIImage from "@/resources/U&i.jpg";
 
 export default function LeadershipSection() {
@@ -29,8 +31,8 @@ export default function LeadershipSection() {
         "Elected by the student body, I served as an At-Large Senator within UTD’s Student Government, representing the broader graduate and international student community in university-wide decision-making...",
       badges: ["Advocacy", "Event Management", "Public Speaking"],
       color: "bg-[hsl(var(--portfolio-primary))]",
-  // Use the full SG image for the card thumbnail
-  logo: SGImage,
+  // Use the alternate SG image for the card thumbnail
+  logo: SG1Image,
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
@@ -183,6 +185,7 @@ export default function LeadershipSection() {
         "Organized startup-focused programs and connected students with founders and industry mentors.",
       badges: ["Event Planning", "Startup Outreach", "Networking"],
       color: "bg-purple-500",
+      logo: IIELCImage,
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
@@ -202,6 +205,11 @@ export default function LeadershipSection() {
           <p>
             These experiences allowed me to collaborate with mentors, industry professionals, and fellow council members, while strengthening my ability to plan large-scale events, engage with founders, and represent the council's mission to support innovation on campus. Being at the heart of these initiatives reinforced my passion for building ecosystems that support student entrepreneurship and I hope to return one day as a founder myself.
           </p>
+          <img
+            src={IIELCImage}
+            alt="Innovation & Entrepreneurship Council"
+            className="w-40 mx-auto rounded-md"
+          />
         </div>
       ),
     },
