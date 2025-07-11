@@ -1,17 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import PBIIcon from "@/resources/pbi.png";
-import ExcelIcon from "@/resources/excel.png";
+import ExcelIcon from "@/resources/excel1.png";
 import JiraIcon from "@/resources/jira.png";
-import ServiceNowIcon from "@/resources/servicenow1.png";
+import ServiceNowIcon from "@/resources/servicenow2.png";
 import WrikeIcon from "@/resources/wrike.png";
-import SQLIcon from "@/resources/sql.png";
-import TableauIcon from "@/resources/tableau.png";
+import SQLIcon from "@/resources/sql1.png";
+import TableauIcon from "@/resources/tableau1.png";
 import HTML5Icon from "@/resources/html5.png";
-import SAPIcon from "@/resources/sap.png";
+import SAPIcon from "@/resources/sap1.png";
 import AsanaIcon from "@/resources/asana.png";
 import GoogleAnalIcon from "@/resources/googleanal.png";
-import FigmaIcon from "@/resources/figma.png";
+import FigmaIcon from "@/resources/figma1.png";
 import PProIcon from "@/resources/ppro.png";
 import PShopIcon from "@/resources/pshop.png";
 import AEffectsIcon from "@/resources/aeffects.png";
@@ -52,23 +52,23 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Skills & Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="grid grid-cols-3 gap-4 place-items-center max-w-md mx-auto border rounded-lg p-4 h-full">
+          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full">
             {skillIcons.map((icon, idx) => (
               <img
                 key={idx}
                 src={icon}
                 alt="skill"
-                className="w-20 h-20 object-contain"
+                className="w-24 h-24 object-contain"
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-md mx-auto border rounded-lg p-4 h-full">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-lg mx-auto border rounded-lg p-6 h-full">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
@@ -77,7 +77,7 @@ export default function SkillsSection() {
                       <CardContent className="p-2 flex items-center space-x-2">
                         <img src={cert.image} alt={cert.title} className="w-10 h-10 object-contain" />
                         <div>
-                          <h3 className="text-sm font-semibold text-[hsl(var(--portfolio-secondary))]">
+                          <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                             {cert.title}
                           </h3>
                           <p className="text-slate-600 text-xs">{cert.organization}</p>
@@ -92,7 +92,7 @@ export default function SkillsSection() {
               ) : (
                 <Card key={cert.title} className="bg-slate-50 shadow flex items-center">
                   <CardContent className="p-2">
-                    <h3 className="text-sm font-semibold text-[hsl(var(--portfolio-secondary))]">
+                    <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
                     </h3>
                     <p className="text-slate-600 text-xs">{cert.organization}</p>
