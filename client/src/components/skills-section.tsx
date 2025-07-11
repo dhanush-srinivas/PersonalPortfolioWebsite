@@ -52,9 +52,9 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-white">
+    <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
+        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">
           Skills & Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
@@ -68,7 +68,7 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-4xl mx-auto border rounded-lg p-6 h-full">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
