@@ -13,6 +13,7 @@ import AndyImage from "@/resources/andy.jpg";
 import AshleyImage from "@/resources/ashley.jpg";
 import DebopreetaImage from "@/resources/debopreeta.jpeg";
 import SteveImage from "@/resources/steve.jpg";
+import AnimatedSection from "@/components/animated-section";
 
 export default function RecommendationsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -101,7 +102,7 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
   }, [recommendations.length, startCarousel]);
 
   return (
-    <section id="recommendations" ref={sectionRef} className="py-16 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="recommendations" ref={sectionRef as any} className="py-16 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-12">
           Recommendations
@@ -213,5 +214,6 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
           </div>
         </div>
       </div>
-    </section>
-  );}
+      </AnimatedSection>
+  );
+}

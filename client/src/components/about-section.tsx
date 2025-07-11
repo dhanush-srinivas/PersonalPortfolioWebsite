@@ -1,5 +1,6 @@
 import { Code, Palette, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import AnimatedSection from "@/components/animated-section";
 
 export default function AboutSection() {
   const features = [
@@ -24,7 +25,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[hsl(var(--portfolio-slate-50))] font-montserrat">
+    <AnimatedSection id="about" className="py-20 bg-[hsl(var(--portfolio-slate-50))] font-montserrat">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
@@ -47,6 +48,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

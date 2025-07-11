@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import AnimatedSection from "@/components/animated-section";
 import PrinterImage from "@/resources/new3DPrinter.jpg";
 import NRGImage from "@/resources/NRG.jpg";
 import ClothingImage from "@/resources/Clothing.jpg";
@@ -604,7 +605,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="projects" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Projects
@@ -714,6 +715,6 @@ export default function ProjectsSection() {
           )}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
