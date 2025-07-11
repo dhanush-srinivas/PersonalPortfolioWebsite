@@ -27,7 +27,7 @@ export default function AboutSection() {
   return (
     <AnimatedSection
       id="about"
-      className="py-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-accent)/0.05)] to-white font-montserrat"
+      className="py-20 font-montserrat"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">

@@ -55,7 +55,7 @@ export default function SkillsSection() {
   return (
     <AnimatedSection
       id="skills"
-      className="py-20 bg-[#FAF5FF]"
+      className="py-20"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">

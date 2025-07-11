@@ -607,7 +607,7 @@ export default function ProjectsSection() {
   return (
     <AnimatedSection
       id="projects"
-      className="py-20 bg-[#FEF5F6]"
+      className="py-20"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
