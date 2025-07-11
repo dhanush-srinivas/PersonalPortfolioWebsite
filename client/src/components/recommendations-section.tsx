@@ -105,7 +105,7 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
     <AnimatedSection
       id="recommendations"
       ref={sectionRef as any}
-      className="py-16 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-primary)/0.05)] to-white"
+      className="py-16 bg-[#EBF2FF]"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-12">
