@@ -28,7 +28,7 @@ export default function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="pt-10 pb-20 bg-[#DCFCE7]"
+      className="pt-10 pb-20"
     >
       <div className="container mx-auto px-4">
         {/* Video and Pitch Section */}
