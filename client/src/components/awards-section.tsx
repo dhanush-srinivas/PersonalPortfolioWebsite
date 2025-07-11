@@ -1,5 +1,6 @@
 import { Trophy, Medal, Star, Award, Code, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import AnimatedSection from "@/components/animated-section";
 
 export default function AwardsSection() {
   const awards = [
@@ -48,7 +49,7 @@ export default function AwardsSection() {
   ];
 
   return (
-    <section id="awards" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="awards" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Awards & Recognition
@@ -70,6 +71,6 @@ export default function AwardsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

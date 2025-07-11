@@ -1,6 +1,7 @@
 import { Briefcase, Code, Laptop } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AnimatedSection from "@/components/animated-section";
 
 export default function ExperienceSection() {
   const experiences = [
@@ -46,7 +47,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="experience" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Experience
@@ -99,6 +100,6 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

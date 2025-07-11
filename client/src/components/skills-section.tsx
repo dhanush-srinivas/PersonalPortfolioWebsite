@@ -21,6 +21,7 @@ import GooglePMImage from "@/resources/googlepm.jpg";
 import MarketingImage from "@/resources/marketingc.jpg";
 import CBREPMImage from "@/resources/cbrepm.jpg";
 import ExternshipImage from "@/resources/externc.jpg";
+import AnimatedSection from "@/components/animated-section";
 
 export default function SkillsSection() {
   const skillIcons = [
@@ -52,7 +53,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="skills" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">
           Skills & Certifications
@@ -103,6 +104,6 @@ export default function SkillsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -20,6 +20,7 @@ import KSImage from "@/resources/KS.jpg";
 import SU2Image from "@/resources/SU2.jpeg";
 import IIELCImage from "@/resources/iielc.jpg";
 import UandIImage from "@/resources/U&i.jpg";
+import AnimatedSection from "@/components/animated-section";
 
 export default function LeadershipSection() {
   const leadership = [
@@ -284,7 +285,7 @@ export default function LeadershipSection() {
   ];
 
   return (
-    <section id="leadership" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection id="leadership" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Leadership Experience
@@ -403,6 +404,6 @@ export default function LeadershipSection() {
           )}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
