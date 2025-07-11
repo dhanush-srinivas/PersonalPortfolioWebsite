@@ -45,10 +45,10 @@ export default function SkillsSection() {
     { title: "Certified Scrum Master", organization: "Scrum Alliance", image: CSMImage },
     { title: "Power BI Data Analyst", organization: "Microsoft", image: PowerBIImage },
     { title: "Project Management Professional (v2)", organization: "Google", image: GooglePMImage },
-    { title: "Marketing Automation", organization: "How to Build a Successful Campaign", image: MarketingImage },
+    { title: "Supply Chain Modelling & Analytics", organization: "NPTEL" },
     { title: "Project Management Job Simulation", organization: "Forage (CBRE)", image: CBREPMImage },
     { title: "Market Research Externship", organization: "National Research Group (NRG)", image: ExternshipImage },
-    { title: "Supply Chain Modelling & Analytics", organization: "NPTEL" },
+    { title: "Marketing Automation", organization: "How to Build a Successful Campaign", image: MarketingImage },
   ];
 
   return (
@@ -68,14 +68,14 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-lg mx-auto border rounded-lg p-6 h-full">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-3xl mx-auto border rounded-lg p-6 h-full">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
-                    <Card className="bg-slate-50 shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
-                      <CardContent className="p-2 flex items-center space-x-2">
-                        <img src={cert.image} alt={cert.title} className="w-10 h-10 object-contain" />
+                    <Card className="w-full bg-slate-50 shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
+                      <CardContent className="p-2 flex items-center space-x-4">
+                        <img src={cert.image} alt={cert.title} className="w-16 h-16 object-contain" />
                         <div>
                           <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                             {cert.title}
@@ -90,7 +90,7 @@ export default function SkillsSection() {
                   </DialogContent>
                 </Dialog>
               ) : (
-                <Card key={cert.title} className="bg-slate-50 shadow flex items-center">
+                <Card key={cert.title} className="w-full bg-slate-50 shadow flex items-center">
                   <CardContent className="p-2">
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
