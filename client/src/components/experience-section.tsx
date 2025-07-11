@@ -49,7 +49,7 @@ export default function ExperienceSection() {
   return (
     <AnimatedSection
       id="experience"
-      className="py-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-accent)/0.05)] to-white"
+      className="py-20 bg-[#EAF1FF]"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
