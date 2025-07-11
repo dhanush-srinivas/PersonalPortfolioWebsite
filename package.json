@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://dhanush-srinivas.github.io/PersonalPortfolioWebsite",
+  "homepage": "https://dhanush-srinivas.github.io/Portfolio",
 
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
