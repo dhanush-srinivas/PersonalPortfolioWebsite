@@ -53,7 +53,10 @@ export default function SkillsSection() {
   ];
 
   return (
-    <AnimatedSection id="skills" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection
+      id="skills"
+      className="py-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-primary)/0.05)] to-white"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">
           Skills & Certifications
@@ -74,7 +77,9 @@ export default function SkillsSection() {
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
-                    <Card className="w-full md:w-80 bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
+                    <Card
+                      className="w-full md:w-80 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow"
+                    >
                       <CardContent className="px-2 py-1 flex items-center space-x-4">
                         <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
                         <div>
@@ -91,7 +96,10 @@ export default function SkillsSection() {
                   </DialogContent>
                 </Dialog>
               ) : (
-                <Card key={cert.title} className="w-full md:w-80 bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center">
+                <Card
+                  key={cert.title}
+                  className="w-full md:w-80 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center"
+                >
                   <CardContent className="px-2 py-1">
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
