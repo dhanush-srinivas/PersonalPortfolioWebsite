@@ -14,7 +14,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import SGLogo from "@/resources/SG_logo.png";
 import SGImage from "@/resources/Sg.jpg";
 import SG1Image from "@/resources/Sg1.jpg";
 import KSImage from "@/resources/KS.jpg";
