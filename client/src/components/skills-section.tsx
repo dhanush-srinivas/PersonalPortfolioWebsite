@@ -59,7 +59,7 @@ export default function SkillsSection() {
           Skills & Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full">
+          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full bg-white">
             {skillIcons.map((icon, idx) => (
               <img
                 key={idx}
@@ -69,12 +69,12 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
-                    <Card className="w-full bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
+                    <Card className="w-full md:w-80 bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
                       <CardContent className="px-2 py-1 flex items-center space-x-4">
                         <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
                         <div>
@@ -91,7 +91,7 @@ export default function SkillsSection() {
                   </DialogContent>
                 </Dialog>
               ) : (
-                <Card key={cert.title} className="w-full bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center">
+                <Card key={cert.title} className="w-full md:w-80 bg-[hsl(var(--portfolio-slate-50))] shadow flex items-center">
                   <CardContent className="px-2 py-1">
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
