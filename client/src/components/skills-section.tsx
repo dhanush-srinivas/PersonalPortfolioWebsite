@@ -1,21 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import PBIIcon from "@/resources/skills/pbi.svg";
-import ExcelIcon from "@/resources/skills/excel.svg";
-import JiraIcon from "@/resources/skills/jira.svg";
-import ServiceNowIcon from "@/resources/servicenow.png";
+import PBIIcon from "@/resources/pbi.png";
+import ExcelIcon from "@/resources/excel.png";
+import JiraIcon from "@/resources/jira.png";
+import ServiceNowIcon from "@/resources/servicenow1.png";
 import WrikeIcon from "@/resources/wrike.png";
-import SQLIcon from "@/resources/skills/sql.svg";
-import TableauIcon from "@/resources/skills/tableau.svg";
-import HTML5Icon from "@/resources/skills/html5.svg";
-import SAPIcon from "@/resources/skills/sap.svg";
-import AsanaIcon from "@/resources/skills/asana.svg";
-import GoogleAnalIcon from "@/resources/skills/googleanal.svg";
-import FigmaIcon from "@/resources/skills/figma.svg";
-import Wrike2Icon from "@/resources/wrike.png";
-import PProIcon from "@/resources/skills/ppro.svg";
-import PShopIcon from "@/resources/skills/pshop.svg";
-import AEffectsIcon from "@/resources/skills/aeffects.svg";
+import SQLIcon from "@/resources/sql.png";
+import TableauIcon from "@/resources/tableau.png";
+import HTML5Icon from "@/resources/html5.png";
+import SAPIcon from "@/resources/sap.png";
+import AsanaIcon from "@/resources/asana.png";
+import GoogleAnalIcon from "@/resources/googleanal.png";
+import FigmaIcon from "@/resources/figma.png";
+import PProIcon from "@/resources/ppro.png";
+import PShopIcon from "@/resources/pshop.png";
+import AEffectsIcon from "@/resources/aeffects.png";
 import CSMImage from "@/resources/csm.jpg";
 import PowerBIImage from "@/resources/powerbi.jpg";
 import GooglePMImage from "@/resources/googlepm.jpg";
@@ -37,7 +36,6 @@ export default function SkillsSection() {
     AsanaIcon,
     GoogleAnalIcon,
     FigmaIcon,
-    Wrike2Icon,
     PProIcon,
     PShopIcon,
     AEffectsIcon,
@@ -59,18 +57,18 @@ export default function SkillsSection() {
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Skills & Certifications
         </h2>
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div className="flex flex-wrap justify-center max-w-md mx-auto border rounded-lg p-4">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-3 gap-4 place-items-center max-w-md mx-auto border rounded-lg p-4 h-full">
             {skillIcons.map((icon, idx) => (
-              <div
+              <img
                 key={idx}
-                className={`w-20 h-20 m-2 ${idx % 2 ? "mt-6" : ""}`}
-              >
-                <img src={icon} alt="skill" className="w-full h-full object-contain" />
-              </div>
+                src={icon}
+                alt="skill"
+                className="w-20 h-20 object-contain"
+              />
             ))}
           </div>
-          <div className="grid gap-4 max-w-md mx-auto border rounded-lg p-4">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 max-w-md mx-auto border rounded-lg p-4 h-full">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
