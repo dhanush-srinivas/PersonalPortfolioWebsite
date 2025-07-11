@@ -21,20 +21,20 @@
   --accent-foreground: hsl(220, 9%, 46%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(60, 9%, 98%);
-  --ring: hsl(221, 83%, 53%);
+  --ring: hsl(262, 84%, 58%);
   --radius: 0.5rem;
   
   /* Custom portfolio colors */
-  --portfolio-primary: hsl(221, 83%, 53%);
-  --portfolio-secondary: hsl(220, 24%, 17%);
-  --portfolio-accent: hsl(189, 94%, 43%);
-  --portfolio-slate-50: hsl(210, 40%, 98%);
-  --portfolio-slate-100: hsl(210, 40%, 96%);
-  --portfolio-slate-200: hsl(214, 32%, 91%);
-  --portfolio-slate-300: hsl(213, 27%, 84%);
-  --portfolio-slate-600: hsl(218, 11%, 65%);
-  --portfolio-slate-700: hsl(215, 25%, 27%);
-  --portfolio-slate-900: hsl(220, 39%, 11%);
+  --portfolio-primary: hsl(262, 84%, 58%);
+  --portfolio-secondary: hsl(232, 24%, 16%);
+  --portfolio-accent: hsl(340, 82%, 60%);
+  --portfolio-slate-50: hsl(240, 40%, 98%);
+  --portfolio-slate-100: hsl(240, 40%, 96%);
+  --portfolio-slate-200: hsl(240, 32%, 92%);
+  --portfolio-slate-300: hsl(240, 27%, 86%);
+  --portfolio-slate-600: hsl(240, 11%, 65%);
+  --portfolio-slate-700: hsl(240, 16%, 27%);
+  --portfolio-slate-900: hsl(240, 33%, 12%);
 }
 
 .dark {
@@ -48,15 +48,25 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 4%, 16%);
   --input: hsl(240, 4%, 16%);
-  --primary: hsl(221, 83%, 53%);
+  --primary: hsl(262, 84%, 58%);
   --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(240, 4%, 16%);
+  --secondary: hsl(230, 6%, 10%);
   --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 4%, 16%);
+  --accent: hsl(340, 82%, 60%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 63%, 31%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(221, 83%, 53%);
+  --ring: hsl(262, 84%, 58%);
+  --portfolio-primary: hsl(262, 84%, 58%);
+  --portfolio-secondary: hsl(232, 24%, 16%);
+  --portfolio-accent: hsl(340, 82%, 60%);
+  --portfolio-slate-50: hsl(240, 20%, 15%);
+  --portfolio-slate-100: hsl(240, 20%, 18%);
+  --portfolio-slate-200: hsl(240, 20%, 22%);
+  --portfolio-slate-300: hsl(240, 20%, 30%);
+  --portfolio-slate-600: hsl(240, 10%, 50%);
+  --portfolio-slate-700: hsl(240, 16%, 70%);
+  --portfolio-slate-900: hsl(240, 30%, 88%);
 }
 
 @layer base {
