@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
+  --background: hsl(210, 40%, 98%);
   --foreground: hsl(20, 14.3%, 4.1%);
   --muted: hsl(220, 13%, 96%);
   --muted-foreground: hsl(25, 5.3%, 44.7%);
@@ -13,7 +13,7 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(220, 13%, 91%);
   --input: hsl(220, 13%, 91%);
-  --primary: hsl(221, 83%, 53%);
+  --primary: hsl(204, 85%, 45%);
   --primary-foreground: hsl(210, 40%, 98%);
   --secondary: hsl(220, 14%, 96%);
   --secondary-foreground: hsl(220, 9%, 46%);
@@ -21,24 +21,24 @@
   --accent-foreground: hsl(220, 9%, 46%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(60, 9%, 98%);
-  --ring: hsl(262, 84%, 58%);
+  --ring: hsl(204, 85%, 45%);
   --radius: 0.5rem;
   
   /* Custom portfolio colors */
-  --portfolio-primary: hsl(262, 84%, 58%);
-  --portfolio-secondary: hsl(232, 24%, 16%);
-  --portfolio-accent: hsl(340, 82%, 60%);
-  --portfolio-slate-50: hsl(240, 40%, 98%);
-  --portfolio-slate-100: hsl(240, 40%, 96%);
-  --portfolio-slate-200: hsl(240, 32%, 92%);
-  --portfolio-slate-300: hsl(240, 27%, 86%);
-  --portfolio-slate-600: hsl(240, 11%, 65%);
-  --portfolio-slate-700: hsl(240, 16%, 27%);
-  --portfolio-slate-900: hsl(240, 33%, 12%);
+  --portfolio-primary: hsl(204, 85%, 45%);
+  --portfolio-secondary: hsl(230, 35%, 18%);
+  --portfolio-accent: hsl(339, 84%, 62%);
+  --portfolio-slate-50: hsl(210, 40%, 98%);
+  --portfolio-slate-100: hsl(210, 40%, 96%);
+  --portfolio-slate-200: hsl(210, 32%, 92%);
+  --portfolio-slate-300: hsl(210, 24%, 87%);
+  --portfolio-slate-600: hsl(210, 16%, 47%);
+  --portfolio-slate-700: hsl(210, 18%, 31%);
+  --portfolio-slate-900: hsl(210, 36%, 13%);
 }
 
 .dark {
-  --background: hsl(240, 10%, 4%);
+  --background: hsl(230, 15%, 12%);
   --foreground: hsl(0, 0%, 98%);
   --muted: hsl(240, 4%, 16%);
   --muted-foreground: hsl(240, 5%, 65%);
@@ -56,17 +56,17 @@
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 63%, 31%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(262, 84%, 58%);
-  --portfolio-primary: hsl(262, 84%, 58%);
-  --portfolio-secondary: hsl(232, 24%, 16%);
-  --portfolio-accent: hsl(340, 82%, 60%);
-  --portfolio-slate-50: hsl(240, 20%, 15%);
-  --portfolio-slate-100: hsl(240, 20%, 18%);
-  --portfolio-slate-200: hsl(240, 20%, 22%);
-  --portfolio-slate-300: hsl(240, 20%, 30%);
-  --portfolio-slate-600: hsl(240, 10%, 50%);
-  --portfolio-slate-700: hsl(240, 16%, 70%);
-  --portfolio-slate-900: hsl(240, 30%, 88%);
+  --ring: hsl(204, 85%, 55%);
+  --portfolio-primary: hsl(204, 85%, 55%);
+  --portfolio-secondary: hsl(230, 35%, 90%);
+  --portfolio-accent: hsl(339, 84%, 72%);
+  --portfolio-slate-50: hsl(230, 25%, 15%);
+  --portfolio-slate-100: hsl(230, 25%, 20%);
+  --portfolio-slate-200: hsl(230, 25%, 25%);
+  --portfolio-slate-300: hsl(230, 25%, 32%);
+  --portfolio-slate-600: hsl(230, 30%, 56%);
+  --portfolio-slate-700: hsl(230, 35%, 75%);
+  --portfolio-slate-900: hsl(230, 50%, 88%);
 }
 
 @layer base {
@@ -75,8 +75,13 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
     font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--portfolio-slate-50)),
+      hsl(var(--portfolio-slate-200))
+    );
   }
   
   html {

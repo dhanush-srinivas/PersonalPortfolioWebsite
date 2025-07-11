@@ -27,7 +27,7 @@ export default function Header() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm font-montserrat"
+      className="sticky top-0 z-50 bg-gradient-to-r from-white via-[hsl(var(--portfolio-slate-50))] to-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm font-montserrat"
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">

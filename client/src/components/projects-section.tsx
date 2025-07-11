@@ -605,7 +605,10 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <AnimatedSection id="projects" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
+    <AnimatedSection
+      id="projects"
+      className="py-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-primary)/0.05)] to-white"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Projects

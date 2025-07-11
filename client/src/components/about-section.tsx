@@ -25,7 +25,10 @@ export default function AboutSection() {
   ];
 
   return (
-    <AnimatedSection id="about" className="py-20 bg-[hsl(var(--portfolio-slate-50))] font-montserrat">
+    <AnimatedSection
+      id="about"
+      className="py-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-accent)/0.05)] to-white font-montserrat"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
@@ -33,7 +36,10 @@ export default function AboutSection() {
           </h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-[hsl(var(--portfolio-slate-50))] hover:shadow-lg transition-shadow duration-300">
+              <Card
+                key={index}
+                className="bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] hover:shadow-lg transition-shadow duration-300"
+              >
                 <CardContent className="p-8">
                   <div className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center mb-6`}>
                     <feature.icon className="text-white w-8 h-8" />
