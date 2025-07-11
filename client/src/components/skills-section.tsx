@@ -3,8 +3,8 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import PBIIcon from "@/resources/skills/pbi.svg";
 import ExcelIcon from "@/resources/skills/excel.svg";
 import JiraIcon from "@/resources/skills/jira.svg";
-import ServiceNowIcon from "@/resources/skills/servicenow.svg";
-import WrikeIcon from "@/resources/skills/wrike.svg";
+import ServiceNowIcon from "@/resources/servicenow.png";
+import WrikeIcon from "@/resources/wrike.png";
 import SQLIcon from "@/resources/skills/sql.svg";
 import TableauIcon from "@/resources/skills/tableau.svg";
 import HTML5Icon from "@/resources/skills/html5.svg";
@@ -12,7 +12,7 @@ import SAPIcon from "@/resources/skills/sap.svg";
 import AsanaIcon from "@/resources/skills/asana.svg";
 import GoogleAnalIcon from "@/resources/skills/googleanal.svg";
 import FigmaIcon from "@/resources/skills/figma.svg";
-import Wrike2Icon from "@/resources/skills/wrike2.svg";
+import Wrike2Icon from "@/resources/wrike.png";
 import PProIcon from "@/resources/skills/ppro.svg";
 import PShopIcon from "@/resources/skills/pshop.svg";
 import AEffectsIcon from "@/resources/skills/aeffects.svg";
@@ -60,7 +60,7 @@ export default function SkillsSection() {
           Skills & Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div className="flex flex-wrap justify-center max-w-md mx-auto">
+          <div className="flex flex-wrap justify-center max-w-md mx-auto border rounded-lg p-4">
             {skillIcons.map((icon, idx) => (
               <div
                 key={idx}
@@ -70,14 +70,14 @@ export default function SkillsSection() {
               </div>
             ))}
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-4 max-w-md mx-auto border rounded-lg p-4">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
                     <Card className="bg-slate-50 shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow">
-                      <CardContent className="p-4 flex items-center space-x-4">
-                        <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
+                      <CardContent className="p-2 flex items-center space-x-2">
+                        <img src={cert.image} alt={cert.title} className="w-10 h-10 object-contain" />
                         <div>
                           <h3 className="text-sm font-semibold text-[hsl(var(--portfolio-secondary))]">
                             {cert.title}
@@ -93,7 +93,7 @@ export default function SkillsSection() {
                 </Dialog>
               ) : (
                 <Card key={cert.title} className="bg-slate-50 shadow flex items-center">
-                  <CardContent className="p-4">
+                  <CardContent className="p-2">
                     <h3 className="text-sm font-semibold text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
                     </h3>

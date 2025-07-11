@@ -29,7 +29,8 @@ export default function LeadershipSection() {
         "Elected by the student body, I served as an At-Large Senator within UTD’s Student Government, representing the broader graduate and international student community in university-wide decision-making...",
       badges: ["Advocacy", "Event Management", "Public Speaking"],
       color: "bg-[hsl(var(--portfolio-primary))]",
-      logo: SGLogo,
+  // Use the full SG image for the card thumbnail
+  logo: SGImage,
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
