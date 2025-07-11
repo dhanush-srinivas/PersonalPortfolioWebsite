@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer
-      className="py-12 bg-gradient-to-br from-[hsl(var(--portfolio-secondary))] via-[hsl(var(--portfolio-primary)/0.3)] to-[hsl(var(--portfolio-secondary))] text-white"
+      className="py-12 bg-[#8E72EB] text-white"
     >
       <div className="container mx-auto px-4">
         <div className="text-center">
