@@ -28,7 +28,7 @@ export default function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="pt-10 pb-20 bg-gradient-to-br from-slate-50 to-white"
+      className="pt-10 pb-20 bg-gradient-to-br from-[hsl(var(--portfolio-slate-50))] via-[hsl(var(--portfolio-primary)/0.1)] to-white"
     >
       <div className="container mx-auto px-4">
         {/* Video and Pitch Section */}

@@ -277,7 +277,7 @@ export default function LeadershipSection() {
   ];
 
   return (
-    <section id="leadership" className="py-20 bg-white">
+    <section id="leadership" className="py-20 bg-[hsl(var(--portfolio-slate-50))]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
           Leadership Experience
@@ -287,7 +287,7 @@ export default function LeadershipSection() {
             typeof item.details !== "string" ? (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="relative bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                  <Card className="relative bg-[hsl(var(--portfolio-slate-50))] shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
                     {"logo" in item && (
                     <img
                       src={(item as any).logo}
@@ -347,7 +347,7 @@ export default function LeadershipSection() {
             ) : (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="bg-slate-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                  <Card className="bg-[hsl(var(--portfolio-slate-50))] shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
