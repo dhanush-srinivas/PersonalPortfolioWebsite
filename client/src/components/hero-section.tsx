@@ -59,7 +59,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6 lg:col-span-1"
           >
-            <Card className="shadow-lg font-montserrat">
+            <Card className="shadow-2xl font-montserrat">
               <CardContent className="p-8 font-montserrat">
                 <h2 className="text-2xl font-bold text-[hsl(var(--portfolio-secondary))] mb-4">
                   Who am I?

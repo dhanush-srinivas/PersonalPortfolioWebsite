@@ -287,7 +287,8 @@ export default function LeadershipSection() {
   return (
     <AnimatedSection
       id="leadership"
-      className="py-20"
+      className="py-10"
+      duration={1.2}
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
@@ -328,7 +329,7 @@ export default function LeadershipSection() {
                       </div>
                       <div className="absolute right-4 bottom-4 flex flex-wrap gap-2">
                         {item.badges.map((badge, badgeIndex) => (
-                          <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                          <Badge key={badgeIndex} variant="outline" className="text-xs">
                             {badge}
                           </Badge>
                         ))}
@@ -350,7 +351,7 @@ export default function LeadershipSection() {
                   {item.details}
                   <div className="flex flex-wrap gap-2 mt-4">
                     {item.badges.map((badge, badgeIndex) => (
-                      <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                      <Badge key={badgeIndex} variant="outline" className="text-xs">
                         {badge}
                       </Badge>
                     ))}
@@ -373,7 +374,7 @@ export default function LeadershipSection() {
                           <p className="text-slate-600 mb-2 text-sm">{item.description}</p>
                           <div className="flex flex-wrap gap-2">
                             {item.badges.map((badge, badgeIndex) => (
-                              <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                              <Badge key={badgeIndex} variant="outline" className="text-xs">
                                 {badge}
                               </Badge>
                             ))}
@@ -398,7 +399,7 @@ export default function LeadershipSection() {
                   <p className="text-slate-600 text-sm mb-2">{item.details}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.badges.map((badge, badgeIndex) => (
-                      <Badge key={badgeIndex} variant="secondary" className="text-xs">
+                      <Badge key={badgeIndex} variant="outline" className="text-xs">
                         {badge}
                       </Badge>
                     ))}

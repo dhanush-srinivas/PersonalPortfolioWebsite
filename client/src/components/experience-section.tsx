@@ -49,7 +49,8 @@ export default function ExperienceSection() {
   return (
     <AnimatedSection
       id="experience"
-      className="py-20"
+      className="py-10"
+      duration={1.2}
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
@@ -67,7 +68,7 @@ export default function ExperienceSection() {
                   <div className={`w-16 h-16 ${exp.color} rounded-full flex items-center justify-center flex-shrink-0 relative z-10`}>
                     <exp.icon className="text-white w-8 h-8" />
                   </div>
-                  <Card className="shadow-lg flex-1">
+                  <Card className="shadow-lg flex-1 bg-[#FEFEFE]">
                     <CardContent className="p-8">
                       <div className="flex justify-between items-start mb-4">
                         <div>
