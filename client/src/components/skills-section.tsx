@@ -43,27 +43,47 @@ export default function SkillsSection() {
   ];
 
   const certifications = [
-    { title: "Certified Scrum Master", organization: "Scrum Alliance", image: CSMImage },
-    { title: "Power BI Data Analyst", organization: "Microsoft", image: PowerBIImage },
-    { title: "Project Management Professional (v2)", organization: "Google", image: GooglePMImage },
+    {
+      title: "Certified Scrum Master",
+      organization: "Scrum Alliance",
+      image: CSMImage,
+    },
+    {
+      title: "Power BI Data Analyst",
+      organization: "Microsoft",
+      image: PowerBIImage,
+    },
+    {
+      title: "Project Management Professional (v2)",
+      organization: "Google",
+      image: GooglePMImage,
+    },
     { title: "Supply Chain Modelling & Analytics", organization: "NPTEL" },
-    { title: "Project Management Job Simulation", organization: "Forage (CBRE)", image: CBREPMImage },
-    { title: "Market Research Externship", organization: "National Research Group (NRG)", image: ExternshipImage },
-    { title: "Marketing Automation", organization: "How to Build a Successful Campaign", image: MarketingImage },
+    {
+      title: "Project Management Job Simulation",
+      organization: "Forage (CBRE)",
+      image: CBREPMImage,
+    },
+    {
+      title: "Market Research Externship",
+      organization: "National Research Group (NRG)",
+      image: ExternshipImage,
+    },
+    {
+      title: "Marketing Automation",
+      organization: "How to Build a Successful Campaign",
+      image: MarketingImage,
+    },
   ];
 
   return (
-    <AnimatedSection
-      id="skills"
-      className="py-10"
-      duration={1.2}
-    >
+    <AnimatedSection id="skills" className="py-10" duration={1.2}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">
           Skills & Certifications
         </h2>
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full bg-[#FEFEFE]">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full bg-[#FEFEFE] md:col-span-1">
             {skillIcons.map((icon, idx) => (
               <img
                 key={idx}
@@ -73,27 +93,45 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr bg-[#FEFEFE]">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr bg-[#FEFEFE] md:col-span-2">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
                     <Card
-                      className="w-full md:w-96 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow"
+                      className={`w-full ${
+                        [
+                          "Project Management Job Simulation",
+                          "Market Research Externship",
+                          "Marketing Automation",
+                        ].includes(cert.title)
+                          ? "md:w-64"
+                          : "md:w-96"
+                      } bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow`}
                     >
                       <CardContent className="px-2 py-0.5 flex items-center space-x-4">
-                        <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
+                        <img
+                          src={cert.image}
+                          alt={cert.title}
+                          className="w-12 h-12 object-contain"
+                        />
                         <div>
                           <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                             {cert.title}
                           </h3>
-                          <p className="text-slate-600 text-xs">{cert.organization}</p>
+                          <p className="text-slate-600 text-xs">
+                            {cert.organization}
+                          </p>
                         </div>
                       </CardContent>
                     </Card>
                   </DialogTrigger>
                   <DialogContent className="w-[95vw] max-w-xl p-0">
-                    <img src={cert.image} alt={cert.title} className="w-full h-auto object-contain" />
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-auto object-contain"
+                    />
                   </DialogContent>
                 </Dialog>
               ) : (
@@ -105,10 +143,12 @@ export default function SkillsSection() {
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
                     </h3>
-                    <p className="text-slate-600 text-xs">{cert.organization}</p>
+                    <p className="text-slate-600 text-xs">
+                      {cert.organization}
+                    </p>
                   </CardContent>
                 </Card>
-              )
+              ),
             )}
           </div>
         </div>
