@@ -55,14 +55,15 @@ export default function SkillsSection() {
   return (
     <AnimatedSection
       id="skills"
-      className="py-20"
+      className="py-10"
+      duration={1.2}
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-8">
           Skills & Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full bg-white">
+          <div className="grid grid-cols-3 gap-6 place-items-center max-w-lg mx-auto border rounded-lg p-6 h-full bg-[#FEFEFE]">
             {skillIcons.map((icon, idx) => (
               <img
                 key={idx}
@@ -72,15 +73,15 @@ export default function SkillsSection() {
               />
             ))}
           </div>
-          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr">
+          <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr bg-[#FEFEFE]">
             {certifications.map((cert) =>
               cert.image ? (
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
                     <Card
-                      className="w-full md:w-80 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow"
+                      className="w-full md:w-96 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow"
                     >
-                      <CardContent className="px-2 py-1 flex items-center space-x-4">
+                      <CardContent className="px-2 py-0.5 flex items-center space-x-4">
                         <img src={cert.image} alt={cert.title} className="w-12 h-12 object-contain" />
                         <div>
                           <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
@@ -98,9 +99,9 @@ export default function SkillsSection() {
               ) : (
                 <Card
                   key={cert.title}
-                  className="w-full md:w-80 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center"
+                  className="w-full md:w-96 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center"
                 >
-                  <CardContent className="px-2 py-1">
+                  <CardContent className="px-2 py-0.5">
                     <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
                       {cert.title}
                     </h3>

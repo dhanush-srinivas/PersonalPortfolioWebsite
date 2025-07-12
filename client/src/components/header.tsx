@@ -7,10 +7,10 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#recommendations", label: "Recommendations" },
     { href: "#projects", label: "Projects" },
     { href: "#leadership", label: "Leadership" },
     { href: "#skills", label: "Skills" },
+    { href: "#recommendations", label: "Recommendations" },
     { href: "#experience", label: "Experience" },
   ];
 

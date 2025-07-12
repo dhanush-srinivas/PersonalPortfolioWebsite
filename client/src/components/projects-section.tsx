@@ -607,7 +607,8 @@ export default function ProjectsSection() {
   return (
     <AnimatedSection
       id="projects"
-      className="py-20"
+      className="py-10"
+      duration={1.2}
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
@@ -618,7 +619,7 @@ export default function ProjectsSection() {
             project.details ? (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer">
+                  <Card className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer bg-[#FEFEFE]">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -632,10 +633,10 @@ export default function ProjectsSection() {
                       {project.role || project.tools ? (
                         <div className="flex flex-col gap-2 mb-3">
                           {project.role && (
-                            <Badge variant="secondary" className="w-fit text-xs">Role: {project.role}</Badge>
+                            <Badge variant="outline" className="w-fit text-xs">Role: {project.role}</Badge>
                           )}
                           {project.tools && (
-                            <Badge variant="secondary" className="w-fit text-xs">Tools: {project.tools}</Badge>
+                            <Badge variant="outline" className="w-fit text-xs">Tools: {project.tools}</Badge>
                           )}
                         </div>
                       ) : (
@@ -647,7 +648,7 @@ export default function ProjectsSection() {
                           ))}
                         </div>
                       )}
-                      <Button variant="outline" size="sm">Read more</Button>
+                      <Button variant="outline" size="sm" className="text-[#6B7280]">Read more</Button>
                     </CardContent>
                   </Card>
                 </DialogTrigger>
@@ -668,7 +669,7 @@ export default function ProjectsSection() {
             ) : (
               <Card
                 key={index}
-                className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden bg-[#FEFEFE]"
               >
                 <img
                   src={project.image}
@@ -683,10 +684,10 @@ export default function ProjectsSection() {
                   {project.role || project.tools ? (
                     <div className="flex flex-col gap-2 mb-3">
                       {project.role && (
-                            <Badge variant="secondary" className="w-fit text-xs">Role: {project.role}</Badge>
+                            <Badge variant="outline" className="w-fit text-xs">Role: {project.role}</Badge>
                       )}
                       {project.tools && (
-                            <Badge variant="secondary" className="w-fit text-xs">Tools: {project.tools}</Badge>
+                            <Badge variant="outline" className="w-fit text-xs">Tools: {project.tools}</Badge>
                       )}
                     </div>
                   ) : (
