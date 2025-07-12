@@ -99,21 +99,15 @@ export default function SkillsSection() {
                 <Dialog key={cert.title}>
                   <DialogTrigger asChild>
                     <Card
-                      className={`w-full ${
-                        [
-                          "Project Management Job Simulation",
-                          "Market Research Externship",
-                          "Marketing Automation",
-                        ].includes(cert.title)
-                          ? "md:w-64"
-                          : "md:w-96"
-                      } bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow`}
+                      className={
+                        "w-full md:w-96 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center cursor-pointer hover:shadow-xl transition-shadow"
+                      }
                     >
                       <CardContent className="px-2 py-0.5 flex items-center space-x-4">
                         <img
                           src={cert.image}
                           alt={cert.title}
-                          className="w-12 h-12 object-contain"
+                          className="w-24 h-24 object-contain"
                         />
                         <div>
                           <h3 className="text-sm font-semibold whitespace-nowrap text-[hsl(var(--portfolio-secondary))]">
