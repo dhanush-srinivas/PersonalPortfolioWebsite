@@ -20,7 +20,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import UTDLogo from "@/resources/UTD.png";
 import VTULogo from "@/resources/VTU.png";
-import Arrow from "@/resources/Arrow.png";
+// Replaced Arrow.jpg with Arrow2.png for the hero section arrow graphic
+import Arrow from "@/resources/Arrow2.png";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
