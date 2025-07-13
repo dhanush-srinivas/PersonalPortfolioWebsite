@@ -20,7 +20,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import UTDLogo from "@/resources/UTD.png";
 import VTULogo from "@/resources/VTU.png";
-import Arrow from "@/resources/Arrow.jpg";
+import Arrow from "@/resources/Arrow.png";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -64,7 +64,7 @@ export default function HeroSection() {
             <img
               src={Arrow}
               alt="Arrow pointing to the video"
-              className="hidden lg:block w-32 h-auto mx-auto -mb-4"
+              className="hidden lg:block w-32 h-auto -mb-4 lg:-ml-16"
             />
             <Card className="shadow-2xl font-montserrat">
               <CardContent className="p-8 font-montserrat">
