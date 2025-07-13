@@ -65,7 +65,7 @@ export default function HeroSection() {
             <img
               src={Arrow}
               alt="Arrow pointing to the video"
-              className="hidden lg:block w-32 h-auto -mb-4 lg:-ml-16"
+              className="hidden lg:block w-32 h-auto -mb-4 lg:-ml-8"
             />
             <Card className="shadow-2xl font-montserrat">
               <CardContent className="p-8 font-montserrat">
