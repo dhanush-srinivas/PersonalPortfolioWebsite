@@ -217,7 +217,7 @@ export default function HeroSection() {
               <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-base italic font-medium">
                 <p>Hey! I'm Dhanush. I recently completed my Master’s in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity about how things work and how they can work better.</p>
                 <p>My journey so far has included building dashboards, identifying market opportunities, planning product roadmaps, managing cross-functional projects, and collaborating with teams to bring ideas to life. I love turning messy data into meaningful insights and simplifying complex problems into practical solutions.</p>
-                <p>I’ve worked with tools like Power BI, SQL, and SAP, but what excites me most is the problem-solving process. Whether I’m designing a solution, tackling a challenge, or helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated. ☕️</p>
+                <p>I’ve worked with tools like Power BI, SQL, and SAP, but what excites me most is the problem-solving process. Whether I’m designing a solution, tackling a challenge, or helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated. <span className="not-italic">☕️</span></p>
               </div>
             </CardContent>
           </Card>
