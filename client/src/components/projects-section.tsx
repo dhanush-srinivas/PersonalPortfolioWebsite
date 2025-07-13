@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import AnimatedSection from "@/components/animated-section";
-import PrinterImage from "@/resources/3dprinter1.jpg";
+import PrinterImage from "@/resources/3dprinter2.jpg";
 import NRGImage from "@/resources/targetaudience.jpg";
 import ClothingImage from "@/resources/Clothing.jpg";
 import SAPImage from "@/resources/SAPproject.jpg";
