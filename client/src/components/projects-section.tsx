@@ -4,12 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import AnimatedSection from "@/components/animated-section";
-import PrinterImage from "@/resources/new3DPrinter.jpg";
-import NRGImage from "@/resources/NRG.jpg";
+import PrinterImage from "@/resources/3dprinter1.jpg";
+import NRGImage from "@/resources/targetaudience.jpg";
 import ClothingImage from "@/resources/Clothing.jpg";
-import SAPImage from "@/resources/SAP.jpg";
+import SAPImage from "@/resources/SAPproject.jpg";
 import BottleImage from "@/resources/bottle.jpg";
-import WireframeImage from "@/resources/wireframing.jpg";
+import WireframeImage from "@/resources/wireframingproject.jpg";
 import type { ReactNode } from "react";
 
 type Project = {
@@ -594,7 +594,7 @@ export default function ProjectsSection() {
       ),
     },
     {
-      title: "Upcoming Project",
+      title: "Wireframing - Learn mobile App",
       description: "Details coming soon.",
       image: WireframeImage,
       links: {

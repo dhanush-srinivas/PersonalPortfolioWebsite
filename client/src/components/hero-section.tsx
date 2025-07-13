@@ -100,7 +100,7 @@ export default function HeroSection() {
                       </CardContent>
                     </Card>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-[32rem]" side="right">
+                  <HoverCardContent className="w-[40rem] p-6" side="right">
                     <div className="flex items-start mb-2">
                       <img src={UTDLogo} alt="UT Dallas" className="w-10 h-10 mr-3 object-contain" />
                       <div>
@@ -114,35 +114,35 @@ export default function HeroSection() {
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
-                        <FaCogs className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaCogs className="w-4 h-4 text-orange-500 mr-2 mt-0.5" />
                         <span>Systems Engineering</span>
                       </li>
                       <li className="flex items-start">
-                        <FaChartLine className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaChartLine className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
                         <span>Data Analytics</span>
                       </li>
                       <li className="flex items-start">
-                        <FaProjectDiagram className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaProjectDiagram className="w-4 h-4 text-blue-500 mr-2 mt-0.5" />
                         <span>Operations Research</span>
                       </li>
                       <li className="flex items-start">
-                        <FaIndustry className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaIndustry className="w-4 h-4 text-indigo-500 mr-2 mt-0.5" />
                         <span>Lean Manufacturing</span>
                       </li>
                       <li className="flex items-start">
-                        <FaTasks className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaTasks className="w-4 h-4 text-pink-500 mr-2 mt-0.5" />
                         <span>Project Management (planning, budgeting, scheduling)</span>
                       </li>
                       <li className="flex items-start">
-                        <FaUsers className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaUsers className="w-4 h-4 text-yellow-500 mr-2 mt-0.5" />
                         <span>Cross-functional team leadership</span>
                       </li>
                       <li className="flex items-start">
-                        <FaComments className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaComments className="w-4 h-4 text-red-500 mr-2 mt-0.5" />
                         <span>Stakeholder Communication</span>
                       </li>
                       <li className="flex items-start">
-                        <FaDatabase className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaDatabase className="w-4 h-4 text-purple-500 mr-2 mt-0.5" />
                         <span>SAP</span>
                       </li>
                     </ul>
@@ -164,7 +164,7 @@ export default function HeroSection() {
                       </CardContent>
                     </Card>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-[32rem]" side="right">
+                  <HoverCardContent className="w-[40rem] p-6" side="right">
                     <div className="flex items-start mb-2">
                       <img src={VTULogo} alt="VTU" className="w-10 h-10 mr-3 object-contain" />
                       <div>
@@ -178,27 +178,27 @@ export default function HeroSection() {
                     <h5 className="font-semibold mb-1 text-[hsl(var(--portfolio-secondary))]">Coursework and Skills</h5>
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-slate-600">
                       <li className="flex items-start">
-                        <FaTruck className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaTruck className="w-4 h-4 text-orange-500 mr-2 mt-0.5" />
                         <span>Supply Chain Management</span>
                       </li>
                       <li className="flex items-start">
-                        <FaDraftingCompass className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaDraftingCompass className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
                         <span>Facility Layout and Design</span>
                       </li>
                       <li className="flex items-start">
-                        <FaUserCog className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaUserCog className="w-4 h-4 text-blue-500 mr-2 mt-0.5" />
                         <span>Work Study and Ergonomics</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaCheckCircle className="w-4 h-4 text-emerald-500 mr-2 mt-0.5" />
                         <span>Total Quality Management</span>
                       </li>
                       <li className="flex items-start">
-                        <FaLaptopCode className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaLaptopCode className="w-4 h-4 text-indigo-500 mr-2 mt-0.5" />
                         <span>CAD/CAM</span>
                       </li>
                       <li className="flex items-start">
-                        <FaClipboardList className="w-4 h-4 text-[hsl(var(--portfolio-primary))] mr-2 mt-0.5" />
+                        <FaClipboardList className="w-4 h-4 text-pink-500 mr-2 mt-0.5" />
                         <span>Production Planning and Control</span>
                       </li>
                     </ul>
@@ -217,7 +217,7 @@ export default function HeroSection() {
               <div className="text-slate-600 leading-relaxed mb-6 space-y-4 font-serif text-base italic font-medium">
                 <p>Hey! I'm Dhanush. I recently completed my Master’s in Systems Engineering and Management from UT Dallas, with a background in Industrial Engineering and a strong curiosity about how things work and how they can work better.</p>
                 <p>My journey so far has included building dashboards, identifying market opportunities, planning product roadmaps, managing cross-functional projects, and collaborating with teams to bring ideas to life. I love turning messy data into meaningful insights and simplifying complex problems into practical solutions.</p>
-                <p>I’ve worked with tools like Power BI, SQL, and SAP, but what excites me most is the problem-solving process. Whether I’m designing a solution, tackling a challenge, or helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated.</p>
+                <p>I’ve worked with tools like Power BI, SQL, and SAP, but what excites me most is the problem-solving process. Whether I’m designing a solution, tackling a challenge, or helping the team stay on track, I believe the best work happens when people feel connected, motivated, and slightly over-caffeinated. ☕️</p>
               </div>
             </CardContent>
           </Card>
