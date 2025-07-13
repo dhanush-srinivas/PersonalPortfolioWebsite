@@ -32,9 +32,12 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
-          <div className="font-semibold text-xl text-slate-700">
+          <button
+            onClick={() => handleNavClick("#hero")}
+            className="font-semibold text-xl text-slate-700 hover:text-[#8E72EB] transition-colors duration-200"
+          >
             Dhanush Gowda S
-          </div>
+          </button>
           
           <div className="hidden lg:flex space-x-8">
             {navLinks.map((link) => (
