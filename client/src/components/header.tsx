@@ -12,6 +12,7 @@ export default function Header() {
     { href: "#skills", label: "Skills" },
     { href: "#recommendations", label: "Recommendations" },
     { href: "#experience", label: "Experience" },
+    { href: "#storytelling", label: "⭐" },
   ];
 
   const handleNavClick = (href: string) => {
