@@ -5,6 +5,7 @@ import LeadershipSection from "@/components/leadership-section";
 import ProjectsSection from "@/components/projects-section";
 import SkillsSection from "@/components/skills-section";
 import ExperienceSection from "@/components/experience-section";
+import StorytellingSection from "@/components/storytelling-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <SkillsSection />
       <RecommendationsSection />
       <ExperienceSection />
+      <StorytellingSection />
       <Footer />
     </div>
   );
