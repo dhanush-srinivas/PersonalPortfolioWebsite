@@ -39,7 +39,7 @@ export default function ProjectsSection() {
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍Situation:</strong> Industrial 3D printing is
+            <strong>Situation:</strong> Industrial 3D printing is
             revolutionizing manufacturing, yet most small and mid-sized
             businesses lack the capital and infrastructure to adopt this
             technology. Recognizing this gap, our team proposed a B2B
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
             costs and offer a scalable, maintenance-friendly deployment.
           </p>
           <p>
-            <strong>🎯Task:</strong> As the Product Manager, I was responsible
+            <strong>Task:</strong> As the Product Manager, I was responsible
             for driving the end-to-end product strategy. From identifying market
             needs and defining product vision to designing the system
             architecture and pitching the solution to potential investors. The
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>⚙️ Action:</strong>
+            <strong>Action:</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
@@ -130,7 +130,7 @@ export default function ProjectsSection() {
             </li>
           </ol>
           <p>
-            <strong>📈 Result:</strong>
+            <strong>Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>
@@ -151,7 +151,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>🧠 Skills & Tools Used:</strong> Product Strategy · System
+            <strong>Skills & Tools Used:</strong> Product Strategy · System
             Architecture · B2B SaaS · MVP Design · Pricing Models · Simulation
             Modeling · Stakeholder Interviews · Agile Planning · Figma ·
             Lucidchart · Notion · SQL · Excel · Python (mock API testing)
@@ -170,13 +170,13 @@ export default function ProjectsSection() {
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> In an age of health awareness and sustainable living, hydration remains a poorly addressed problem despite being critical to wellness. Our team identified a growing consumer need for a tech-enabled, eco-friendly hydration solution that could integrate seamlessly into modern lifestyles.
+            <strong>Situation:</strong> In an age of health awareness and sustainable living, hydration remains a poorly addressed problem despite being critical to wellness. Our team identified a growing consumer need for a tech-enabled, eco-friendly hydration solution that could integrate seamlessly into modern lifestyles.
           </p>
           <p>
-            <strong>🎯 Task:</strong> As the Product Manager of a seven-member cross-functional team, my goal was to lead the conceptualization, feature design, and market strategy for AquaFlex, a smart water bottle that blends technology, health monitoring, and sustainability.
+            <strong>Task:</strong> As the Product Manager of a seven-member cross-functional team, my goal was to lead the conceptualization, feature design, and market strategy for AquaFlex, a smart water bottle that blends technology, health monitoring, and sustainability.
           </p>
           <p>
-            <strong>⚙️ Action:</strong>
+            <strong>Action:</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
@@ -198,7 +198,7 @@ export default function ProjectsSection() {
               <strong>Competitive Analysis &amp; Positioning:</strong>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Mapped relative product advantage by scoring each feature on innovation, eco-friendliness, usability, and tech depth.</li>
-                <li>Positioned AquaFlex as the “Apple Watch of water bottles” — a personalized, interactive hydration device.</li>
+                <li>Positioned AquaFlex as the “Apple Watch of water bottles”, a personalized, interactive hydration device.</li>
               </ul>
             </li>
             <li>
@@ -217,7 +217,7 @@ export default function ProjectsSection() {
             </li>
           </ol>
           <p>
-            <strong>📈 Result:</strong>
+            <strong>Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Developed a complete end-to-end product and go-to-market strategy integrating consumer insight, sustainability, health tech, and digital innovation.</li>
@@ -225,7 +225,7 @@ export default function ProjectsSection() {
             <li>Received top project recognition for strategic clarity, product innovation, and execution depth.</li>
           </ul>
           <p>
-            <strong>🧠 Skills &amp; Tools Used:</strong> Product Strategy · Market Research · TAM/SAM/SOM Estimation · Competitive Benchmarking · Pricing Models · Consumer Persona Design · Feature Prioritization · GTM Planning · Financial Forecasting · Risk Assessment · Canva · Figma · Excel · Qualtrics · Presentation Design
+            <strong>Skills &amp; Tools Used:</strong> Product Strategy · Market Research · TAM/SAM/SOM Estimation · Competitive Benchmarking · Pricing Models · Consumer Persona Design · Feature Prioritization · GTM Planning · Financial Forecasting · Risk Assessment · Canva · Figma · Excel · Qualtrics · Presentation Design
           </p>
         </div>
       ),
@@ -241,16 +241,16 @@ export default function ProjectsSection() {
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> A local apparel retailer in Bangalore
+            <strong>Situation:</strong> A local apparel retailer in Bangalore
             was struggling with frequent stockouts of fast-moving items and
             overstocking of low-demand inventory, leading to increased carrying
             costs, missed sales opportunities, and a strained relationship with
             suppliers.
           </p>
           <p>
-            <strong>🎯 Task:</strong> My role was to analyze existing inventory
+            <strong>Task:</strong> My role was to analyze existing inventory
             trends, implement a data-driven inventory planning system, and
-            collaborate with suppliers to improve lead time predictability —
+            collaborate with suppliers to improve lead time predictability,
             with the primary objectives to:
           </p>
           <ul className="list-disc pl-5 space-y-1">
@@ -262,7 +262,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>⚙️ Action:</strong>
+            <strong>Action:</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
@@ -334,7 +334,7 @@ export default function ProjectsSection() {
             </li>
           </ol>
           <p>
-            <strong>📈 Result:</strong>
+            <strong>Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>
@@ -358,7 +358,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>🧠 Skills & Tools Used:</strong> Inventory Optimization ·
+            <strong>Skills & Tools Used:</strong> Inventory Optimization ·
             Demand Forecasting · ABC Classification · Stock Replenishment Models
             · Supplier Relationship Management · Python · Excel (Solver, Forecast
             Sheet) · Power BI · Retail Analytics · KPI Tracking · Visual
@@ -378,13 +378,13 @@ export default function ProjectsSection() {
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> Global manufacturing organizations rely on integrated planning tools to align supply with demand, especially across distributed networks. In this simulated environment, we were tasked with optimizing the planning pipeline for Global Bike Inc. by leveraging SAP Integrated Business Planning (IBP) and Advanced Planning &amp; Optimization (APO) modules.
+            <strong>Situation:</strong> Global manufacturing organizations rely on integrated planning tools to align supply with demand, especially across distributed networks. In this simulated environment, we were tasked with optimizing the planning pipeline for Global Bike Inc. by leveraging SAP Integrated Business Planning (IBP) and Advanced Planning &amp; Optimization (APO) modules.
           </p>
           <p>
-            <strong>🎯 Task:</strong> The goal was to simulate and improve an end-to-end supply chain process covering demand forecasting, supply network planning, and material requirements planning (MRP) across multiple plants and distribution centers. KPIs included forecast accuracy, procurement lead time, and inventory availability.
+            <strong>Task:</strong> The goal was to simulate and improve an end-to-end supply chain process covering demand forecasting, supply network planning, and material requirements planning (MRP) across multiple plants and distribution centers. KPIs included forecast accuracy, procurement lead time, and inventory availability.
           </p>
           <p>
-            <strong>⚙️ Action:</strong>
+            <strong>Action:</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
@@ -423,7 +423,7 @@ export default function ProjectsSection() {
             </li>
           </ol>
           <p>
-            <strong>📈 Result:</strong>
+            <strong>Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Achieved a 5% improvement in forecast accuracy, measured via pre/post-MAPE comparisons on seasonal product lines.</li>
@@ -432,7 +432,7 @@ export default function ProjectsSection() {
             <li>Produced a reusable planning simulation framework now used as a reference model for new learners in the program.</li>
           </ul>
           <p>
-            <strong>🧠 Skills &amp; Tools Used:</strong> SAP IBP · SAP APO · SAP ECC (MD01, MD02, MD04, MMBE) · Statistical Forecasting · Demand Planning · Supply Network Design · Capacity Alignment · Material Requirements Planning (MRP) · Inventory Optimization · S&amp;OP Principles · Excel · Planning Analytics
+            <strong>Skills &amp; Tools Used:</strong> SAP IBP · SAP APO · SAP ECC (MD01, MD02, MD04, MMBE) · Statistical Forecasting · Demand Planning · Supply Network Design · Capacity Alignment · Material Requirements Planning (MRP) · Inventory Optimization · S&amp;OP Principles · Excel · Planning Analytics
           </p>
         </div>
       ),
@@ -449,7 +449,7 @@ export default function ProjectsSection() {
       details: (
         <div className="space-y-4 text-sm text-left">
           <p>
-            <strong>📍 Situation:</strong> The National Research Group (NRG)
+            <strong>Situation:</strong> The National Research Group (NRG)
             sought to understand how community-focused policies are shaped and
             influenced in real-world decision-making. With shifting public
             narratives and increased focus on social impact, there was a
@@ -457,7 +457,7 @@ export default function ProjectsSection() {
             voices shaping perception and adoption.
           </p>
           <p>
-            <strong>🎯 Task:</strong> As an extern and team lead, I was
+            <strong>Task:</strong> As an extern and team lead, I was
             responsible for leading a strategic market research initiative that
             analyzed the influence ecosystem around policy-driven community
             initiatives. My objectives were to:
@@ -477,7 +477,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>⚙️ Action</strong>
+            <strong>Action</strong>
           </p>
           <ol className="list-decimal pl-5 space-y-1">
             <li>
@@ -566,7 +566,7 @@ export default function ProjectsSection() {
             </li>
           </ol>
           <p>
-            <strong>📈 Result:</strong>
+            <strong>Result:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>
@@ -584,7 +584,7 @@ export default function ProjectsSection() {
             </li>
           </ul>
           <p>
-            <strong>🧠 Skills & Tools Used:</strong> Market Research · Strategic
+            <strong>Skills & Tools Used:</strong> Market Research · Strategic
             Analysis · Qualitative Coding (NVivo) · Persona Development · Policy
             Mapping · Influencer Profiling · Google Trends · Competitive
             Intelligence · Stakeholder Presentation · Community Engagement
@@ -628,7 +628,7 @@ export default function ProjectsSection() {
             Bootstrap, Android (Java), and HTML/CSS/JavaScript, the platform was
             a collaborative effort with a clear mission: to make education
             accessible, relevant, and learner-first. "Learn" continues to serve
-            as a prototype for a broader vision—a global learning hub built for
+            as a prototype for a broader vision, a global learning hub built for
             impact.
           </p>
         </div>
