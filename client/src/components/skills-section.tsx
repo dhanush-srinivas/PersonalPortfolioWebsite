@@ -74,6 +74,14 @@ export default function SkillsSection() {
       organization: "How to Build a Successful Campaign",
       image: MarketingImage,
     },
+    {
+      title: (
+        <span>
+          CSPO & PMP <em>(in progress)</em>
+        </span>
+      ),
+      organization: "",
+    },
   ];
 
   return (
@@ -94,9 +102,9 @@ export default function SkillsSection() {
             ))}
           </div>
           <div className="grid grid-flow-col grid-rows-4 gap-4 w-full border rounded-lg p-6 h-full md:auto-cols-fr bg-[#FEFEFE] md:col-span-2">
-            {certifications.map((cert) =>
+            {certifications.map((cert, idx) =>
               cert.image ? (
-                <Dialog key={cert.title}>
+                <Dialog key={idx}>
                   <DialogTrigger asChild>
                     <Card
                       className={
@@ -130,7 +138,7 @@ export default function SkillsSection() {
                 </Dialog>
               ) : (
                 <Card
-                  key={cert.title}
+                  key={idx}
                   className="w-full md:w-96 bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow flex items-center"
                 >
                   <CardContent className="px-2 py-0.5">
