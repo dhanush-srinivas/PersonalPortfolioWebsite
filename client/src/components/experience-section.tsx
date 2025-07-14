@@ -2,21 +2,35 @@ import { Briefcase, Code, Laptop } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/animated-section";
+import CognizantLogo from "@/resources/cognizant.jpg";
 
 export default function ExperienceSection() {
   const experiences = [
     {
       icon: Briefcase,
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
+      logo: CognizantLogo,
+      title: (
+        <span>
+          Associate Project Manager (<em>Product-focused</em>)
+        </span>
+      ),
+      company: "Cognizant",
+      period: "Sep 2021 - Jul 2023",
       color: "bg-[hsl(var(--portfolio-primary))]",
       achievements: [
-        "Lead development of microservices architecture serving 1M+ users",
-        "Mentored 5 junior developers and established coding standards",
-        "Improved application performance by 40% through optimization",
+        "SAP",
+        "ServiceNow",
+        "Data Analytics",
+        "Excel",
+        "Power BI",
+        "Wrike",
+        "Make-to-Order",
+        "Demand forecasting",
+        "Material flow",
+        "Warehouse capacity",
+        "Cross-collaboration",
       ],
-      technologies: ["React", "Node.js", "AWS"],
+      technologies: [],
     },
     {
       icon: Code,
@@ -71,13 +85,22 @@ export default function ExperienceSection() {
                   <Card className="shadow-lg flex-1 bg-[#FEFEFE]">
                     <CardContent className="p-8">
                       <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))]">
-                            {exp.title}
-                          </h3>
-                          <p className="font-medium" style={{ color: exp.color.replace('bg-', '').replace('[hsl(var(--portfolio-', 'hsl(var(--portfolio-').replace('))]', '))') }}>
-                            {exp.company}
-                          </p>
+                        <div className="flex items-start space-x-4">
+                          {"logo" in exp && (
+                            <img
+                              src={(exp as any).logo}
+                              alt={`${exp.company} logo`}
+                              className="w-12 h-12 object-contain rounded-md"
+                            />
+                          )}
+                          <div>
+                            <h3 className="text-xl font-semibold text-[hsl(var(--portfolio-secondary))]">
+                              {exp.title}
+                            </h3>
+                            <p className="font-medium" style={{ color: exp.color.replace('bg-', '').replace('[hsl(var(--portfolio-', 'hsl(var(--portfolio-').replace('))]', '))') }}>
+                              {exp.company}
+                            </p>
+                          </div>
                         </div>
                         <span className="text-slate-500 text-sm">{exp.period}</span>
                       </div>
