@@ -17,6 +17,7 @@ export default function ExperienceSection() {
       company: "Cognizant",
       period: "Sep 2021 - Jul 2023",
       color: "bg-[hsl(var(--portfolio-primary))]",
+      splitAchievements: true,
       achievements: [
         "SAP",
         "ServiceNow",
@@ -28,7 +29,6 @@ export default function ExperienceSection() {
         "Demand forecasting",
         "Material flow",
         "Warehouse capacity",
-        "Cross-collaboration",
       ],
       technologies: [],
     },
@@ -104,14 +104,35 @@ export default function ExperienceSection() {
                         </div>
                         <span className="text-slate-500 text-sm">{exp.period}</span>
                       </div>
-                      <ul className="text-slate-600 space-y-2 mb-4">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
+                      {exp.splitAchievements ? (
+                        <div className="grid grid-cols-2 gap-x-8 mb-4">
+                          <ul className="text-slate-600 space-y-2">
+                            {exp.achievements.slice(0, 5).map((achievement, achIndex) => (
+                              <li key={achIndex} className="flex items-start">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                {achievement}
+                              </li>
+                            ))}
+                          </ul>
+                          <ul className="text-slate-600 space-y-2">
+                            {exp.achievements.slice(5).map((achievement, achIndex) => (
+                              <li key={achIndex} className="flex items-start">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                {achievement}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : (
+                        <ul className="text-slate-600 space-y-2 mb-4">
+                          {exp.achievements.map((achievement, achIndex) => (
+                            <li key={achIndex} className="flex items-start">
+                              <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech, techIndex) => (
                           <Badge key={techIndex} variant="secondary">
