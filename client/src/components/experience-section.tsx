@@ -24,7 +24,6 @@ export default function ExperienceSection() {
         "Data Analytics",
         "Excel",
         "Power BI",
-        "Wrike",
         "Make-to-Order",
         "Demand forecasting",
         "Material flow",
@@ -105,23 +104,19 @@ export default function ExperienceSection() {
                         <span className="text-slate-500 text-sm">{exp.period}</span>
                       </div>
                       {exp.splitAchievements ? (
-                        <div className="grid grid-cols-2 gap-x-8 mb-4">
-                          <ul className="text-slate-600 space-y-2">
-                            {exp.achievements.slice(0, 5).map((achievement, achIndex) => (
-                              <li key={achIndex} className="flex items-start">
-                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                {achievement}
-                              </li>
-                            ))}
-                          </ul>
-                          <ul className="text-slate-600 space-y-2">
-                            {exp.achievements.slice(5).map((achievement, achIndex) => (
-                              <li key={achIndex} className="flex items-start">
-                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                {achievement}
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="grid grid-cols-3 gap-x-8 mb-4">
+                          {[0, 1, 2].map((col) => (
+                            <ul key={col} className="text-slate-600 space-y-2">
+                              {exp.achievements
+                                .slice(col * 3, col * 3 + 3)
+                                .map((achievement, achIndex) => (
+                                  <li key={achIndex} className="flex items-start">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    {achievement}
+                                  </li>
+                                ))}
+                            </ul>
+                          ))}
                         </div>
                       ) : (
                         <ul className="text-slate-600 space-y-2 mb-4">
