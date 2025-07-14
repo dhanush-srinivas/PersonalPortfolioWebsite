@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-4 text-white">Lets Get Connected</h3>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Liked what you saw? Have a job opportunity, an idea to build, or just stuck and need a fresh perspective to move things forward? I’m always up for a great conversation
+            Liked what you saw? Have a job opportunity, an idea to build, or just stuck and need a fresh perspective to move things forward? I’m always up for a great conversation. 🙌🏻
           </p>
           <div className="flex justify-center space-x-6 mb-8">
             <Button
