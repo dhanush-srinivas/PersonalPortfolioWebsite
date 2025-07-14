@@ -33,29 +33,36 @@ export default function ExperienceSection() {
     },
     {
       icon: Code,
-      title: "Full-Stack Developer",
-      company: "InnovateLabs",
-      period: "2019 - 2021",
+      logo: CognizantLogo,
+      title: "Summer Intern",
+      company: "Cognizant",
+      period: "May 2021 - Aug 2021",
       color: "bg-[hsl(var(--portfolio-accent))]",
+      splitAchievements: true,
+      achievementsColumns: 2,
       achievements: [
-        "Developed and maintained 15+ web applications using React and Python",
-        "Collaborated with design team to implement responsive UI/UX",
-        "Integrated third-party APIs and payment gateways",
+        "Service delivery roadmap",
+        "Dashboards",
+        "Product tracking",
+        "Stakeholder interaction",
+        "Defining KPIs",
+        "SAP Analytics Cloud (SAC)",
       ],
-      technologies: ["Vue.js", "Python", "Django"],
+      technologies: [],
     },
     {
       icon: Laptop,
-      title: "Junior Developer",
-      company: "StartupHub",
-      period: "2018 - 2019",
+      title: "Project Intern",
+      company: "Aviyana Ventures LTD.",
+      period: "Jul 2020 - Aug 2020",
       color: "bg-orange-500",
+      inlineAchievements: true,
       achievements: [
-        "Built responsive web applications using HTML, CSS, and JavaScript",
-        "Participated in code reviews and agile development processes",
-        "Contributed to open-source projects and internal tools",
+        "CRM trend analysis",
+        "Campaign optimization",
+        "Structured data capturing",
       ],
-      technologies: ["JavaScript", "HTML/CSS", "jQuery"],
+      technologies: [],
     },
   ];
 
@@ -104,8 +111,12 @@ export default function ExperienceSection() {
                         <span className="text-slate-500 text-sm">{exp.period}</span>
                       </div>
                       {exp.splitAchievements ? (
-                        <div className="grid grid-cols-3 gap-x-8 mb-4">
-                          {[0, 1, 2].map((col) => (
+                        <div
+                          className={`grid ${
+                            exp.achievementsColumns === 2 ? "grid-cols-2" : "grid-cols-3"
+                          } gap-x-8 mb-4`}
+                        >
+                          {[...Array(exp.achievementsColumns || 3)].map((_, col) => (
                             <ul key={col} className="text-slate-600 space-y-2">
                               {exp.achievements
                                 .slice(col * 3, col * 3 + 3)
@@ -118,6 +129,15 @@ export default function ExperienceSection() {
                             </ul>
                           ))}
                         </div>
+                      ) : exp.inlineAchievements ? (
+                        <ul className="text-slate-600 flex flex-wrap gap-x-8 mb-4">
+                          {exp.achievements.map((achievement, achIndex) => (
+                            <li key={achIndex} className="flex items-center">
+                              <div className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></div>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
                       ) : (
                         <ul className="text-slate-600 space-y-2 mb-4">
                           {exp.achievements.map((achievement, achIndex) => (
