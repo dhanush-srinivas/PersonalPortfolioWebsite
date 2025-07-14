@@ -595,12 +595,44 @@ export default function ProjectsSection() {
     },
     {
       title: "Wireframing - Learn mobile App",
-      description: "Details coming soon.",
+      description:
+        '"Learn" is a web and mobile app designed to provide free, curated educational resources across diverse subjects, making quality learning accessible to all. I led the wireframing and UX design to create an intuitive, distraction-free experience that empowers self-paced discovery and growth.',
       image: WireframeImage,
+      role: "UX Designer & Wireframing Lead | Personal Project",
+      tools: "Adobe XD",
       links: {
         demo: "#",
         github: "#",
       },
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            "Learn" is a web and mobile application designed to provide free,
+            curated educational resources to students across domains like
+            science, math, geography, politics, and more. Born during the
+            COVID-19 pandemic, the project aimed to break down financial and
+            accessibility barriers by simplifying how learners discover and
+            engage with quality content.
+          </p>
+          <p>
+            I led the wireframing and UX design for the application, crafting
+            intuitive layouts for modules like authentication, dashboards,
+            catalogues, and personalized learning profiles. Our focus was on
+            creating a clean, distraction-free interface that felt welcoming to
+            learners of all backgrounds. Key features included resource ratings,
+            prerequisites, dark mode, and animated interactions to keep users
+            motivated.
+          </p>
+          <p>
+            Backed by Firebase for real-time updates, and built using Node.js,
+            Bootstrap, Android (Java), and HTML/CSS/JavaScript, the platform was
+            a collaborative effort with a clear mission: to make education
+            accessible, relevant, and learner-first. "Learn" continues to serve
+            as a prototype for a broader vision—a global learning hub built for
+            impact.
+          </p>
+        </div>
+      ),
     },
   ];
 
