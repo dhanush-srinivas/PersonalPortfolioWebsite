@@ -32,53 +32,68 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
-          <button
+          <motion.button
             onClick={() => handleNavClick("#hero")}
             className="font-semibold text-xl text-slate-700 hover:text-[#8E72EB] transition-colors duration-200"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
           >
             Dhanush Gowda S
-          </button>
+          </motion.button>
           
           <div className="hidden lg:flex space-x-8">
             {navLinks.map((link) => (
-              <button
+              <motion.button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className="text-slate-700 hover:text-[#8E72EB] transition-colors duration-200 font-medium text-sm"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
                 {link.label}
-              </button>
+              </motion.button>
             ))}
           </div>
           
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </Button>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </motion.div>
         </nav>
         
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-slate-200">
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden mt-4 py-4 border-t border-slate-200 overflow-hidden"
+          >
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <button
+              {navLinks.map((link, i) => (
+                <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                className="text-slate-700 hover:text-[#8E72EB] transition-colors duration-200 font-medium text-left text-sm"
+                  className="text-slate-700 hover:text-[#8E72EB] transition-colors duration-200 font-medium text-left text-sm"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
                 >
                   {link.label}
-                </button>
+                </motion.button>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </motion.header>

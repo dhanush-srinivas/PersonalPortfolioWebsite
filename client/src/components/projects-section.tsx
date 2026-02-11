@@ -3,7 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import AnimatedSection from "@/components/animated-section";
+import AnimatedSection, { staggerItemVariants } from "@/components/animated-section";
+import { motion } from "framer-motion";
 import PrinterImage from "@/resources/3dprinter2.jpg";
 import NRGImage from "@/resources/targetaudience.jpg";
 import ClothingImage from "@/resources/Clothing.jpg";
@@ -641,17 +642,27 @@ export default function ProjectsSection() {
       id="projects"
       className="py-10"
       duration={1.2}
+      staggerChildren={0.1}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
+        <motion.h2
+          variants={staggerItemVariants}
+          className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16"
+        >
           Projects
-        </h2>
+        </motion.h2>
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) =>
             project.details ? (
-              <Dialog key={index}>
-                <DialogTrigger asChild>
-                  <Card className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer bg-[#FEFEFE]">
+              <motion.div key={index} variants={staggerItemVariants} custom={index}>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      whileTap={{ scale: 0.99 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                    >
+                      <Card className="shadow-lg hover:shadow-xl overflow-hidden cursor-pointer bg-[#FEFEFE]">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -683,7 +694,8 @@ export default function ProjectsSection() {
                       <Button variant="outline" size="sm" className="text-[#6B7280]">Read more</Button>
                     </CardContent>
                   </Card>
-                </DialogTrigger>
+                    </motion.div>
+                  </DialogTrigger>
                 <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-0 flex flex-col">
                   <div
                     className="w-full h-40 bg-cover bg-center flex items-end"
@@ -698,10 +710,16 @@ export default function ProjectsSection() {
                   </div>
                 </DialogContent>
               </Dialog>
+            </motion.div>
             ) : (
+              <motion.div key={index} variants={staggerItemVariants} custom={index}>
+                <motion.div
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  whileTap={{ scale: 0.99 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                >
               <Card
-                key={index}
-                className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden bg-[#FEFEFE]"
+                className="shadow-lg hover:shadow-xl overflow-hidden bg-[#FEFEFE]"
               >
                 <img
                   src={project.image}
@@ -747,6 +765,8 @@ export default function ProjectsSection() {
                   </div>
                 </CardContent>
               </Card>
+              </motion.div>
+            </motion.div>
             )
           )}
         </div>

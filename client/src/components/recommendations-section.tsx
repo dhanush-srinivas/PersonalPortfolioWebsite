@@ -7,6 +7,7 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import CarolImage from "@/resources/carol.jpg";
 import MichelleImage from "@/resources/michelle.jpeg";
 import AndyImage from "@/resources/andy.jpg";
@@ -136,11 +137,12 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
             
             {/* Carousel Container */}
             <div className="overflow-hidden px-16">
-              <div 
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{
-                  transform: `translateX(calc(50% - 25vw - ${currentIndex} * (50vw + 2rem)))`,
+              <motion.div 
+                className="flex"
+                animate={{
+                  x: `calc(50% - 25vw - ${currentIndex} * (50vw + 2rem))`,
                 }}
+                transition={{ type: "spring", stiffness: 120, damping: 28 }}
               >
                 {recommendations.map((rec, index) => (
                   <div key={index} className="w-[50vw] flex-shrink-0 mx-4">
@@ -151,8 +153,12 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                           target="_blank"
                           rel="noopener noreferrer"
                         >
+                          <motion.div
+                            whileHover={{ y: -6, scale: 1.03 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                          >
                           <Card
-                            className={`shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${
+                            className={`shadow-lg ${
                               index === currentIndex
                                 ? 'scale-105 shadow-xl'
                                 : 'scale-95 opacity-60'
@@ -193,27 +199,33 @@ Dhanush would be a fantastic addition to any organization, and I highly recommen
                               </div>
                             </CardContent>
                           </Card>
+                          </motion.div>
                         </a>
                       </TooltipTrigger>
                       <TooltipContent side="top">Click to see this on linkedin</TooltipContent>
                     </Tooltip>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
           
           {/* Carousel indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {recommendations.map((_, index) => (
-              <button
+              <motion.button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-[hsl(var(--portfolio-primary))]' 
-                    : 'bg-slate-300 hover:bg-slate-400'
-                }`}
+                className="w-3 h-3 rounded-full border-0 cursor-pointer"
+                animate={{
+                  scale: index === currentIndex ? 1.3 : 1,
+                  backgroundColor: index === currentIndex
+                    ? "hsl(var(--portfolio-primary))"
+                    : "rgb(203 213 225)",
+                }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
               />
             ))}
           </div>

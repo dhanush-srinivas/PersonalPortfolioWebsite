@@ -21,7 +21,8 @@ import SU2Image from "@/resources/SU2.jpeg";
 import IIELCImage from "@/resources/iielc.jpg";
 import UandIImage from "@/resources/U&i.jpg";
 import SULCImage from "@/resources/sulc.png";
-import AnimatedSection from "@/components/animated-section";
+import AnimatedSection, { staggerItemVariants } from "@/components/animated-section";
+import { motion } from "framer-motion";
 
 export default function LeadershipSection() {
   const leadership = [
@@ -386,17 +387,26 @@ export default function LeadershipSection() {
   ];
 
   return (
-    <AnimatedSection id="leadership" className="py-10" duration={1.2}>
+    <AnimatedSection id="leadership" className="py-10" duration={1.2} staggerChildren={0.08}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
+        <motion.h2
+          variants={staggerItemVariants}
+          className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16"
+        >
           Leadership Experience
-        </h2>
+        </motion.h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {leadership.map((item, index) =>
-            typeof item.details !== "string" ? (
-              <Dialog key={index}>
+          {leadership.map((item, index) => (
+            <motion.div key={index} variants={staggerItemVariants} custom={index}>
+            {typeof item.details !== "string" ? (
+              <Dialog>
                 <DialogTrigger asChild>
-                  <Card className="relative bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  >
+                  <Card className="relative bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow-lg h-full cursor-pointer">
                     {"logo" in item && (
                       <img
                         src={(item as any).logo}
@@ -439,6 +449,7 @@ export default function LeadershipSection() {
                       </div>
                     </CardContent>
                   </Card>
+                  </motion.div>
                 </DialogTrigger>
                 <DialogContent className="w-[95vw] max-w-4xl h-[95vh] overflow-y-auto p-6">
                   <div className="flex items-start space-x-4 mb-2">
@@ -468,9 +479,14 @@ export default function LeadershipSection() {
                 </DialogContent>
               </Dialog>
             ) : (
-              <Dialog key={index}>
+              <Dialog>
                 <DialogTrigger asChild>
-                  <Card className="bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 h-full cursor-pointer">
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  >
+                  <Card className="bg-gradient-to-br from-white to-[hsl(var(--portfolio-slate-100))] shadow-lg h-full cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div
@@ -500,6 +516,7 @@ export default function LeadershipSection() {
                       </div>
                     </CardContent>
                   </Card>
+                  </motion.div>
                 </DialogTrigger>
                 <DialogContent className="w-[95vw] max-w-md p-6">
                   <div className="flex items-start space-x-4 mb-2">
@@ -531,8 +548,9 @@ export default function LeadershipSection() {
                   </div>
                 </DialogContent>
               </Dialog>
-            ),
-          )}
+            )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </AnimatedSection>

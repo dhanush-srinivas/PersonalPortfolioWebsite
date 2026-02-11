@@ -1,7 +1,8 @@
 import { Briefcase, Code, Laptop } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import AnimatedSection from "@/components/animated-section";
+import AnimatedSection, { staggerItemVariants } from "@/components/animated-section";
+import { motion } from "framer-motion";
 import CognizantLogo from "@/resources/cognizant.jpg";
 
 export default function ExperienceSection() {
@@ -71,23 +72,47 @@ export default function ExperienceSection() {
       id="experience"
       className="py-10"
       duration={1.2}
+      staggerChildren={0.12}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16">
+        <motion.h2
+          variants={staggerItemVariants}
+          className="text-3xl font-bold text-[hsl(var(--portfolio-secondary))] text-center mb-16"
+        >
           Experience
-        </h2>
+        </motion.h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300"></div>
+            <motion.div
+              className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300 origin-top"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
             
             {/* Experience Items */}
             <div className="space-y-12">
               {experiences.map((exp, index) => (
-                <div key={index} className="relative flex items-start space-x-8">
-                  <div className={`w-16 h-16 ${exp.color} rounded-full flex items-center justify-center flex-shrink-0 relative z-10`}>
+                <motion.div
+                  key={index}
+                  variants={staggerItemVariants}
+                  custom={index}
+                  className="relative flex items-start space-x-8"
+                >
+                  <motion.div
+                    className={`w-16 h-16 ${exp.color} rounded-full flex items-center justify-center flex-shrink-0 relative z-10`}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                  >
                     <exp.icon className="text-white w-8 h-8" />
-                  </div>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ x: 6 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    className="flex-1"
+                  >
                   <Card className="shadow-lg flex-1 bg-[#FEFEFE]">
                     <CardContent className="p-8">
                       <div className="flex justify-between items-start mb-4">
@@ -157,7 +182,8 @@ export default function ExperienceSection() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
           </div>
