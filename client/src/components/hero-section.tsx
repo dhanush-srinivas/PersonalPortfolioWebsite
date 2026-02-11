@@ -34,8 +34,9 @@ export default function HeroSection() {
       className="pt-10 pb-20"
     >
       <div className="container mx-auto px-4">
-        {/* Video and Pitch Section */}
-        <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
+        {/* Video and Pitch Section - full viewport so only this is visible initially on all screen sizes */}
+        <div className="min-h-[calc(100vh-5rem)] flex flex-col justify-center">
+          <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
           {/* Video Embed */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -82,6 +83,7 @@ export default function HeroSection() {
               </CardContent>
             </Card>
           </motion.div>
+          </div>
         </div>
         
         {/* About Me and Education */}
