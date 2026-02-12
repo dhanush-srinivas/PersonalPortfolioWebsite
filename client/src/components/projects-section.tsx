@@ -11,6 +11,7 @@ import ClothingImage from "@/resources/Clothing.jpg";
 import SAPImage from "@/resources/SAPproject.jpg";
 import BottleImage from "@/resources/bottle.jpg";
 import WireframeImage from "@/resources/wireframingproject.jpg";
+import WarRoomImage from "@/resources/warroom.png";
 import type { ReactNode } from "react";
 
 type Project = {
@@ -29,6 +30,143 @@ type Project = {
 
 export default function ProjectsSection() {
   const projects: Project[] = [
+    {
+      title:
+        'Multi-Agent GTM Strategy Engine: AI "War Room" for Market Positioning',
+      description:
+        'Designed a multi-agent "strategy war room" that orchestrates AI agents to debate GTM positioning, simulate competitor counter‑moves, and stream live strategy deliberations to a transparent executive dashboard.',
+      image: WarRoomImage,
+      role: "Lead Product Architect",
+      tools:
+        "Agentic Orchestration, MongoDB Atlas, FastAPI, React, Server-Sent Events (SSE), Python, Prompt Engineering",
+      details: (
+        <div className="space-y-4 text-sm text-left">
+          <p>
+            <strong>Situation:</strong> Launching a product into a saturated,
+            competitive market demanded more than a static GTM slide deck. Most
+            planning cycles were siloed, linear, and lacked adversarial testing
+            of positioning and messaging. I saw an opportunity to turn
+            agent-based workflows into a persistent, automated GTM{" "}
+            <em>war room</em> that could continuously stress-test strategy
+            before money was spent on campaigns.
+          </p>
+          <p>
+            <strong>Task:</strong> As Lead Product Architect, I set out to
+            design a multi-agent system that could (1) simulate competitor
+            strategists, (2) document a full "logic trail" behind every GTM
+            decision, and (3) expose these debates in real time to marketing and
+            product leaders via an interactive dashboard.
+          </p>
+          <p>
+            <strong>Action:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>
+              <strong>Agentic Orchestration &amp; War Room Logic:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Defined a cast of specialized agents including a Brand
+                  Strategist, Competitor Analyst, and Customer Persona Advocate,
+                  each with distinct objectives and prompt scaffolding.
+                </li>
+                <li>
+                  Implemented a multi-round deliberation loop where the Brand
+                  Strategist proposes positioning, the Competitor Analyst
+                  attacks it with counter-moves, and the Customer Advocate
+                  evaluates impact on personas and value perception.
+                </li>
+                <li>
+                  Encoded a facilitation policy that resolves conflicts and
+                  promotes only converged recommendations to the next phase of
+                  GTM planning.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Stateful Memory with MongoDB Atlas:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Architected a centralized memory layer in MongoDB Atlas to
+                  persist agent messages, hypotheses, and scenario assumptions
+                  across long-running sessions.
+                </li>
+                <li>
+                  Modeled documents to capture the full evolution of a strategy
+                  (initial thesis → challenges → refinements), enabling 100%
+                  auditability of how a final GTM recommendation was formed.
+                </li>
+                <li>
+                  Decoupled memory schema from individual agent prompts so new
+                  roles can be added without refactoring persistence logic.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Real-Time Deliberation Streaming:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Built a FastAPI backend with Server-Sent Events (SSE) to
+                  stream live agent debates to the UI as they unfold.
+                </li>
+                <li>
+                  Implemented a React-based "Conflict &amp; Resolution" view
+                  that surfaces which agent raised a concern, how it was
+                  addressed, and what changed in the GTM as a result.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>GTM Stress-Testing &amp; Simulation:</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Integrated a simulation layer that predicts competitor
+                  responses such as price cuts, feature launches, and aggressive
+                  ad spend, then replays the agent debate under those
+                  conditions.
+                </li>
+                <li>
+                  Generated an automated "Strategy Synthesis" report that
+                  summarizes the final, stress-tested GTM plan along with links
+                  back to the exact deliberation episodes that informed each
+                  recommendation.
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            <strong>Result:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Reduced time to run a full, adversarial GTM review cycle by
+              roughly <strong>60%</strong>, while increasing the number of
+              tested scenarios per cycle.
+            </li>
+            <li>
+              Delivered a persistent, queryable logic trail so executives can
+              trace every final messaging or pricing decision back to specific
+              agent debates and competitor simulations.
+            </li>
+            <li>
+              Demonstrated a production-style architecture that cleanly
+              separates agent behavior from state management, making the war
+              room extensible to additional products and markets.
+            </li>
+            <li>
+              Increased stakeholder trust in AI-assisted strategy by replacing
+              "black box" outputs with visible, explainable agent
+              deliberations.
+            </li>
+          </ul>
+          <p>
+            <strong>Skills &amp; Tools Used:</strong> Agentic Orchestration ·
+            GTM Strategy · Competitive Analysis · System Architecture · MongoDB
+            Atlas · FastAPI · React · Server-Sent Events (SSE) · Market
+            Simulation · Prompt Engineering · Python · Agile Delivery
+          </p>
+        </div>
+      ),
+    },
     {
       title: "System Architecture & Product Strategy for a 3D Printer Leasing Platform",
       description:
