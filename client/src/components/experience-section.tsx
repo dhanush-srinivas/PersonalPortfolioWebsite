@@ -10,13 +10,9 @@ export default function ExperienceSection() {
     {
       icon: Briefcase,
       logo: CognizantLogo,
-      title: (
-        <span>
-          Associate Project Manager (<em>Product-focused</em>)
-        </span>
-      ),
+      title: "Product Manager (Product Analyst)",
       company: "Cognizant",
-      period: "Sep 2021 - Jul 2023",
+      period: "Aug 2021 - Jul 2023",
       color: "bg-[hsl(var(--portfolio-primary))]",
       splitAchievements: true,
       achievements: [
